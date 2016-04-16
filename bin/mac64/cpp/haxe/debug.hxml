@@ -1,0 +1,25 @@
+-main ApplicationMain 
+-cp /usr/lib/haxelib/HaxePunk/2,5,6
+-D HaxePunk=2.5.6
+-cp /usr/lib/haxelib/lime/2,6,1
+-D lime=2.6.1
+-cp /usr/lib/haxelib/openfl/3,3,2
+-D openfl=3.3.2
+-cp /usr/lib/haxelib/hxcpp/3,2,102
+-D hxcpp=3.2.102
+-cp src
+-cp /usr/lib/haxelib/lime/2,6,1/legacy
+-D openfl-legacy
+-D tools=2.6.1
+-D lime-legacy
+-D no-compilation
+-D native
+-D openfl-native
+-D lime-native
+-D mac
+-D desktop
+--remap flash:openfl
+-cpp bin/mac64/cpp/obj/
+-cp bin/mac64/cpp/haxe
+--macro keep("Main")
+-debug

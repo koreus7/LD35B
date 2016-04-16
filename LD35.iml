@@ -2,6 +2,7 @@
 <module type="HAXE_MODULE" version="4">
   <component name="HaxeModuleSettingsStorage">
     <option name="buildConfig" value="3" />
+    <option name="openFLTarget" value="Mac OS" />
     <option name="outputFolder" value="$MODULE_DIR$/out/production/LD35" />
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
@@ -12,5 +13,49 @@
     </content>
     <orderEntry type="jdk" jdkName="Haxe 3.2.0" jdkType="Haxe toolkit" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="haxelib|openfl">
+        <CLASSES>
+          <root url="/usr/lib/haxelib/openfl/3,3,2/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="/usr/lib/haxelib/openfl/3,3,2/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="haxelib|/usr/lib/haxelib/HaxePunk/2,5,6">
+        <CLASSES>
+          <root url="file:///usr/lib/haxelib/HaxePunk/2,5,6" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file:///usr/lib/haxelib/HaxePunk/2,5,6" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="haxelib|/usr/lib/haxelib/openfl/3,3,2">
+        <CLASSES>
+          <root url="file:///usr/lib/haxelib/openfl/3,3,2" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file:///usr/lib/haxelib/openfl/3,3,2" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="haxelib|/usr/lib/haxelib/lime/2,6,1">
+        <CLASSES>
+          <root url="file:///usr/lib/haxelib/lime/2,6,1" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file:///usr/lib/haxelib/lime/2,6,1" />
+        </SOURCES>
+      </library>
+    </orderEntry>
   </component>
 </module>

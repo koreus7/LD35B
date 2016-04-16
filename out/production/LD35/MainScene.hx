@@ -10,6 +10,8 @@ class MainScene extends BaseWorld
 
     override public function begin()
 	{
+
+        G.ground = HXP.height - 30.0;
 		P5.fill(0x272727, 1.0);
 		P5.noStroke();
 		addGraphic( P5.rect(HXP.width/2, HXP.height/2,HXP.width, HXP.height), Layers.back);
@@ -23,22 +25,32 @@ class MainScene extends BaseWorld
         p2 = new Paralax(0,0,"graphics/paralax2.png");
         p2.layer = Layers.backParalax;
 
-        p1.rate = 0.8;
-        p2.rate = 0.9;
+        p1.rate = 0.01;
+        p2.rate = 0.02;
 
 		player = new Runner();
 		player.layer = Layers.top;
 
+
+        player.x = HXP.width/2;
+        player.y = G.ground - 64;
+
+        var road = new BaseWorldEntity(0,0, new Image("graphics/road.png"));
+        road.layer = Layers.main;
+
+
+
         this.add(background);
         this.add(p2);
         this.add(p1);
+        this.add(road);
 		this.add(player);
 	}
 
     override public function update()
     {
         G.delta = HXP.elapsed * G.timeSpeed;
-        Paralax.offset = player.x - HXP.width/2.0;
+        Paralax.offset = HXP.width/2.0 - player.x;
         super.update();
     }
 }

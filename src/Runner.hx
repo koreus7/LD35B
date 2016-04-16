@@ -52,6 +52,8 @@ class Runner extends BaseWorldEntity
 		{
 			_animatedSprite.play("idle");
 		}
+
+
 	}
 	
 }

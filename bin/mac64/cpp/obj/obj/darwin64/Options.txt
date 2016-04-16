@@ -1,0 +1,5 @@
+HXCPP_CLANG=1
+HXCPP_M64=1
+hxcpp=3.2.102
+hxcpp_api_level=321
+hxcpp=/usr/lib/haxelib/hxcpp/3,2,102/

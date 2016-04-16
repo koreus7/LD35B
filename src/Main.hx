@@ -7,7 +7,7 @@ class Main extends Engine
 {
     public static inline var kScreenWidth:Int = 750;
     public static inline var kScreenHeight:Int = 450;
-    public static inline var kFrameRate:Int = 60;
+    public static inline var kFrameRate:Int = 30;
 
     function new()
     {
@@ -16,11 +16,11 @@ class Main extends Engine
 
 	override public function init()
 	{
-#if debug
+//#if debug
 		HXP.console.enable();
 
         HXP.console.toggleKey = Key.F3;
-#end
+//#end
 		HXP.scene = new MainScene();
 	}
 
