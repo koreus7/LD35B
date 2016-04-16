@@ -26,7 +26,7 @@ class MainScene extends BaseWorld
         p2.layer = Layers.backParalax;
 
         p1.rate = 0.01;
-        p2.rate = 0.02;
+        p2.rate = 0.015;
 
 		player = new Runner();
 		player.layer = Layers.top;
@@ -45,6 +45,7 @@ class MainScene extends BaseWorld
         this.add(p1);
         this.add(road);
 		this.add(player);
+        add(new Walker(player.x + 50, player.y));
 	}
 
     override public function update()

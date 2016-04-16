@@ -15,20 +15,20 @@
 
 Void __ASSET__font_04b_03___ttf_obj::__construct(::String __o_filename,::openfl::_legacy::text::FontStyle style,::openfl::_legacy::text::FontType type)
 {
-HX_STACK_FRAME("__ASSET__font_04b_03___ttf","new",0x28d5615d,"__ASSET__font_04b_03___ttf.new","DefaultAssetLibrary.hx",532,0x0fc48912)
+HX_STACK_FRAME("__ASSET__font_04b_03___ttf","new",0x28d5615d,"__ASSET__font_04b_03___ttf.new","DefaultAssetLibrary.hx",544,0x0fc48912)
 HX_STACK_THIS(this)
 HX_STACK_ARG(__o_filename,"filename")
 HX_STACK_ARG(style,"style")
 HX_STACK_ARG(type,"type")
 ::String filename = __o_filename.Default(HX_HCSTRING("","\x00","\x00","\x00","\x00"));
 {
-	HX_STACK_LINE(532)
+	HX_STACK_LINE(544)
 	::String tmp = filename;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(532)
+	HX_STACK_LINE(544)
 	::openfl::_legacy::text::FontStyle tmp1 = style;		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(532)
+	HX_STACK_LINE(544)
 	::openfl::_legacy::text::FontType tmp2 = type;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(532)
+	HX_STACK_LINE(544)
 	super::__construct(tmp,tmp1,tmp2);
 }
 ;

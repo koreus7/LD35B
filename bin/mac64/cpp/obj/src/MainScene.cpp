@@ -21,6 +21,9 @@
 #ifndef INCLUDED_Runner
 #include <Runner.h>
 #endif
+#ifndef INCLUDED_Walker
+#include <Walker.h>
+#endif
 #ifndef INCLUDED_com_haxepunk_Entity
 #include <com/haxepunk/Entity.h>
 #endif
@@ -235,7 +238,7 @@ Void MainScene_obj::begin( ){
 		HX_STACK_LINE(29)
 		::Paralax tmp19 = this->p2;		HX_STACK_VAR(tmp19,"tmp19");
 		HX_STACK_LINE(29)
-		tmp19->rate = ((Float)0.02);
+		tmp19->rate = ((Float)0.015);
 		HX_STACK_LINE(31)
 		::Runner tmp20 = ::Runner_obj::__new(null(),null(),null(),null());		HX_STACK_VAR(tmp20,"tmp20");
 		HX_STACK_LINE(31)
@@ -361,6 +364,64 @@ Void MainScene_obj::begin( ){
 		::Runner tmp37 = this->player;		HX_STACK_VAR(tmp37,"tmp37");
 		HX_STACK_LINE(47)
 		this->add(tmp37);
+		HX_STACK_LINE(48)
+		Float tmp38;		HX_STACK_VAR(tmp38,"tmp38");
+		HX_STACK_LINE(48)
+		{
+			HX_STACK_LINE(48)
+			::Runner tmp39 = this->player;		HX_STACK_VAR(tmp39,"tmp39");
+			HX_STACK_LINE(48)
+			::Runner _this = tmp39;		HX_STACK_VAR(_this,"_this");
+			HX_STACK_LINE(48)
+			bool tmp40 = _this->followCamera;		HX_STACK_VAR(tmp40,"tmp40");
+			HX_STACK_LINE(48)
+			if ((tmp40)){
+				HX_STACK_LINE(48)
+				Float tmp41 = _this->x;		HX_STACK_VAR(tmp41,"tmp41");
+				HX_STACK_LINE(48)
+				::openfl::_legacy::geom::Point tmp42 = ::com::haxepunk::HXP_obj::camera;		HX_STACK_VAR(tmp42,"tmp42");
+				HX_STACK_LINE(48)
+				Float tmp43 = tmp42->x;		HX_STACK_VAR(tmp43,"tmp43");
+				HX_STACK_LINE(48)
+				tmp38 = (tmp41 + tmp43);
+			}
+			else{
+				HX_STACK_LINE(48)
+				tmp38 = _this->x;
+			}
+		}
+		HX_STACK_LINE(48)
+		Float tmp39 = (tmp38 + (int)50);		HX_STACK_VAR(tmp39,"tmp39");
+		HX_STACK_LINE(48)
+		Float tmp40;		HX_STACK_VAR(tmp40,"tmp40");
+		HX_STACK_LINE(48)
+		{
+			HX_STACK_LINE(48)
+			::Runner tmp41 = this->player;		HX_STACK_VAR(tmp41,"tmp41");
+			HX_STACK_LINE(48)
+			::Runner _this = tmp41;		HX_STACK_VAR(_this,"_this");
+			HX_STACK_LINE(48)
+			bool tmp42 = _this->followCamera;		HX_STACK_VAR(tmp42,"tmp42");
+			HX_STACK_LINE(48)
+			if ((tmp42)){
+				HX_STACK_LINE(48)
+				Float tmp43 = _this->y;		HX_STACK_VAR(tmp43,"tmp43");
+				HX_STACK_LINE(48)
+				::openfl::_legacy::geom::Point tmp44 = ::com::haxepunk::HXP_obj::camera;		HX_STACK_VAR(tmp44,"tmp44");
+				HX_STACK_LINE(48)
+				Float tmp45 = tmp44->y;		HX_STACK_VAR(tmp45,"tmp45");
+				HX_STACK_LINE(48)
+				tmp40 = (tmp43 + tmp45);
+			}
+			else{
+				HX_STACK_LINE(48)
+				tmp40 = _this->y;
+			}
+		}
+		HX_STACK_LINE(48)
+		::Walker tmp41 = ::Walker_obj::__new(tmp39,tmp40);		HX_STACK_VAR(tmp41,"tmp41");
+		HX_STACK_LINE(48)
+		this->add(tmp41);
 	}
 return null();
 }
@@ -368,51 +429,51 @@ return null();
 
 Void MainScene_obj::update( ){
 {
-		HX_STACK_FRAME("MainScene","update",0x679956e4,"MainScene.update","MainScene.hx",51,0xb84de26b)
+		HX_STACK_FRAME("MainScene","update",0x679956e4,"MainScene.update","MainScene.hx",52,0xb84de26b)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(52)
+		HX_STACK_LINE(53)
 		Float tmp = ::com::haxepunk::HXP_obj::elapsed;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(52)
+		HX_STACK_LINE(53)
 		Float tmp1 = ::G_obj::timeSpeed;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(52)
+		HX_STACK_LINE(53)
 		Float tmp2 = (tmp * tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(52)
+		HX_STACK_LINE(53)
 		::G_obj::delta = tmp2;
-		HX_STACK_LINE(53)
+		HX_STACK_LINE(54)
 		int tmp3 = ::com::haxepunk::HXP_obj::width;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(53)
+		HX_STACK_LINE(54)
 		Float tmp4 = (Float(tmp3) / Float(((Float)2.0)));		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(53)
+		HX_STACK_LINE(54)
 		Float tmp5;		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(53)
+		HX_STACK_LINE(54)
 		{
-			HX_STACK_LINE(53)
+			HX_STACK_LINE(54)
 			::Runner tmp6 = this->player;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(53)
+			HX_STACK_LINE(54)
 			::Runner _this = tmp6;		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(53)
+			HX_STACK_LINE(54)
 			bool tmp7 = _this->followCamera;		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(53)
+			HX_STACK_LINE(54)
 			if ((tmp7)){
-				HX_STACK_LINE(53)
+				HX_STACK_LINE(54)
 				Float tmp8 = _this->x;		HX_STACK_VAR(tmp8,"tmp8");
-				HX_STACK_LINE(53)
+				HX_STACK_LINE(54)
 				::openfl::_legacy::geom::Point tmp9 = ::com::haxepunk::HXP_obj::camera;		HX_STACK_VAR(tmp9,"tmp9");
-				HX_STACK_LINE(53)
+				HX_STACK_LINE(54)
 				Float tmp10 = tmp9->x;		HX_STACK_VAR(tmp10,"tmp10");
-				HX_STACK_LINE(53)
+				HX_STACK_LINE(54)
 				tmp5 = (tmp8 + tmp10);
 			}
 			else{
-				HX_STACK_LINE(53)
+				HX_STACK_LINE(54)
 				tmp5 = _this->x;
 			}
 		}
-		HX_STACK_LINE(53)
-		Float tmp6 = (tmp4 - tmp5);		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(53)
-		::Paralax_obj::offset = tmp6;
 		HX_STACK_LINE(54)
+		Float tmp6 = (tmp4 - tmp5);		HX_STACK_VAR(tmp6,"tmp6");
+		HX_STACK_LINE(54)
+		::Paralax_obj::offset = tmp6;
+		HX_STACK_LINE(55)
 		this->super::update();
 	}
 return null();

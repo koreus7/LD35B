@@ -74,6 +74,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
@@ -110,6 +116,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("font/04B_03__.ttf.png", __ASSET__font_04b_03___ttf_png);
 		type.set ("font/04B_03__.ttf.png", AssetType.IMAGE);
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -633,6 +645,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("graphics/road.png", AssetType.IMAGE);
 		path.set ("graphics/runner.png", "graphics/runner.png");
 		type.set ("graphics/runner.png", AssetType.IMAGE);
+		path.set ("graphics/runneralt.png", "graphics/runneralt.png");
+		type.set ("graphics/runneralt.png", AssetType.IMAGE);
+		path.set ("graphics/walker.png", "graphics/walker.png");
+		type.set ("graphics/walker.png", AssetType.IMAGE);
+		path.set ("audio/Noir Jazz - Click Button.wav", "audio/Noir Jazz - Click Button.wav");
+		type.set ("audio/Noir Jazz - Click Button.wav", AssetType.SOUND);
+		path.set ("audio/Noir Jazz - Footsteps.wav", "audio/Noir Jazz - Footsteps.wav");
+		type.set ("audio/Noir Jazz - Footsteps.wav", AssetType.SOUND);
+		path.set ("audio/Noir Jazz - In Game Music.wav", "audio/Noir Jazz - In Game Music.wav");
+		type.set ("audio/Noir Jazz - In Game Music.wav", AssetType.SOUND);
+		path.set ("audio/Noir Jazz - Main Theme.wav", "audio/Noir Jazz - Main Theme.wav");
+		type.set ("audio/Noir Jazz - Main Theme.wav", AssetType.SOUND);
 		
 		
 		#elseif html5
@@ -697,6 +721,24 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "graphics/runner.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "graphics/runneralt.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "graphics/walker.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "audio/Noir Jazz - Click Button.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/Noir Jazz - Footsteps.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/Noir Jazz - In Game Music.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
+		id = "audio/Noir Jazz - Main Theme.wav";
+		path.set (id, id);
+		type.set (id, AssetType.SOUND);
 		
 		
 		var assetsPrefix = ApplicationMain.config.assetsPrefix;
@@ -720,6 +762,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__font_04b_03___ttf);
+		
+		
+		
+		
+		
+		
 		
 		
 		
@@ -765,6 +813,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("font/04B_03__.ttf.png", __ASSET__font_04b_03___ttf_png);
 		type.set ("font/04B_03__.ttf.png", AssetType.IMAGE);
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -1483,6 +1537,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
 #elseif html5
 
 
@@ -1495,6 +1555,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 @:keep #if display private #end class __ASSET__font_04b_03___ttf extends lime.text.Font { public function new () { super (); name = "04b03"; } } 
+
+
+
+
+
+
 
 
 

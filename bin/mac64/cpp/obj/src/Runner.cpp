@@ -79,7 +79,7 @@ Float x = __o_x.Default(100);
 Float y = __o_y.Default(100);
 {
 	HX_STACK_LINE(23)
-	this->_speed = (int)600;
+	this->_speed = (int)550;
 	HX_STACK_LINE(25)
 	::com::haxepunk::RenderMode tmp = ::com::haxepunk::HXP_obj::renderMode;		HX_STACK_VAR(tmp,"tmp");
 	HX_STACK_LINE(25)

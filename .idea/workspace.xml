@@ -2,19 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a790b3-d666-4364-a719-f51354387859" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/flash/bin/Main.swf" afterPath="$PROJECT_DIR$/bin/flash/bin/Main.swf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Walker.hx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/graphics/runner.png" afterPath="$PROJECT_DIR$/assets/graphics/runner.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/graphics/runneralt.xcf" afterPath="$PROJECT_DIR$/assets/graphics/runneralt.xcf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/bin/Main.app/Contents/MacOS/Main" afterPath="$PROJECT_DIR$/bin/mac64/cpp/bin/Main.app/Contents/MacOS/Main" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/bin/Main.app/Contents/Resources/graphics/runner.png" afterPath="$PROJECT_DIR$/bin/mac64/cpp/bin/Main.app/Contents/Resources/graphics/runner.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/obj/ApplicationMain" afterPath="$PROJECT_DIR$/bin/mac64/cpp/obj/ApplicationMain" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/obj/obj/darwin64/57588eaa_DefaultAssetLibrary.o" afterPath="$PROJECT_DIR$/bin/mac64/cpp/obj/obj/darwin64/57588eaa_DefaultAssetLibrary.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/obj/obj/darwin64/57588eaa_MainScene.o" afterPath="$PROJECT_DIR$/bin/mac64/cpp/obj/obj/darwin64/57588eaa_MainScene.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/obj/obj/darwin64/57588eaa_Runner.o" afterPath="$PROJECT_DIR$/bin/mac64/cpp/obj/obj/darwin64/57588eaa_Runner.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/obj/obj/darwin64/57588eaa___boot__.o" afterPath="$PROJECT_DIR$/bin/mac64/cpp/obj/obj/darwin64/57588eaa___boot__.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/LD35.iml" afterPath="$PROJECT_DIR$/LD35.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/.build" afterPath="$PROJECT_DIR$/bin/.build" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/flash/haxe/ApplicationMain.hx" afterPath="$PROJECT_DIR$/bin/flash/haxe/ApplicationMain.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LD35/Main.hx" afterPath="$PROJECT_DIR$/out/production/LD35/Main.hx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/bin/Main.app/Contents/Info.plist" afterPath="$PROJECT_DIR$/bin/mac64/cpp/bin/Main.app/Contents/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/bin/Main.app/Contents/Resources/manifest" afterPath="$PROJECT_DIR$/bin/mac64/cpp/bin/Main.app/Contents/Resources/manifest" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/haxe/ApplicationMain.hx" afterPath="$PROJECT_DIR$/bin/mac64/cpp/haxe/ApplicationMain.hx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/haxe/DefaultAssetLibrary.hx" afterPath="$PROJECT_DIR$/bin/mac64/cpp/haxe/DefaultAssetLibrary.hx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/haxe/lime/AssetData.hx" afterPath="$PROJECT_DIR$/bin/mac64/cpp/haxe/lime/AssetData.hx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/obj/Build.xml" afterPath="$PROJECT_DIR$/bin/mac64/cpp/obj/Build.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/obj/obj/darwin64/all_objs" afterPath="$PROJECT_DIR$/bin/mac64/cpp/obj/obj/darwin64/all_objs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/obj/src/DefaultAssetLibrary.cpp" afterPath="$PROJECT_DIR$/bin/mac64/cpp/obj/src/DefaultAssetLibrary.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/obj/src/MainScene.cpp" afterPath="$PROJECT_DIR$/bin/mac64/cpp/obj/src/MainScene.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/obj/src/Runner.cpp" afterPath="$PROJECT_DIR$/bin/mac64/cpp/obj/src/Runner.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/obj/src/__ASSET__font_04b_03___ttf.cpp" afterPath="$PROJECT_DIR$/bin/mac64/cpp/obj/src/__ASSET__font_04b_03___ttf.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/obj/src/__boot__.cpp" afterPath="$PROJECT_DIR$/bin/mac64/cpp/obj/src/__boot__.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/cpp/obj/src/__files__.cpp" afterPath="$PROJECT_DIR$/bin/mac64/cpp/obj/src/__files__.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LD35/MainScene.hx" afterPath="$PROJECT_DIR$/out/production/LD35/MainScene.hx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LD35/Runner.hx" afterPath="$PROJECT_DIR$/out/production/LD35/Runner.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/G.hx" afterPath="$PROJECT_DIR$/src/G.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.hx" afterPath="$PROJECT_DIR$/src/Main.hx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainScene.hx" afterPath="$PROJECT_DIR$/src/MainScene.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Paralax.hx" afterPath="$PROJECT_DIR$/src/Paralax.hx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Runner.hx" afterPath="$PROJECT_DIR$/src/Runner.hx" />
     </list>
     <ignored path="LD35.iws" />
@@ -38,11 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MainScene.hx" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainScene.hx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainScene.hx">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.27716535">
-              <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -82,7 +97,17 @@
         <entry file="file://$PROJECT_DIR$/src/Runner.hx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
+              <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Walker.hx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Walker.hx">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.4535433">
+              <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -100,6 +125,13 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HaxeClass" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -111,11 +143,12 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Runner.hx" />
         <option value="$PROJECT_DIR$/src/Main.hx" />
         <option value="$PROJECT_DIR$/src/Paralax.hx" />
         <option value="$PROJECT_DIR$/src/G.hx" />
+        <option value="$PROJECT_DIR$/src/Runner.hx" />
         <option value="$PROJECT_DIR$/src/MainScene.hx" />
+        <option value="$PROJECT_DIR$/src/Walker.hx" />
       </list>
     </option>
   </component>
@@ -750,12 +783,12 @@
       <updated>1460821198281</updated>
       <workItem from="1460821230541" duration="156000" />
       <workItem from="1460821393241" duration="154000" />
-      <workItem from="1460822126603" duration="2478000" />
+      <workItem from="1460822126603" duration="8210000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2788000" />
+    <option name="totallyTimeSpent" value="8520000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-649" width="1920" height="1057" extended-state="6" />
@@ -822,14 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Runner.hx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="32" column="8" selection-start-line="32" selection-start-column="8" selection-end-line="32" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/G.hx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -848,8 +873,24 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainScene.hx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27716535">
-          <caret line="28" column="22" selection-start-line="28" selection-start-column="22" selection-end-line="28" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Runner.hx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Walker.hx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4535433">
+          <caret line="18" column="64" selection-start-line="18" selection-start-column="64" selection-end-line="18" selection-end-column="64" />
           <folding />
         </state>
       </provider>

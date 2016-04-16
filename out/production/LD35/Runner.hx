@@ -20,7 +20,7 @@ class Runner extends BaseWorldEntity
 	public function new(x:Float=100, y:Float=100, graphic:Graphic=null, mask:Mask=null)  
 	{
 		
-		_speed = 600;
+		_speed = 550;
 		
 		_animatedSprite = new Spritemap("graphics/runner.png", 64, 64);
 		_animatedSprite.add("run", [0, 1, 2, 3, 4, 5], 12);

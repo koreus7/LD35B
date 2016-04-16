@@ -738,6 +738,9 @@
 #ifndef INCLUDED_com_haxepunk__Entity_SolidType_Impl_
 #include <com/haxepunk/_Entity/SolidType_Impl_.h>
 #endif
+#ifndef INCLUDED_Walker
+#include <Walker.h>
+#endif
 #ifndef INCLUDED_StringTools
 #include <StringTools.h>
 #endif
@@ -1099,6 +1102,7 @@ hx::RegisterResources( hx::GetResources() );
 ::com::haxepunk::_Graphic::ImageType_Impl__obj::__register();
 ::com::haxepunk::_Graphic::TileType_Impl__obj::__register();
 ::com::haxepunk::_Entity::SolidType_Impl__obj::__register();
+::Walker_obj::__register();
 ::StringTools_obj::__register();
 ::StringBuf_obj::__register();
 ::Runner_obj::__register();

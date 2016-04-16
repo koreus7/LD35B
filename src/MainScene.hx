@@ -45,6 +45,7 @@ class MainScene extends BaseWorld
         this.add(p1);
         this.add(road);
 		this.add(player);
+        add(new Walker(player.x + 50, player.y));
 	}
 
     override public function update()

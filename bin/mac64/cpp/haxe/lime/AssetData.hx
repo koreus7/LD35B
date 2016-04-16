@@ -48,6 +48,18 @@ class AssetData {
 			type.set ("graphics/road.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("graphics/runner.png", "graphics/runner.png");
 			type.set ("graphics/runner.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("graphics/runneralt.png", "graphics/runneralt.png");
+			type.set ("graphics/runneralt.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("graphics/walker.png", "graphics/walker.png");
+			type.set ("graphics/walker.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("audio/Noir Jazz - Click Button.wav", "audio/Noir Jazz - Click Button.wav");
+			type.set ("audio/Noir Jazz - Click Button.wav", Reflect.field (AssetType, "sound".toUpperCase ()));
+			path.set ("audio/Noir Jazz - Footsteps.wav", "audio/Noir Jazz - Footsteps.wav");
+			type.set ("audio/Noir Jazz - Footsteps.wav", Reflect.field (AssetType, "sound".toUpperCase ()));
+			path.set ("audio/Noir Jazz - In Game Music.wav", "audio/Noir Jazz - In Game Music.wav");
+			type.set ("audio/Noir Jazz - In Game Music.wav", Reflect.field (AssetType, "sound".toUpperCase ()));
+			path.set ("audio/Noir Jazz - Main Theme.wav", "audio/Noir Jazz - Main Theme.wav");
+			type.set ("audio/Noir Jazz - Main Theme.wav", Reflect.field (AssetType, "sound".toUpperCase ()));
 			
 			
 			initialized = true;
