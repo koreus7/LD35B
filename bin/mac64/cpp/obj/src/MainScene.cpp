@@ -1,5 +1,6 @@
 #include <hxcpp.h>
 
+#include "hxMath.h"
 #ifndef INCLUDED_BaseWorld
 #include <BaseWorld.h>
 #endif
@@ -20,6 +21,9 @@
 #endif
 #ifndef INCLUDED_Runner
 #include <Runner.h>
+#endif
+#ifndef INCLUDED_Utils
+#include <Utils.h>
 #endif
 #ifndef INCLUDED_Walker
 #include <Walker.h>
@@ -360,67 +364,136 @@ Void MainScene_obj::begin( ){
 		::BaseWorldEntity tmp36 = road;		HX_STACK_VAR(tmp36,"tmp36");
 		HX_STACK_LINE(46)
 		this->add(tmp36);
-		HX_STACK_LINE(47)
-		::Runner tmp37 = this->player;		HX_STACK_VAR(tmp37,"tmp37");
-		HX_STACK_LINE(47)
-		this->add(tmp37);
-		HX_STACK_LINE(48)
-		Float tmp38;		HX_STACK_VAR(tmp38,"tmp38");
-		HX_STACK_LINE(48)
+		HX_STACK_LINE(49)
 		{
-			HX_STACK_LINE(48)
+			HX_STACK_LINE(49)
+			int _g = (int)0;		HX_STACK_VAR(_g,"_g");
+			HX_STACK_LINE(49)
+			while((true)){
+				HX_STACK_LINE(49)
+				bool tmp37 = (_g < (int)20);		HX_STACK_VAR(tmp37,"tmp37");
+				HX_STACK_LINE(49)
+				bool tmp38 = !(tmp37);		HX_STACK_VAR(tmp38,"tmp38");
+				HX_STACK_LINE(49)
+				if ((tmp38)){
+					HX_STACK_LINE(49)
+					break;
+				}
+				HX_STACK_LINE(49)
+				int tmp39 = (_g)++;		HX_STACK_VAR(tmp39,"tmp39");
+				HX_STACK_LINE(49)
+				int i = tmp39;		HX_STACK_VAR(i,"i");
+				HX_STACK_LINE(52)
+				Float tmp40 = ::Math_obj::random();		HX_STACK_VAR(tmp40,"tmp40");
+				HX_STACK_LINE(52)
+				int tmp41 = ::com::haxepunk::HXP_obj::width;		HX_STACK_VAR(tmp41,"tmp41");
+				HX_STACK_LINE(52)
+				Float tmp42 = (tmp40 * tmp41);		HX_STACK_VAR(tmp42,"tmp42");
+				HX_STACK_LINE(52)
+				int tmp43 = ::Math_obj::floor(tmp42);		HX_STACK_VAR(tmp43,"tmp43");
+				HX_STACK_LINE(52)
+				int tmp44 = ::com::haxepunk::HXP_obj::width;		HX_STACK_VAR(tmp44,"tmp44");
+				HX_STACK_LINE(52)
+				int tmp45 = (tmp44 - (int)64);		HX_STACK_VAR(tmp45,"tmp45");
+				HX_STACK_LINE(52)
+				Float tmp46 = ::Utils_obj::clamp(tmp43,(int)0,tmp45);		HX_STACK_VAR(tmp46,"tmp46");
+				HX_STACK_LINE(53)
+				Float tmp47;		HX_STACK_VAR(tmp47,"tmp47");
+				HX_STACK_LINE(53)
+				{
+					HX_STACK_LINE(53)
+					::Runner tmp48 = this->player;		HX_STACK_VAR(tmp48,"tmp48");
+					HX_STACK_LINE(53)
+					::Runner _this = tmp48;		HX_STACK_VAR(_this,"_this");
+					HX_STACK_LINE(53)
+					bool tmp49 = _this->followCamera;		HX_STACK_VAR(tmp49,"tmp49");
+					HX_STACK_LINE(53)
+					if ((tmp49)){
+						HX_STACK_LINE(53)
+						Float tmp50 = _this->y;		HX_STACK_VAR(tmp50,"tmp50");
+						HX_STACK_LINE(53)
+						::openfl::_legacy::geom::Point tmp51 = ::com::haxepunk::HXP_obj::camera;		HX_STACK_VAR(tmp51,"tmp51");
+						HX_STACK_LINE(53)
+						Float tmp52 = tmp51->y;		HX_STACK_VAR(tmp52,"tmp52");
+						HX_STACK_LINE(53)
+						tmp47 = (tmp50 + tmp52);
+					}
+					else{
+						HX_STACK_LINE(53)
+						tmp47 = _this->y;
+					}
+				}
+				HX_STACK_LINE(51)
+				::Walker tmp48 = ::Walker_obj::__new(tmp46,tmp47);		HX_STACK_VAR(tmp48,"tmp48");
+				HX_STACK_LINE(51)
+				::Walker walker = tmp48;		HX_STACK_VAR(walker,"walker");
+				HX_STACK_LINE(55)
+				::Walker tmp49 = walker;		HX_STACK_VAR(tmp49,"tmp49");
+				HX_STACK_LINE(55)
+				this->add(tmp49);
+			}
+		}
+		HX_STACK_LINE(60)
+		::Runner tmp37 = this->player;		HX_STACK_VAR(tmp37,"tmp37");
+		HX_STACK_LINE(60)
+		this->add(tmp37);
+		HX_STACK_LINE(61)
+		Float tmp38;		HX_STACK_VAR(tmp38,"tmp38");
+		HX_STACK_LINE(61)
+		{
+			HX_STACK_LINE(61)
 			::Runner tmp39 = this->player;		HX_STACK_VAR(tmp39,"tmp39");
-			HX_STACK_LINE(48)
+			HX_STACK_LINE(61)
 			::Runner _this = tmp39;		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(48)
+			HX_STACK_LINE(61)
 			bool tmp40 = _this->followCamera;		HX_STACK_VAR(tmp40,"tmp40");
-			HX_STACK_LINE(48)
+			HX_STACK_LINE(61)
 			if ((tmp40)){
-				HX_STACK_LINE(48)
+				HX_STACK_LINE(61)
 				Float tmp41 = _this->x;		HX_STACK_VAR(tmp41,"tmp41");
-				HX_STACK_LINE(48)
+				HX_STACK_LINE(61)
 				::openfl::_legacy::geom::Point tmp42 = ::com::haxepunk::HXP_obj::camera;		HX_STACK_VAR(tmp42,"tmp42");
-				HX_STACK_LINE(48)
+				HX_STACK_LINE(61)
 				Float tmp43 = tmp42->x;		HX_STACK_VAR(tmp43,"tmp43");
-				HX_STACK_LINE(48)
+				HX_STACK_LINE(61)
 				tmp38 = (tmp41 + tmp43);
 			}
 			else{
-				HX_STACK_LINE(48)
+				HX_STACK_LINE(61)
 				tmp38 = _this->x;
 			}
 		}
-		HX_STACK_LINE(48)
+		HX_STACK_LINE(61)
 		Float tmp39 = (tmp38 + (int)50);		HX_STACK_VAR(tmp39,"tmp39");
-		HX_STACK_LINE(48)
+		HX_STACK_LINE(61)
 		Float tmp40;		HX_STACK_VAR(tmp40,"tmp40");
-		HX_STACK_LINE(48)
+		HX_STACK_LINE(61)
 		{
-			HX_STACK_LINE(48)
+			HX_STACK_LINE(61)
 			::Runner tmp41 = this->player;		HX_STACK_VAR(tmp41,"tmp41");
-			HX_STACK_LINE(48)
+			HX_STACK_LINE(61)
 			::Runner _this = tmp41;		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(48)
+			HX_STACK_LINE(61)
 			bool tmp42 = _this->followCamera;		HX_STACK_VAR(tmp42,"tmp42");
-			HX_STACK_LINE(48)
+			HX_STACK_LINE(61)
 			if ((tmp42)){
-				HX_STACK_LINE(48)
+				HX_STACK_LINE(61)
 				Float tmp43 = _this->y;		HX_STACK_VAR(tmp43,"tmp43");
-				HX_STACK_LINE(48)
+				HX_STACK_LINE(61)
 				::openfl::_legacy::geom::Point tmp44 = ::com::haxepunk::HXP_obj::camera;		HX_STACK_VAR(tmp44,"tmp44");
-				HX_STACK_LINE(48)
+				HX_STACK_LINE(61)
 				Float tmp45 = tmp44->y;		HX_STACK_VAR(tmp45,"tmp45");
-				HX_STACK_LINE(48)
+				HX_STACK_LINE(61)
 				tmp40 = (tmp43 + tmp45);
 			}
 			else{
-				HX_STACK_LINE(48)
+				HX_STACK_LINE(61)
 				tmp40 = _this->y;
 			}
 		}
-		HX_STACK_LINE(48)
+		HX_STACK_LINE(61)
 		::Walker tmp41 = ::Walker_obj::__new(tmp39,tmp40);		HX_STACK_VAR(tmp41,"tmp41");
-		HX_STACK_LINE(48)
+		HX_STACK_LINE(61)
 		this->add(tmp41);
 	}
 return null();
@@ -429,51 +502,51 @@ return null();
 
 Void MainScene_obj::update( ){
 {
-		HX_STACK_FRAME("MainScene","update",0x679956e4,"MainScene.update","MainScene.hx",52,0xb84de26b)
+		HX_STACK_FRAME("MainScene","update",0x679956e4,"MainScene.update","MainScene.hx",65,0xb84de26b)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(53)
+		HX_STACK_LINE(66)
 		Float tmp = ::com::haxepunk::HXP_obj::elapsed;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(53)
+		HX_STACK_LINE(66)
 		Float tmp1 = ::G_obj::timeSpeed;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(53)
+		HX_STACK_LINE(66)
 		Float tmp2 = (tmp * tmp1);		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(53)
+		HX_STACK_LINE(66)
 		::G_obj::delta = tmp2;
-		HX_STACK_LINE(54)
+		HX_STACK_LINE(67)
 		int tmp3 = ::com::haxepunk::HXP_obj::width;		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(54)
+		HX_STACK_LINE(67)
 		Float tmp4 = (Float(tmp3) / Float(((Float)2.0)));		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(54)
+		HX_STACK_LINE(67)
 		Float tmp5;		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(54)
+		HX_STACK_LINE(67)
 		{
-			HX_STACK_LINE(54)
+			HX_STACK_LINE(67)
 			::Runner tmp6 = this->player;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(54)
+			HX_STACK_LINE(67)
 			::Runner _this = tmp6;		HX_STACK_VAR(_this,"_this");
-			HX_STACK_LINE(54)
+			HX_STACK_LINE(67)
 			bool tmp7 = _this->followCamera;		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(54)
+			HX_STACK_LINE(67)
 			if ((tmp7)){
-				HX_STACK_LINE(54)
+				HX_STACK_LINE(67)
 				Float tmp8 = _this->x;		HX_STACK_VAR(tmp8,"tmp8");
-				HX_STACK_LINE(54)
+				HX_STACK_LINE(67)
 				::openfl::_legacy::geom::Point tmp9 = ::com::haxepunk::HXP_obj::camera;		HX_STACK_VAR(tmp9,"tmp9");
-				HX_STACK_LINE(54)
+				HX_STACK_LINE(67)
 				Float tmp10 = tmp9->x;		HX_STACK_VAR(tmp10,"tmp10");
-				HX_STACK_LINE(54)
+				HX_STACK_LINE(67)
 				tmp5 = (tmp8 + tmp10);
 			}
 			else{
-				HX_STACK_LINE(54)
+				HX_STACK_LINE(67)
 				tmp5 = _this->x;
 			}
 		}
-		HX_STACK_LINE(54)
+		HX_STACK_LINE(67)
 		Float tmp6 = (tmp4 - tmp5);		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(54)
+		HX_STACK_LINE(67)
 		::Paralax_obj::offset = tmp6;
-		HX_STACK_LINE(55)
+		HX_STACK_LINE(68)
 		this->super::update();
 	}
 return null();

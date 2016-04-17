@@ -9,6 +9,7 @@
 #include <BaseWorldEntity.h>
 #endif
 HX_DECLARE_CLASS0(BaseWorldEntity)
+HX_DECLARE_CLASS0(TimerEntity)
 HX_DECLARE_CLASS0(Walker)
 HX_DECLARE_CLASS2(com,haxepunk,Entity)
 HX_DECLARE_CLASS2(com,haxepunk,Graphic)
@@ -34,6 +35,7 @@ class HXCPP_CLASS_ATTRIBUTES  Walker_obj : public ::BaseWorldEntity_obj{
 
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
+		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
 		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
@@ -42,7 +44,45 @@ class HXCPP_CLASS_ATTRIBUTES  Walker_obj : public ::BaseWorldEntity_obj{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("Walker","\xd6","\x3d","\x9f","\xea"); }
 
+		static void __boot();
 		::com::haxepunk::graphics::Spritemap _animatedSprite;
+		Float _speed;
+		Float _speedMod;
+		bool isShapeShifter;
+		::TimerEntity turnTimer;
+		Float _maxTurnTime;
+		Float _minTurnTime;
+		bool goingRight;
+		::TimerEntity slowDownTimer;
+		bool _isOld;
+		Float _speed2FR;
+		bool goingFast;
+		int walkerId;
+		int dontOvertakeID;
+		virtual Void update( );
+
+		virtual int getWalkerId( );
+		Dynamic getWalkerId_dyn();
+
+		virtual Float getSpeed( );
+		Dynamic getSpeed_dyn();
+
+		virtual bool isGoingRight( );
+		Dynamic isGoingRight_dyn();
+
+		virtual bool isGoingFast( );
+		Dynamic isGoingFast_dyn();
+
+		virtual Void walkFast( );
+		Dynamic walkFast_dyn();
+
+		virtual Void walk( Dynamic data);
+		Dynamic walk_dyn();
+
+		virtual Void turn( Dynamic data);
+		Dynamic turn_dyn();
+
+		static int idCount;
 };
 
 

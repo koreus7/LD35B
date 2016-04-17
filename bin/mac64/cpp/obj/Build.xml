@@ -1834,6 +1834,8 @@
   </file>
   <file name="src/Walker.cpp">
    <depend name="include/BaseWorldEntity.h"/>
+   <depend name="include/G.h"/>
+   <depend name="include/TimerEntity.h"/>
    <depend name="include/Walker.h"/>
    <depend name="include/com/haxepunk/Entity.h"/>
    <depend name="include/com/haxepunk/Graphic.h"/>
@@ -1852,6 +1854,19 @@
    <depend name="include/haxe/ds/StringMap.h"/>
    <depend name="include/openfl/_legacy/display/BitmapData.h"/>
    <depend name="include/openfl/_legacy/display/IBitmapDrawable.h"/>
+   <depend name="include/openfl/_legacy/geom/Point.h"/>
+  </file>
+  <file name="src/Utils.cpp">
+   <depend name="include/Utils.h"/>
+  </file>
+  <file name="src/TimerEntity.cpp">
+   <depend name="include/TimerEntity.h"/>
+   <depend name="include/com/haxepunk/Entity.h"/>
+   <depend name="include/com/haxepunk/Graphic.h"/>
+   <depend name="include/com/haxepunk/HXP.h"/>
+   <depend name="include/com/haxepunk/Mask.h"/>
+   <depend name="include/com/haxepunk/Scene.h"/>
+   <depend name="include/com/haxepunk/Tweener.h"/>
   </file>
   <file name="src/StringTools.cpp">
    <depend name="include/StringTools.h"/>
@@ -1948,6 +1963,7 @@
    <depend name="include/P5.h"/>
    <depend name="include/Paralax.h"/>
    <depend name="include/Runner.h"/>
+   <depend name="include/Utils.h"/>
    <depend name="include/Walker.h"/>
    <depend name="include/com/haxepunk/Entity.h"/>
    <depend name="include/com/haxepunk/Graphic.h"/>
@@ -2761,6 +2777,7 @@
    <depend name="include/com/haxepunk/debug/Console.h"/>
    <depend name="include/com/haxepunk/Sfx.h"/>
    <depend name="include/Xml.h"/>
+   <depend name="include/Walker.h"/>
    <depend name="include/P5.h"/>
    <depend name="include/Layers.h"/>
    <depend name="include/G.h"/>

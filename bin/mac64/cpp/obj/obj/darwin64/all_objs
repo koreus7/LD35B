@@ -216,6 +216,8 @@ obj/darwin64/af6b507c_TileType_Impl_.o
 obj/darwin64/2386e4b5_SolidType_Impl_.o
 obj/darwin64/57588eaa_Xml.o
 obj/darwin64/57588eaa_Walker.o
+obj/darwin64/57588eaa_Utils.o
+obj/darwin64/57588eaa_TimerEntity.o
 obj/darwin64/57588eaa_StringTools.o
 obj/darwin64/57588eaa_StringBuf.o
 obj/darwin64/57588eaa_Runner.o

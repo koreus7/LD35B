@@ -11,5 +11,14 @@ class BaseWorld extends Scene
 	{
 		super();
 	}
-	
+
+/*
+	public function delay(time : Float, callback : Dynamic) : TimerEntity
+    {
+        var t : TimerEntity = new TimerEntity(time, callback);
+        add(t);
+        return t;
+    }
+
+	*/
 }

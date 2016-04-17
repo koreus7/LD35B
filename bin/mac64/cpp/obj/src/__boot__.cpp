@@ -366,6 +366,9 @@
 #ifndef INCLUDED_Xml
 #include <Xml.h>
 #endif
+#ifndef INCLUDED_Walker
+#include <Walker.h>
+#endif
 #ifndef INCLUDED_P5
 #include <P5.h>
 #endif
@@ -738,8 +741,11 @@
 #ifndef INCLUDED_com_haxepunk__Entity_SolidType_Impl_
 #include <com/haxepunk/_Entity/SolidType_Impl_.h>
 #endif
-#ifndef INCLUDED_Walker
-#include <Walker.h>
+#ifndef INCLUDED_Utils
+#include <Utils.h>
+#endif
+#ifndef INCLUDED_TimerEntity
+#include <TimerEntity.h>
 #endif
 #ifndef INCLUDED_StringTools
 #include <StringTools.h>
@@ -978,6 +984,7 @@ hx::RegisterResources( hx::GetResources() );
 ::com::haxepunk::debug::Console_obj::__register();
 ::com::haxepunk::Sfx_obj::__register();
 ::Xml_obj::__register();
+::Walker_obj::__register();
 ::P5_obj::__register();
 ::Layers_obj::__register();
 ::G_obj::__register();
@@ -1102,7 +1109,8 @@ hx::RegisterResources( hx::GetResources() );
 ::com::haxepunk::_Graphic::ImageType_Impl__obj::__register();
 ::com::haxepunk::_Graphic::TileType_Impl__obj::__register();
 ::com::haxepunk::_Entity::SolidType_Impl__obj::__register();
-::Walker_obj::__register();
+::Utils_obj::__register();
+::TimerEntity_obj::__register();
 ::StringTools_obj::__register();
 ::StringBuf_obj::__register();
 ::Runner_obj::__register();
@@ -1216,6 +1224,7 @@ hx::RegisterResources( hx::GetResources() );
 ::G_obj::__boot();
 ::Layers_obj::__boot();
 ::P5_obj::__boot();
+::Walker_obj::__boot();
 ::Xml_obj::__boot();
 ::com::haxepunk::Sfx_obj::__boot();
 ::com::haxepunk::debug::Console_obj::__boot();

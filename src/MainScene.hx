@@ -44,6 +44,19 @@ class MainScene extends BaseWorld
         this.add(p2);
         this.add(p1);
         this.add(road);
+
+
+        for(i in 0...20)
+        {
+            var walker : Walker = new Walker(
+                Utils.clamp(Utils.randInt(HXP.width), 0, HXP.width - 64),
+                player.y
+            );
+            add(walker);
+        }
+
+
+
 		this.add(player);
         add(new Walker(player.x + 50, player.y));
 	}
