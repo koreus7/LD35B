@@ -3,6 +3,7 @@ import com.haxepunk.Entity;
 import com.haxepunk.graphics.Image;
 class Lamp extends BaseWorldEntity
 {
+
     var lampSprite : Image;
    // var light : Entity;
 
@@ -16,6 +17,11 @@ class Lamp extends BaseWorldEntity
         graphic = lampSprite;
 
 
+
+        setHitbox(128,128);
+
+        type = "Lamp";
+
     }
 
     override public function firstUpdateCallback():Void
@@ -28,14 +34,8 @@ class Lamp extends BaseWorldEntity
     override public function update() : Void
     {
 
-        super.update();
 
-        /*
-        if(light != null)
-        {
-            light.x = x + lampSprite.width/2 - 256;
-            light.y = y;
-        }*/
+        super.update();
 
     }
 

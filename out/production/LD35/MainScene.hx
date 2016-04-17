@@ -40,29 +40,30 @@ class MainScene extends BaseWorld
         road.layer = Layers.main;
 
 
-
         this.add(background);
         this.add(p2);
         this.add(p1);
         this.add(road);
-        this.add(new LightMask());
-
-        var lampA = new Lamp(0, G.ground - 134);
-        lampA.centerX = 200;
-
-        this.add(lampA);
-
-        var lampB = new Lamp(0, G.ground - 134);
-        lampB.centerX = 526;
-
-        this.add(lampB);
 
 
-        for(i in 0...3)
+        var lightMask = new LightMask();
+        LightMask.lampTop = G.ground - 130;
+
+
+
+        this.add(lightMask);
+
+
+        for(i in 0...10)
         {
+
+            var shifter = Utils.randInt(10) <= 2;
             var walker : Walker = new Walker(
                 Utils.clamp(Utils.randInt(HXP.width), 0, HXP.width - 64),
-                player.y
+                player.y,
+                Utils.coinFlip(),
+                shifter,
+                Utils.coinFlip()
             );
             add(walker);
         }

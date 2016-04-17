@@ -46,4 +46,27 @@ class Utils
         return  a <= b - tollerance && a + tollerance >= b;
     }
 
+    public static function compareFloat(a : Float, b : Float)
+    {
+        if( a > b )
+        {
+            return 1;
+        }
+        if(a < b)
+        {
+            return -1;
+        }
+        return 0;
+    }
+
+    public static inline function radToDeg(angle:Float):Float
+    {
+        return 57.2957795 * angle;
+    }
+
+    public static inline function degToRad(angle:Float):Float
+    {
+        return angle / 57.2957795;
+    }
+
 }

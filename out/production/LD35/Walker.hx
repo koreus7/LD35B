@@ -13,14 +13,14 @@ class Walker extends BaseWorldEntity
     private var _speed : Float;
     private var _speedMod : Float;
 
-    public var isShapeShifter : Bool;
-
     private var turnTimer : TimerEntity;
 
     private var _maxTurnTime : Float;
     private var _minTurnTime : Float;
 
     private var goingRight : Bool;
+
+    public var isShapeShifter : Bool;
 
     private var slowDownTimer : TimerEntity;
 
@@ -37,11 +37,17 @@ class Walker extends BaseWorldEntity
     //Walker to temporarily not overtake.
     private var dontOvertakeID : Int;
 
+    private var inLight : Bool;
 
-    public function new(x : Float, y : Float)
+    private var shiftTimer : TimerEntity;
+
+    private var shifted : Bool;
+
+    public function new(x : Float, y : Float, isOld : Bool, isShapeShifter : Bool, goingRight : Bool)
     {
         super(x,y);
 
+        this.isShapeShifter = isShapeShifter;
         walkerId = idCount;
         idCount ++;
 
@@ -53,16 +59,16 @@ class Walker extends BaseWorldEntity
         _speed2FR= 0.2;
         _speedMod = 1.0;
         goingFast = false;
-
+        shifted = false;
 
         _animatedSprite = new Spritemap("graphics/walker.png", 64, 64);
 
-        _isOld = false;
+        _isOld = isOld;
 
         this.graphic = _animatedSprite;
 
 
-        if(Utils.coinFlip())
+        if(!isOld)
         {
 
             _speed = 50 + Utils.randInt(20);
@@ -73,7 +79,6 @@ class Walker extends BaseWorldEntity
         }
         else
         {
-            _isOld = true;
             _speed = 30 + Utils.randInt(20);
             _animatedSprite.add("hobble", [8, 9, 10, 11, 12, 13, 14, 15], _speed * _speed2FR);
             _animatedSprite.play("hobble");
@@ -82,9 +87,12 @@ class Walker extends BaseWorldEntity
         setHitbox(_animatedSprite.width, _animatedSprite.height);
 
 
-        goingRight = Utils.coinFlip();
+        this.goingRight = goingRight;
 
         turn();
+
+
+
     }
 
     override public function update() : Void
@@ -162,7 +170,34 @@ class Walker extends BaseWorldEntity
         {
             walk();
         }
-        
+
+        if(collide("Lamp",x,y) == null)
+        {
+            inLight = false;
+        }
+        else
+        {
+            inLight = true;
+        }
+
+        super.update();
+    }
+
+    override public function firstUpdateCallback() : Void
+    {
+        if(this.isShapeShifter)
+        {
+            shiftTimer = new TimerEntity(5, shapeShiftTimerCallback, true);
+            scene.add(shiftTimer);
+        }
+    }
+
+    public function shapeShiftTimerCallback(data : Dynamic = null) : Void
+    {
+        if(!inLight)
+        {
+            shapeShift();
+        }
     }
 
     public function getWalkerId() : Int
@@ -202,5 +237,29 @@ class Walker extends BaseWorldEntity
     private function turn ( data:Dynamic = null ) : Void
     {
         goingRight = !goingRight;
+    }
+
+    public function triggerShapeShift() : Void
+    {
+        if(isShapeShifter)
+        {
+            shapeShift();
+        }
+    }
+
+
+    private function shapeShift() : Void
+    {
+        if(!shifted)
+        {
+            trace("shift" + getWalkerId());
+            var newForm : Walker = new Walker(x,y, !_isOld, true, !goingRight);
+            if(G.world== null) trace("baseWorld");
+            G.world.add(newForm);
+            graphic.destroy();
+            G.world.remove(shiftTimer);
+            G.world.remove(this);
+            shifted = true;
+        }
     }
 }

@@ -11,17 +11,9 @@ class BaseWorld extends Scene
 
 	public function new() 
 	{
+		G.world = this;
 		super();
 	}
 
-	public function addLight(image : String, x : Float, y : Float) : Entity
-	{
-
-		var light : Light = new Light(x,y, new Image(image));
-		light.layer = Layers.lights;
-		add(light);
-
-		return light;
-	}
 
 }
