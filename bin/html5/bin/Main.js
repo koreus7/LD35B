@@ -55,6 +55,18 @@ ApplicationMain.create = function() {
 	types.push("IMAGE");
 	urls.push("graphics/runner.png");
 	types.push("IMAGE");
+	urls.push("graphics/runneralt.png");
+	types.push("IMAGE");
+	urls.push("graphics/walker.png");
+	types.push("IMAGE");
+	urls.push("audio/Noir Jazz - Click Button.wav");
+	types.push("SOUND");
+	urls.push("audio/Noir Jazz - Footsteps.wav");
+	types.push("SOUND");
+	urls.push("audio/Noir Jazz - In Game Music.wav");
+	types.push("SOUND");
+	urls.push("audio/Noir Jazz - Main Theme.wav");
+	types.push("SOUND");
 	if(ApplicationMain.config.assetsPrefix != null) {
 		var _g1 = 0;
 		var _g = urls.length;
@@ -77,7 +89,7 @@ ApplicationMain.init = function() {
 	if(total == 0) ApplicationMain.start();
 };
 ApplicationMain.main = function() {
-	ApplicationMain.config = { build : "20", company : "", file : "Main", fps : 60, name : "HaxePunk_Project", orientation : "", packageName : "com.example.app", version : "1.0.0", windows : [{ antialiasing : 0, background : 3355443, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 450, parameters : "{}", resizable : true, stencilBuffer : true, title : "HaxePunk_Project", vsync : false, width : 750, x : null, y : null}]};
+	ApplicationMain.config = { build : "233", company : "", file : "Main", fps : 60, name : "HaxePunk_Project", orientation : "", packageName : "com.example.app", version : "1.0.0", windows : [{ antialiasing : 0, background : 3355443, borderless : false, depthBuffer : false, display : 0, fullscreen : false, hardware : true, height : 450, parameters : "{}", resizable : true, stencilBuffer : true, title : "HaxePunk_Project", vsync : false, width : 750, x : null, y : null}]};
 };
 ApplicationMain.start = function() {
 	var hasMain = false;
@@ -1513,15 +1525,8 @@ Main.prototype = $extend(com_haxepunk_Engine.prototype,{
 		}(this))).toggleKey = 114;
 		com_haxepunk_HXP.set_scene(new MainScene());
 	}
-	,onStage: function(e) {
-		com_haxepunk_Engine.prototype.onStage.call(this,e);
-		this.onResize(new openfl_events_Event("resize"));
-		com_haxepunk_HXP.stage.addEventListener(openfl_events_Event.RESIZE,$bind(this,this.onResize));
-	}
-	,onResize: function(event) {
-		com_haxepunk_HXP.width = com_haxepunk_HXP.stage.stageWidth;
-		com_haxepunk_HXP.height = com_haxepunk_HXP.stage.stageHeight;
-		com_haxepunk_HXP.resize(com_haxepunk_HXP.stage.stageWidth,com_haxepunk_HXP.stage.stageHeight);
+	,update: function() {
+		if(com_haxepunk_utils_Input.pressed(com_haxepunk_utils__$Input_InputType_$Impl_$.fromRight(70))) com_haxepunk_HXP.set_fullscreen(!(com_haxepunk_HXP.stage.__displayState == openfl_display_StageDisplayState.FULL_SCREEN));
 	}
 	,__class__: Main
 });
@@ -4962,6 +4967,24 @@ var DefaultAssetLibrary = function() {
 	id = "graphics/runner.png";
 	this.path.set(id,id);
 	this.type.set(id,"IMAGE");
+	id = "graphics/runneralt.png";
+	this.path.set(id,id);
+	this.type.set(id,"IMAGE");
+	id = "graphics/walker.png";
+	this.path.set(id,id);
+	this.type.set(id,"IMAGE");
+	id = "audio/Noir Jazz - Click Button.wav";
+	this.path.set(id,id);
+	this.type.set(id,"SOUND");
+	id = "audio/Noir Jazz - Footsteps.wav";
+	this.path.set(id,id);
+	this.type.set(id,"SOUND");
+	id = "audio/Noir Jazz - In Game Music.wav";
+	this.path.set(id,id);
+	this.type.set(id,"SOUND");
+	id = "audio/Noir Jazz - Main Theme.wav";
+	this.path.set(id,id);
+	this.type.set(id,"SOUND");
 	var assetsPrefix = ApplicationMain.config.assetsPrefix;
 	if(assetsPrefix != null) {
 		var $it0 = this.path.keys();
@@ -5268,8 +5291,6 @@ EReg.prototype = {
 var G = function() { };
 $hxClasses["G"] = G;
 G.__name__ = ["G"];
-G.delta = null;
-G.timeSpeed = null;
 var HxOverrides = function() { };
 $hxClasses["HxOverrides"] = HxOverrides;
 HxOverrides.__name__ = ["HxOverrides"];
@@ -5423,6 +5444,7 @@ MainScene.prototype = $extend(BaseWorld.prototype,{
 	,p2: null
 	,player: null
 	,begin: function() {
+		G.ground = com_haxepunk_HXP.height - 30.0;
 		P5.fill(2565927,1.0);
 		P5.noStroke();
 		this.addGraphic(P5.rect(com_haxepunk_HXP.width / 2,com_haxepunk_HXP.height / 2,com_haxepunk_HXP.width,com_haxepunk_HXP.height),100);
@@ -5447,19 +5469,45 @@ MainScene.prototype = $extend(BaseWorld.prototype,{
 		this.p1.set_layer(80);
 		this.p2 = new Paralax(0,0,"graphics/paralax2.png");
 		this.p2.set_layer(90);
-		this.p1.rate = 0.8;
-		this.p2.rate = 0.9;
+		this.p1.rate = 0.01;
+		this.p2.rate = 0.015;
 		this.player = new Runner();
 		this.player.set_layer(60);
+		this.player.x = com_haxepunk_HXP.width / 2;
+		this.player.y = G.ground - 64;
+		var road = new BaseWorldEntity(0,0,new com_haxepunk_graphics_Image(com_haxepunk_HXP.renderMode == com_haxepunk_RenderMode.HARDWARE?(function($this) {
+			var $r;
+			var e2 = com_haxepunk_ds_Either.Right(com_haxepunk_graphics_atlas_Atlas.loadImageAsRegion((function($this) {
+				var $r;
+				var data1 = com_haxepunk_graphics_atlas_AtlasData.getAtlasDataByName("graphics/road.png",true);
+				$r = data1;
+				return $r;
+			}($this))));
+			$r = e2;
+			return $r;
+		}(this)):(function($this) {
+			var $r;
+			var e3 = com_haxepunk_ds_Either.Left(com_haxepunk_HXP.getBitmap("graphics/road.png"));
+			$r = e3;
+			return $r;
+		}(this))));
+		road.set_layer(70);
 		this.add(background);
 		this.add(this.p2);
 		this.add(this.p1);
+		this.add(road);
+		var _g = 0;
+		while(_g < 20) {
+			var i = _g++;
+			var walker = new Walker(Utils.clamp(Math.floor(Math.random() * com_haxepunk_HXP.width),0,com_haxepunk_HXP.width - 64),this.player.get_y());
+			this.add(walker);
+		}
 		this.add(this.player);
+		this.add(new Walker(this.player.get_x() + 50,this.player.get_y()));
 	}
 	,update: function() {
-		haxe_Log.trace(this.player.get_x(),{ fileName : "MainScene.hx", lineNumber : 40, className : "MainScene", methodName : "update"});
 		G.delta = com_haxepunk_HXP.elapsed * G.timeSpeed;
-		Paralax.offset = this.player.get_x() - com_haxepunk_HXP.width / 2.0;
+		Paralax.offset = com_haxepunk_HXP.width / 2.0 - this.player.get_x();
 		BaseWorld.prototype.update.call(this);
 	}
 	,__class__: MainScene
@@ -5917,7 +5965,7 @@ P5.prototype = $extend(com_haxepunk_Graphic.prototype,{
 	__class__: P5
 });
 var Paralax = function(x,y,imagePath) {
-	BaseWorldEntity.call(this,x,y,new com_haxepunk_graphics_Image(com_haxepunk_HXP.renderMode == com_haxepunk_RenderMode.HARDWARE?(function($this) {
+	this.image = new com_haxepunk_graphics_Image(com_haxepunk_HXP.renderMode == com_haxepunk_RenderMode.HARDWARE?(function($this) {
 		var $r;
 		var e = com_haxepunk_ds_Either.Right(com_haxepunk_graphics_atlas_Atlas.loadImageAsRegion((function($this) {
 			var $r;
@@ -5932,7 +5980,8 @@ var Paralax = function(x,y,imagePath) {
 		var e1 = com_haxepunk_ds_Either.Left(com_haxepunk_HXP.getBitmap(imagePath));
 		$r = e1;
 		return $r;
-	}(this))));
+	}(this)));
+	BaseWorldEntity.call(this,x,y,this.image);
 };
 $hxClasses["Paralax"] = Paralax;
 Paralax.__name__ = ["Paralax"];
@@ -5940,7 +5989,9 @@ Paralax.offset = null;
 Paralax.__super__ = BaseWorldEntity;
 Paralax.prototype = $extend(BaseWorldEntity.prototype,{
 	rate: null
+	,image: null
 	,update: function() {
+		this.set_x(com_haxepunk_HXP.width / 2 - this.image.get_width() / 2);
 		this._graphic.x = Paralax.offset * this.rate;
 	}
 	,__class__: Paralax
@@ -5948,7 +5999,7 @@ Paralax.prototype = $extend(BaseWorldEntity.prototype,{
 var Runner = function(x,y,graphic,mask) {
 	if(y == null) y = 100;
 	if(x == null) x = 100;
-	this._speed = 600;
+	this._speed = 550;
 	this._animatedSprite = new com_haxepunk_graphics_Spritemap(com_haxepunk_HXP.renderMode == com_haxepunk_RenderMode.HARDWARE?(function($this) {
 		var $r;
 		var e = com_haxepunk_ds_Either.Right(new com_haxepunk_graphics_atlas_TileAtlas((function($this) {
@@ -6075,6 +6126,37 @@ StringTools.hex = function(n,digits) {
 StringTools.fastCodeAt = function(s,index) {
 	return s.charCodeAt(index);
 };
+var TimerEntity = function(time,_callback,reusable) {
+	if(reusable == null) reusable = false;
+	com_haxepunk_Entity.call(this);
+	this.timeElapsed = 0;
+	this.time = time;
+	this._callback = _callback;
+	this.reusable = reusable;
+};
+$hxClasses["TimerEntity"] = TimerEntity;
+TimerEntity.__name__ = ["TimerEntity"];
+TimerEntity.__super__ = com_haxepunk_Entity;
+TimerEntity.prototype = $extend(com_haxepunk_Entity.prototype,{
+	_callback: null
+	,time: null
+	,timeElapsed: null
+	,reusable: null
+	,reset: function() {
+		this.timeElapsed = 0;
+	}
+	,update: function() {
+		this.timeElapsed += com_haxepunk_HXP.elapsed;
+		if(this.timeElapsed >= this.time) {
+			this._callback();
+			if(!this.reusable) this._scene.remove(this);
+		}
+	}
+	,running: function() {
+		return this.timeElapsed < this.time;
+	}
+	,__class__: TimerEntity
+});
 var _$UInt_UInt_$Impl_$ = {};
 $hxClasses["_UInt.UInt_Impl_"] = _$UInt_UInt_$Impl_$;
 _$UInt_UInt_$Impl_$.__name__ = ["_UInt","UInt_Impl_"];
@@ -6087,6 +6169,140 @@ _$UInt_UInt_$Impl_$.toFloat = function(this1) {
 	var $int = this1;
 	if($int < 0) return 4294967296.0 + $int; else return $int + 0.0;
 };
+var Utils = function() { };
+$hxClasses["Utils"] = Utils;
+Utils.__name__ = ["Utils"];
+Utils.randomRange = function(lowerBound,upperBound) {
+	return lowerBound + Math.random() * (upperBound - lowerBound + 1);
+};
+Utils.randSign = function() {
+	if(Math.random() > 0.5) return -1; else return 1;
+};
+Utils.coinFlip = function() {
+	return Math.random() > 0.5;
+};
+Utils.mod = function(value) {
+	if(value < 0) return -value; else return value;
+};
+Utils.randInt = function(max) {
+	return Math.floor(Math.random() * max);
+};
+Utils.clamp = function(value,min,max) {
+	if(value > max) return max; else if(value < min) return min;
+	return value;
+};
+var Walker = function(x,y) {
+	BaseWorldEntity.call(this,x,y);
+	this.walkerId = Walker.idCount;
+	Walker.idCount++;
+	this.set_type("walker");
+	this._maxTurnTime = 4.0;
+	this._minTurnTime = 1.0;
+	this._speed2FR = 0.2;
+	this._speedMod = 1.0;
+	this.goingFast = false;
+	this._animatedSprite = new com_haxepunk_graphics_Spritemap(com_haxepunk_HXP.renderMode == com_haxepunk_RenderMode.HARDWARE?(function($this) {
+		var $r;
+		var e = com_haxepunk_ds_Either.Right(new com_haxepunk_graphics_atlas_TileAtlas((function($this) {
+			var $r;
+			var data = com_haxepunk_graphics_atlas_AtlasData.getAtlasDataByName("graphics/walker.png",true);
+			$r = data;
+			return $r;
+		}($this))));
+		$r = e;
+		return $r;
+	}(this)):(function($this) {
+		var $r;
+		var e1 = com_haxepunk_ds_Either.Left(com_haxepunk_HXP.getBitmap("graphics/walker.png"));
+		$r = e1;
+		return $r;
+	}(this)),64,64);
+	this._isOld = false;
+	this.set_graphic(this._animatedSprite);
+	if(Math.random() > 0.5) {
+		this._speed = 50 + Math.floor(Math.random() * 20);
+		this._animatedSprite.add("walk",[0,1,2,3,4,5,6,7],this._speed * this._speed2FR * 0.9);
+		this._animatedSprite.add("walkFast",[0,1,2,3,4,5,6,7],this._speed * this._speed2FR * 0.9 * 2.0);
+		this._animatedSprite.play("walk");
+	} else {
+		this._isOld = true;
+		this._speed = 30 + Math.floor(Math.random() * 20);
+		this._animatedSprite.add("hobble",[8,9,10,11,12,13,14,15],this._speed * this._speed2FR);
+		this._animatedSprite.play("hobble");
+	}
+	this.setHitbox(this._animatedSprite.get_width(),this._animatedSprite.get_height(),null,null);
+	this.goingRight = Math.random() > 0.5;
+	this.turn();
+};
+$hxClasses["Walker"] = Walker;
+Walker.__name__ = ["Walker"];
+Walker.__super__ = BaseWorldEntity;
+Walker.prototype = $extend(BaseWorldEntity.prototype,{
+	_animatedSprite: null
+	,_speed: null
+	,_speedMod: null
+	,isShapeShifter: null
+	,turnTimer: null
+	,_maxTurnTime: null
+	,_minTurnTime: null
+	,goingRight: null
+	,slowDownTimer: null
+	,_isOld: null
+	,_speed2FR: null
+	,goingFast: null
+	,walkerId: null
+	,dontOvertakeID: null
+	,update: function() {
+		if((this.followCamera?this.x + com_haxepunk_HXP.camera.x:this.x) >= com_haxepunk_HXP.width && this.goingRight) this.set_x(-this._animatedSprite.get_width()); else if((this.followCamera?this.x + com_haxepunk_HXP.camera.x:this.x) + this._animatedSprite.get_width() <= -2 && !this.goingRight) this.x = com_haxepunk_HXP.width;
+		if(this.goingRight) {
+			this._animatedSprite.set_flipped(false);
+			this.moveBy(this._speed * this._speedMod * G.delta,0);
+		} else {
+			this._animatedSprite.set_flipped(true);
+			this.moveBy(-this._speed * this._speedMod * G.delta,0);
+		}
+		var checkOffset;
+		if(this.isGoingRight()) checkOffset = this._animatedSprite.get_width(); else checkOffset = -this._animatedSprite.get_width();
+		var inFront = this.collide("walker",(this.followCamera?this.x + com_haxepunk_HXP.camera.x:this.x) + checkOffset,this.followCamera?this.y + com_haxepunk_HXP.camera.y:this.y);
+		if(inFront == null) {
+			inFront = this.collide("walker",this.followCamera?this.x + com_haxepunk_HXP.camera.x:this.x,this.followCamera?this.y + com_haxepunk_HXP.camera.y:this.y);
+			if(inFront != null && inFront.getWalkerId() != this.dontOvertakeID && !this._isOld) {
+				inFront.dontOvertakeID = this.getWalkerId();
+				this.walkFast();
+			} else if(this.isGoingFast() && !this._isOld) this.walk();
+		} else if(inFront.isGoingRight() == this.isGoingRight() && !inFront.isGoingFast() && inFront.getSpeed() < this._speed) {
+			if(Math.random() > 0.5 && !this._isOld) {
+				if(!this.goingFast) this.walkFast();
+			} else this._speed = inFront.getSpeed();
+		} else if(!this._isOld) this.walk();
+	}
+	,getWalkerId: function() {
+		return this.walkerId;
+	}
+	,getSpeed: function() {
+		return this._speed;
+	}
+	,isGoingRight: function() {
+		return this.goingRight;
+	}
+	,isGoingFast: function() {
+		return this.goingFast;
+	}
+	,walkFast: function() {
+		this.goingFast = true;
+		this._speedMod = 2.0;
+		this._animatedSprite.play("walkFast");
+	}
+	,walk: function(data) {
+		this.goingFast = false;
+		this._speedMod = 1.0;
+		this._animatedSprite.play("walk");
+	}
+	,turn: function(data) {
+		this.goingRight = !this.goingRight;
+	}
+	,__class__: Walker
+});
 var Xml = function(nodeType) {
 	this.nodeType = nodeType;
 	this.children = [];
@@ -42135,6 +42351,9 @@ com_haxepunk_HXP.matrix = new openfl_geom_Matrix();
 com_haxepunk_HXP.sprite = new openfl_display_Sprite();
 com_haxepunk_Entity._EMPTY = new com_haxepunk_Entity();
 openfl_text_Font.__registeredFonts = [];
+G.delta = 0.0;
+G.timeSpeed = 1.0;
+G.ground = 0.0;
 Layers.back = 100;
 Layers.backParalax = 90;
 Layers.forwardParalax = 80;
@@ -42150,6 +42369,7 @@ P5.fillAlpha = 1;
 P5.ellipseMode_ = "center";
 P5.rectMode_ = "center";
 P5.vectArray = [];
+Walker.idCount = 0;
 Xml.Element = 0;
 Xml.PCData = 1;
 Xml.CData = 2;

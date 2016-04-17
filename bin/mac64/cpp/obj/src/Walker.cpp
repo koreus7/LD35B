@@ -70,227 +70,227 @@
 
 Void Walker_obj::__construct(Float x,Float y)
 {
-HX_STACK_FRAME("Walker","new",0xedfd81c8,"Walker.new","Walker.hx",40,0x225bcea8)
+HX_STACK_FRAME("Walker","new",0xedfd81c8,"Walker.new","Walker.hx",42,0x225bcea8)
 HX_STACK_THIS(this)
 HX_STACK_ARG(x,"x")
 HX_STACK_ARG(y,"y")
 {
-	HX_STACK_LINE(41)
+	HX_STACK_LINE(43)
 	Float tmp = x;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(41)
+	HX_STACK_LINE(43)
 	Float tmp1 = y;		HX_STACK_VAR(tmp1,"tmp1");
-	HX_STACK_LINE(41)
+	HX_STACK_LINE(43)
 	super::__construct(tmp,tmp1,null(),null());
-	HX_STACK_LINE(43)
+	HX_STACK_LINE(45)
 	int tmp2 = ::Walker_obj::idCount;		HX_STACK_VAR(tmp2,"tmp2");
-	HX_STACK_LINE(43)
+	HX_STACK_LINE(45)
 	this->walkerId = tmp2;
-	HX_STACK_LINE(44)
+	HX_STACK_LINE(46)
 	(::Walker_obj::idCount)++;
-	HX_STACK_LINE(47)
-	this->set_type(HX_HCSTRING("walker","\xb6","\xc9","\x0a","\xb6"));
 	HX_STACK_LINE(49)
-	this->_maxTurnTime = ((Float)4.0);
-	HX_STACK_LINE(50)
-	this->_minTurnTime = ((Float)1.0);
+	this->set_type(HX_HCSTRING("walker","\xb6","\xc9","\x0a","\xb6"));
 	HX_STACK_LINE(51)
-	this->_speed2FR = ((Float)0.2);
+	this->_maxTurnTime = ((Float)4.0);
 	HX_STACK_LINE(52)
-	this->_speedMod = ((Float)1.0);
+	this->_minTurnTime = ((Float)1.0);
 	HX_STACK_LINE(53)
+	this->_speed2FR = ((Float)0.2);
+	HX_STACK_LINE(54)
+	this->_speedMod = ((Float)1.0);
+	HX_STACK_LINE(55)
 	this->goingFast = false;
-	HX_STACK_LINE(56)
+	HX_STACK_LINE(58)
 	::com::haxepunk::RenderMode tmp3 = ::com::haxepunk::HXP_obj::renderMode;		HX_STACK_VAR(tmp3,"tmp3");
-	HX_STACK_LINE(56)
+	HX_STACK_LINE(58)
 	bool tmp4 = (tmp3 == ::com::haxepunk::RenderMode_obj::HARDWARE);		HX_STACK_VAR(tmp4,"tmp4");
-	HX_STACK_LINE(56)
+	HX_STACK_LINE(58)
 	::com::haxepunk::ds::Either tmp5;		HX_STACK_VAR(tmp5,"tmp5");
-	HX_STACK_LINE(56)
+	HX_STACK_LINE(58)
 	if ((tmp4)){
-		HX_STACK_LINE(56)
+		HX_STACK_LINE(58)
 		::com::haxepunk::graphics::atlas::AtlasData tmp6;		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(56)
+		HX_STACK_LINE(58)
 		{
-			HX_STACK_LINE(56)
+			HX_STACK_LINE(58)
 			::com::haxepunk::graphics::atlas::AtlasData tmp7;		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(56)
+			HX_STACK_LINE(58)
 			{
-				HX_STACK_LINE(56)
+				HX_STACK_LINE(58)
 				::com::haxepunk::graphics::atlas::AtlasData data = null();		HX_STACK_VAR(data,"data");
-				HX_STACK_LINE(56)
+				HX_STACK_LINE(58)
 				::haxe::ds::StringMap tmp8 = ::com::haxepunk::graphics::atlas::AtlasData_obj::_dataPool;		HX_STACK_VAR(tmp8,"tmp8");
-				HX_STACK_LINE(56)
+				HX_STACK_LINE(58)
 				bool tmp9 = tmp8->exists(HX_HCSTRING("graphics/walker.png","\xf5","\xaf","\x1a","\x7e"));		HX_STACK_VAR(tmp9,"tmp9");
-				HX_STACK_LINE(56)
+				HX_STACK_LINE(58)
 				if ((tmp9)){
-					HX_STACK_LINE(56)
+					HX_STACK_LINE(58)
 					::haxe::ds::StringMap tmp10 = ::com::haxepunk::graphics::atlas::AtlasData_obj::_dataPool;		HX_STACK_VAR(tmp10,"tmp10");
-					HX_STACK_LINE(56)
+					HX_STACK_LINE(58)
 					::com::haxepunk::graphics::atlas::AtlasData tmp11 = tmp10->get(HX_HCSTRING("graphics/walker.png","\xf5","\xaf","\x1a","\x7e"));		HX_STACK_VAR(tmp11,"tmp11");
-					HX_STACK_LINE(56)
+					HX_STACK_LINE(58)
 					data = tmp11;
 				}
 				else{
-					HX_STACK_LINE(56)
+					HX_STACK_LINE(58)
 					::openfl::_legacy::display::BitmapData tmp10 = ::com::haxepunk::HXP_obj::getBitmap(HX_HCSTRING("graphics/walker.png","\xf5","\xaf","\x1a","\x7e"));		HX_STACK_VAR(tmp10,"tmp10");
-					HX_STACK_LINE(56)
+					HX_STACK_LINE(58)
 					::openfl::_legacy::display::BitmapData bitmap = tmp10;		HX_STACK_VAR(bitmap,"bitmap");
-					HX_STACK_LINE(56)
+					HX_STACK_LINE(58)
 					bool tmp11 = (bitmap != null());		HX_STACK_VAR(tmp11,"tmp11");
-					HX_STACK_LINE(56)
+					HX_STACK_LINE(58)
 					if ((tmp11)){
-						HX_STACK_LINE(56)
+						HX_STACK_LINE(58)
 						::com::haxepunk::graphics::atlas::AtlasData tmp12 = ::com::haxepunk::graphics::atlas::AtlasData_obj::__new(bitmap,HX_HCSTRING("graphics/walker.png","\xf5","\xaf","\x1a","\x7e"),null());		HX_STACK_VAR(tmp12,"tmp12");
-						HX_STACK_LINE(56)
+						HX_STACK_LINE(58)
 						data = tmp12;
 					}
 				}
-				HX_STACK_LINE(56)
+				HX_STACK_LINE(58)
 				tmp7 = data;
 			}
-			HX_STACK_LINE(56)
+			HX_STACK_LINE(58)
 			::com::haxepunk::graphics::atlas::AtlasData data = tmp7;		HX_STACK_VAR(data,"data");
-			HX_STACK_LINE(56)
+			HX_STACK_LINE(58)
 			tmp6 = data;
 		}
-		HX_STACK_LINE(56)
+		HX_STACK_LINE(58)
 		::com::haxepunk::graphics::atlas::TileAtlas tmp7 = ::com::haxepunk::graphics::atlas::TileAtlas_obj::__new(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(56)
+		HX_STACK_LINE(58)
 		::com::haxepunk::ds::Either tmp8 = ::com::haxepunk::ds::Either_obj::Right(tmp7);		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(56)
+		HX_STACK_LINE(58)
 		::com::haxepunk::ds::Either e = tmp8;		HX_STACK_VAR(e,"e");
-		HX_STACK_LINE(56)
+		HX_STACK_LINE(58)
 		tmp5 = e;
 	}
 	else{
-		HX_STACK_LINE(56)
+		HX_STACK_LINE(58)
 		::openfl::_legacy::display::BitmapData tmp6 = ::com::haxepunk::HXP_obj::getBitmap(HX_HCSTRING("graphics/walker.png","\xf5","\xaf","\x1a","\x7e"));		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(56)
+		HX_STACK_LINE(58)
 		::com::haxepunk::ds::Either tmp7 = ::com::haxepunk::ds::Either_obj::Left(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(56)
+		HX_STACK_LINE(58)
 		::com::haxepunk::ds::Either e = tmp7;		HX_STACK_VAR(e,"e");
-		HX_STACK_LINE(56)
+		HX_STACK_LINE(58)
 		tmp5 = e;
 	}
-	HX_STACK_LINE(56)
-	::com::haxepunk::graphics::Spritemap tmp6 = ::com::haxepunk::graphics::Spritemap_obj::__new(tmp5,(int)64,(int)64,null());		HX_STACK_VAR(tmp6,"tmp6");
-	HX_STACK_LINE(56)
-	this->_animatedSprite = tmp6;
 	HX_STACK_LINE(58)
+	::com::haxepunk::graphics::Spritemap tmp6 = ::com::haxepunk::graphics::Spritemap_obj::__new(tmp5,(int)64,(int)64,null());		HX_STACK_VAR(tmp6,"tmp6");
+	HX_STACK_LINE(58)
+	this->_animatedSprite = tmp6;
+	HX_STACK_LINE(60)
 	this->_isOld = false;
-	HX_STACK_LINE(60)
+	HX_STACK_LINE(62)
 	::com::haxepunk::graphics::Spritemap tmp7 = this->_animatedSprite;		HX_STACK_VAR(tmp7,"tmp7");
-	HX_STACK_LINE(60)
+	HX_STACK_LINE(62)
 	this->set_graphic(tmp7);
-	HX_STACK_LINE(62)
+	HX_STACK_LINE(64)
 	Float tmp8 = ::Math_obj::random();		HX_STACK_VAR(tmp8,"tmp8");
-	HX_STACK_LINE(62)
+	HX_STACK_LINE(64)
 	bool tmp9 = (tmp8 > ((Float)0.5));		HX_STACK_VAR(tmp9,"tmp9");
-	HX_STACK_LINE(62)
+	HX_STACK_LINE(64)
 	if ((tmp9)){
-		HX_STACK_LINE(65)
+		HX_STACK_LINE(67)
 		Float tmp10 = ::Math_obj::random();		HX_STACK_VAR(tmp10,"tmp10");
-		HX_STACK_LINE(65)
+		HX_STACK_LINE(67)
 		Float tmp11 = (tmp10 * (int)20);		HX_STACK_VAR(tmp11,"tmp11");
-		HX_STACK_LINE(65)
+		HX_STACK_LINE(67)
 		int tmp12 = ::Math_obj::floor(tmp11);		HX_STACK_VAR(tmp12,"tmp12");
-		HX_STACK_LINE(65)
+		HX_STACK_LINE(67)
 		int tmp13 = ((int)50 + tmp12);		HX_STACK_VAR(tmp13,"tmp13");
-		HX_STACK_LINE(65)
+		HX_STACK_LINE(67)
 		this->_speed = tmp13;
-		HX_STACK_LINE(66)
+		HX_STACK_LINE(68)
 		::com::haxepunk::graphics::Spritemap tmp14 = this->_animatedSprite;		HX_STACK_VAR(tmp14,"tmp14");
-		HX_STACK_LINE(66)
+		HX_STACK_LINE(68)
 		Float tmp15 = this->_speed;		HX_STACK_VAR(tmp15,"tmp15");
-		HX_STACK_LINE(66)
+		HX_STACK_LINE(68)
 		Float tmp16 = this->_speed2FR;		HX_STACK_VAR(tmp16,"tmp16");
-		HX_STACK_LINE(66)
+		HX_STACK_LINE(68)
 		Float tmp17 = (tmp15 * tmp16);		HX_STACK_VAR(tmp17,"tmp17");
-		HX_STACK_LINE(66)
+		HX_STACK_LINE(68)
 		Float tmp18 = (tmp17 * ((Float)0.9));		HX_STACK_VAR(tmp18,"tmp18");
-		HX_STACK_LINE(66)
+		HX_STACK_LINE(68)
 		tmp14->add(HX_HCSTRING("walk","\x09","\x5d","\xf2","\x4e"),Array_obj< int >::__new().Add((int)0).Add((int)1).Add((int)2).Add((int)3).Add((int)4).Add((int)5).Add((int)6).Add((int)7),tmp18,null());
-		HX_STACK_LINE(67)
+		HX_STACK_LINE(69)
 		::com::haxepunk::graphics::Spritemap tmp19 = this->_animatedSprite;		HX_STACK_VAR(tmp19,"tmp19");
-		HX_STACK_LINE(67)
+		HX_STACK_LINE(69)
 		Float tmp20 = this->_speed;		HX_STACK_VAR(tmp20,"tmp20");
-		HX_STACK_LINE(67)
+		HX_STACK_LINE(69)
 		Float tmp21 = this->_speed2FR;		HX_STACK_VAR(tmp21,"tmp21");
-		HX_STACK_LINE(67)
+		HX_STACK_LINE(69)
 		Float tmp22 = (tmp20 * tmp21);		HX_STACK_VAR(tmp22,"tmp22");
-		HX_STACK_LINE(67)
+		HX_STACK_LINE(69)
 		Float tmp23 = (tmp22 * ((Float)0.9));		HX_STACK_VAR(tmp23,"tmp23");
-		HX_STACK_LINE(67)
+		HX_STACK_LINE(69)
 		Float tmp24 = (tmp23 * ((Float)2.0));		HX_STACK_VAR(tmp24,"tmp24");
-		HX_STACK_LINE(67)
+		HX_STACK_LINE(69)
 		tmp19->add(HX_HCSTRING("walkFast","\x45","\x04","\x0f","\x51"),Array_obj< int >::__new().Add((int)0).Add((int)1).Add((int)2).Add((int)3).Add((int)4).Add((int)5).Add((int)6).Add((int)7),tmp24,null());
-		HX_STACK_LINE(68)
+		HX_STACK_LINE(70)
 		::com::haxepunk::graphics::Spritemap tmp25 = this->_animatedSprite;		HX_STACK_VAR(tmp25,"tmp25");
-		HX_STACK_LINE(68)
+		HX_STACK_LINE(70)
 		tmp25->play(HX_HCSTRING("walk","\x09","\x5d","\xf2","\x4e"),null(),null());
 	}
 	else{
-		HX_STACK_LINE(73)
+		HX_STACK_LINE(75)
 		this->_isOld = true;
-		HX_STACK_LINE(74)
+		HX_STACK_LINE(76)
 		Float tmp10 = ::Math_obj::random();		HX_STACK_VAR(tmp10,"tmp10");
-		HX_STACK_LINE(74)
+		HX_STACK_LINE(76)
 		Float tmp11 = (tmp10 * (int)20);		HX_STACK_VAR(tmp11,"tmp11");
-		HX_STACK_LINE(74)
+		HX_STACK_LINE(76)
 		int tmp12 = ::Math_obj::floor(tmp11);		HX_STACK_VAR(tmp12,"tmp12");
-		HX_STACK_LINE(74)
+		HX_STACK_LINE(76)
 		int tmp13 = ((int)30 + tmp12);		HX_STACK_VAR(tmp13,"tmp13");
-		HX_STACK_LINE(74)
+		HX_STACK_LINE(76)
 		this->_speed = tmp13;
-		HX_STACK_LINE(75)
+		HX_STACK_LINE(77)
 		::com::haxepunk::graphics::Spritemap tmp14 = this->_animatedSprite;		HX_STACK_VAR(tmp14,"tmp14");
-		HX_STACK_LINE(75)
+		HX_STACK_LINE(77)
 		Float tmp15 = this->_speed;		HX_STACK_VAR(tmp15,"tmp15");
-		HX_STACK_LINE(75)
+		HX_STACK_LINE(77)
 		Float tmp16 = this->_speed2FR;		HX_STACK_VAR(tmp16,"tmp16");
-		HX_STACK_LINE(75)
+		HX_STACK_LINE(77)
 		Float tmp17 = (tmp15 * tmp16);		HX_STACK_VAR(tmp17,"tmp17");
-		HX_STACK_LINE(75)
+		HX_STACK_LINE(77)
 		tmp14->add(HX_HCSTRING("hobble","\xc0","\x8e","\xa9","\xbf"),Array_obj< int >::__new().Add((int)8).Add((int)9).Add((int)10).Add((int)11).Add((int)12).Add((int)13).Add((int)14).Add((int)15),tmp17,null());
-		HX_STACK_LINE(76)
+		HX_STACK_LINE(78)
 		::com::haxepunk::graphics::Spritemap tmp18 = this->_animatedSprite;		HX_STACK_VAR(tmp18,"tmp18");
-		HX_STACK_LINE(76)
+		HX_STACK_LINE(78)
 		tmp18->play(HX_HCSTRING("hobble","\xc0","\x8e","\xa9","\xbf"),null(),null());
 	}
-	HX_STACK_LINE(79)
+	HX_STACK_LINE(81)
 	{
-		HX_STACK_LINE(79)
+		HX_STACK_LINE(81)
 		::com::haxepunk::graphics::Spritemap tmp10 = this->_animatedSprite;		HX_STACK_VAR(tmp10,"tmp10");
-		HX_STACK_LINE(79)
+		HX_STACK_LINE(81)
 		int tmp11 = tmp10->get_width();		HX_STACK_VAR(tmp11,"tmp11");
-		HX_STACK_LINE(79)
+		HX_STACK_LINE(81)
 		int width = tmp11;		HX_STACK_VAR(width,"width");
-		HX_STACK_LINE(79)
+		HX_STACK_LINE(81)
 		::com::haxepunk::graphics::Spritemap tmp12 = this->_animatedSprite;		HX_STACK_VAR(tmp12,"tmp12");
-		HX_STACK_LINE(79)
+		HX_STACK_LINE(81)
 		int tmp13 = tmp12->get_height();		HX_STACK_VAR(tmp13,"tmp13");
-		HX_STACK_LINE(79)
+		HX_STACK_LINE(81)
 		int height = tmp13;		HX_STACK_VAR(height,"height");
-		HX_STACK_LINE(79)
+		HX_STACK_LINE(81)
 		int originX = (int)0;		HX_STACK_VAR(originX,"originX");
-		HX_STACK_LINE(79)
+		HX_STACK_LINE(81)
 		int originY = (int)0;		HX_STACK_VAR(originY,"originY");
-		HX_STACK_LINE(79)
+		HX_STACK_LINE(81)
 		this->width = width;
-		HX_STACK_LINE(79)
+		HX_STACK_LINE(81)
 		this->height = height;
-		HX_STACK_LINE(79)
+		HX_STACK_LINE(81)
 		this->originX = originX;
-		HX_STACK_LINE(79)
+		HX_STACK_LINE(81)
 		this->originY = originY;
 	}
-	HX_STACK_LINE(82)
-	Float tmp10 = ::Math_obj::random();		HX_STACK_VAR(tmp10,"tmp10");
-	HX_STACK_LINE(82)
-	bool tmp11 = (tmp10 > ((Float)0.5));		HX_STACK_VAR(tmp11,"tmp11");
-	HX_STACK_LINE(82)
-	this->goingRight = tmp11;
 	HX_STACK_LINE(84)
+	Float tmp10 = ::Math_obj::random();		HX_STACK_VAR(tmp10,"tmp10");
+	HX_STACK_LINE(84)
+	bool tmp11 = (tmp10 > ((Float)0.5));		HX_STACK_VAR(tmp11,"tmp11");
+	HX_STACK_LINE(84)
+	this->goingRight = tmp11;
+	HX_STACK_LINE(86)
 	this->turn(null());
 }
 ;
@@ -312,443 +312,443 @@ Dynamic Walker_obj::__Create(hx::DynamicArray inArgs)
 
 Void Walker_obj::update( ){
 {
-		HX_STACK_FRAME("Walker","update",0x0c7ea5a1,"Walker.update","Walker.hx",88,0x225bcea8)
+		HX_STACK_FRAME("Walker","update",0x0c7ea5a1,"Walker.update","Walker.hx",90,0x225bcea8)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(89)
+		HX_STACK_LINE(91)
 		bool tmp = this->followCamera;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(89)
+		HX_STACK_LINE(91)
 		Float tmp1;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(89)
+		HX_STACK_LINE(91)
 		if ((tmp)){
-			HX_STACK_LINE(89)
+			HX_STACK_LINE(91)
 			Float tmp2 = this->x;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(89)
+			HX_STACK_LINE(91)
 			::openfl::_legacy::geom::Point tmp3 = ::com::haxepunk::HXP_obj::camera;		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(89)
+			HX_STACK_LINE(91)
 			Float tmp4 = tmp3->x;		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(89)
+			HX_STACK_LINE(91)
 			tmp1 = (tmp2 + tmp4);
 		}
 		else{
-			HX_STACK_LINE(89)
+			HX_STACK_LINE(91)
 			tmp1 = this->x;
 		}
-		HX_STACK_LINE(89)
+		HX_STACK_LINE(91)
 		int tmp2 = ::com::haxepunk::HXP_obj::width;		HX_STACK_VAR(tmp2,"tmp2");
-		HX_STACK_LINE(89)
+		HX_STACK_LINE(91)
 		bool tmp3 = (tmp1 >= tmp2);		HX_STACK_VAR(tmp3,"tmp3");
-		HX_STACK_LINE(89)
+		HX_STACK_LINE(91)
 		bool tmp4;		HX_STACK_VAR(tmp4,"tmp4");
-		HX_STACK_LINE(89)
+		HX_STACK_LINE(91)
 		if ((tmp3)){
-			HX_STACK_LINE(89)
+			HX_STACK_LINE(91)
 			tmp4 = this->goingRight;
 		}
 		else{
-			HX_STACK_LINE(89)
+			HX_STACK_LINE(91)
 			tmp4 = false;
 		}
-		HX_STACK_LINE(89)
+		HX_STACK_LINE(91)
 		if ((tmp4)){
-			HX_STACK_LINE(91)
+			HX_STACK_LINE(93)
 			::com::haxepunk::graphics::Spritemap tmp5 = this->_animatedSprite;		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(91)
+			HX_STACK_LINE(93)
 			int tmp6 = tmp5->get_width();		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(91)
+			HX_STACK_LINE(93)
 			int tmp7 = -(tmp6);		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(91)
+			HX_STACK_LINE(93)
 			Float v = tmp7;		HX_STACK_VAR(v,"v");
-			HX_STACK_LINE(91)
+			HX_STACK_LINE(93)
 			this->x = v;
 		}
 		else{
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(95)
 			bool tmp5 = this->followCamera;		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(95)
 			Float tmp6;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(95)
 			if ((tmp5)){
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				Float tmp7 = this->x;		HX_STACK_VAR(tmp7,"tmp7");
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				::openfl::_legacy::geom::Point tmp8 = ::com::haxepunk::HXP_obj::camera;		HX_STACK_VAR(tmp8,"tmp8");
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				Float tmp9 = tmp8->x;		HX_STACK_VAR(tmp9,"tmp9");
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				tmp6 = (tmp7 + tmp9);
 			}
 			else{
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				tmp6 = this->x;
 			}
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(95)
 			::com::haxepunk::graphics::Spritemap tmp7 = this->_animatedSprite;		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(95)
 			int tmp8 = tmp7->get_width();		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(95)
 			Float tmp9 = (tmp6 + tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(95)
 			int tmp10 = (int)-2;		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(95)
 			bool tmp11 = (tmp9 <= tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(95)
 			bool tmp12;		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(95)
 			if ((tmp11)){
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				bool tmp13 = this->goingRight;		HX_STACK_VAR(tmp13,"tmp13");
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				bool tmp14 = tmp13;		HX_STACK_VAR(tmp14,"tmp14");
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				bool tmp15 = tmp14;		HX_STACK_VAR(tmp15,"tmp15");
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				tmp12 = !(tmp15);
 			}
 			else{
-				HX_STACK_LINE(93)
+				HX_STACK_LINE(95)
 				tmp12 = false;
 			}
-			HX_STACK_LINE(93)
+			HX_STACK_LINE(95)
 			if ((tmp12)){
-				HX_STACK_LINE(95)
+				HX_STACK_LINE(97)
 				int tmp13 = ::com::haxepunk::HXP_obj::width;		HX_STACK_VAR(tmp13,"tmp13");
-				HX_STACK_LINE(95)
+				HX_STACK_LINE(97)
 				this->x = tmp13;
 			}
 		}
-		HX_STACK_LINE(98)
+		HX_STACK_LINE(100)
 		bool tmp5 = this->goingRight;		HX_STACK_VAR(tmp5,"tmp5");
-		HX_STACK_LINE(98)
+		HX_STACK_LINE(100)
 		if ((tmp5)){
-			HX_STACK_LINE(100)
+			HX_STACK_LINE(102)
 			::com::haxepunk::graphics::Spritemap tmp6 = this->_animatedSprite;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(100)
+			HX_STACK_LINE(102)
 			tmp6->set_flipped(false);
-			HX_STACK_LINE(101)
+			HX_STACK_LINE(103)
 			Float tmp7 = this->_speed;		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(101)
+			HX_STACK_LINE(103)
 			Float tmp8 = this->_speedMod;		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(101)
+			HX_STACK_LINE(103)
 			Float tmp9 = (tmp7 * tmp8);		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(101)
+			HX_STACK_LINE(103)
 			Float tmp10 = ::G_obj::delta;		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(101)
+			HX_STACK_LINE(103)
 			Float tmp11 = (tmp9 * tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(101)
+			HX_STACK_LINE(103)
 			this->moveBy(tmp11,(int)0,null(),null());
 		}
 		else{
-			HX_STACK_LINE(105)
+			HX_STACK_LINE(107)
 			::com::haxepunk::graphics::Spritemap tmp6 = this->_animatedSprite;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(105)
+			HX_STACK_LINE(107)
 			tmp6->set_flipped(true);
-			HX_STACK_LINE(106)
+			HX_STACK_LINE(108)
 			Float tmp7 = this->_speed;		HX_STACK_VAR(tmp7,"tmp7");
-			HX_STACK_LINE(106)
+			HX_STACK_LINE(108)
 			Float tmp8 = -(tmp7);		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(106)
+			HX_STACK_LINE(108)
 			Float tmp9 = this->_speedMod;		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(106)
+			HX_STACK_LINE(108)
 			Float tmp10 = (tmp8 * tmp9);		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(106)
+			HX_STACK_LINE(108)
 			Float tmp11 = ::G_obj::delta;		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(106)
+			HX_STACK_LINE(108)
 			Float tmp12 = (tmp10 * tmp11);		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(106)
+			HX_STACK_LINE(108)
 			this->moveBy(tmp12,(int)0,null(),null());
 		}
-		HX_STACK_LINE(109)
+		HX_STACK_LINE(111)
 		bool tmp6 = this->isGoingRight();		HX_STACK_VAR(tmp6,"tmp6");
-		HX_STACK_LINE(109)
+		HX_STACK_LINE(111)
 		Float tmp7;		HX_STACK_VAR(tmp7,"tmp7");
-		HX_STACK_LINE(109)
+		HX_STACK_LINE(111)
 		if ((tmp6)){
-			HX_STACK_LINE(109)
+			HX_STACK_LINE(111)
 			::com::haxepunk::graphics::Spritemap tmp8 = this->_animatedSprite;		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(109)
+			HX_STACK_LINE(111)
 			tmp7 = tmp8->get_width();
 		}
 		else{
-			HX_STACK_LINE(109)
+			HX_STACK_LINE(111)
 			::com::haxepunk::graphics::Spritemap tmp8 = this->_animatedSprite;		HX_STACK_VAR(tmp8,"tmp8");
-			HX_STACK_LINE(109)
+			HX_STACK_LINE(111)
 			int tmp9 = tmp8->get_width();		HX_STACK_VAR(tmp9,"tmp9");
-			HX_STACK_LINE(109)
+			HX_STACK_LINE(111)
 			tmp7 = -(tmp9);
 		}
-		HX_STACK_LINE(109)
+		HX_STACK_LINE(111)
 		Float checkOffset = tmp7;		HX_STACK_VAR(checkOffset,"checkOffset");
-		HX_STACK_LINE(111)
+		HX_STACK_LINE(113)
 		bool tmp8 = this->followCamera;		HX_STACK_VAR(tmp8,"tmp8");
-		HX_STACK_LINE(111)
+		HX_STACK_LINE(113)
 		Float tmp9;		HX_STACK_VAR(tmp9,"tmp9");
-		HX_STACK_LINE(111)
+		HX_STACK_LINE(113)
 		if ((tmp8)){
-			HX_STACK_LINE(111)
+			HX_STACK_LINE(113)
 			Float tmp10 = this->x;		HX_STACK_VAR(tmp10,"tmp10");
-			HX_STACK_LINE(111)
+			HX_STACK_LINE(113)
 			::openfl::_legacy::geom::Point tmp11 = ::com::haxepunk::HXP_obj::camera;		HX_STACK_VAR(tmp11,"tmp11");
-			HX_STACK_LINE(111)
+			HX_STACK_LINE(113)
 			Float tmp12 = tmp11->x;		HX_STACK_VAR(tmp12,"tmp12");
-			HX_STACK_LINE(111)
+			HX_STACK_LINE(113)
 			tmp9 = (tmp10 + tmp12);
 		}
 		else{
-			HX_STACK_LINE(111)
+			HX_STACK_LINE(113)
 			tmp9 = this->x;
 		}
-		HX_STACK_LINE(111)
+		HX_STACK_LINE(113)
 		Float tmp10 = checkOffset;		HX_STACK_VAR(tmp10,"tmp10");
-		HX_STACK_LINE(111)
+		HX_STACK_LINE(113)
 		Float tmp11 = (tmp9 + tmp10);		HX_STACK_VAR(tmp11,"tmp11");
-		HX_STACK_LINE(111)
+		HX_STACK_LINE(113)
 		bool tmp12 = this->followCamera;		HX_STACK_VAR(tmp12,"tmp12");
-		HX_STACK_LINE(111)
+		HX_STACK_LINE(113)
 		Float tmp13;		HX_STACK_VAR(tmp13,"tmp13");
-		HX_STACK_LINE(111)
+		HX_STACK_LINE(113)
 		if ((tmp12)){
-			HX_STACK_LINE(111)
+			HX_STACK_LINE(113)
 			Float tmp14 = this->y;		HX_STACK_VAR(tmp14,"tmp14");
-			HX_STACK_LINE(111)
+			HX_STACK_LINE(113)
 			::openfl::_legacy::geom::Point tmp15 = ::com::haxepunk::HXP_obj::camera;		HX_STACK_VAR(tmp15,"tmp15");
-			HX_STACK_LINE(111)
+			HX_STACK_LINE(113)
 			Float tmp16 = tmp15->y;		HX_STACK_VAR(tmp16,"tmp16");
-			HX_STACK_LINE(111)
+			HX_STACK_LINE(113)
 			tmp13 = (tmp14 + tmp16);
 		}
 		else{
-			HX_STACK_LINE(111)
+			HX_STACK_LINE(113)
 			tmp13 = this->y;
 		}
-		HX_STACK_LINE(111)
+		HX_STACK_LINE(113)
 		::com::haxepunk::Entity tmp14 = this->collide(HX_HCSTRING("walker","\xb6","\xc9","\x0a","\xb6"),tmp11,tmp13);		HX_STACK_VAR(tmp14,"tmp14");
-		HX_STACK_LINE(111)
+		HX_STACK_LINE(113)
 		::Walker inFront = ((::Walker)(tmp14));		HX_STACK_VAR(inFront,"inFront");
-		HX_STACK_LINE(114)
+		HX_STACK_LINE(116)
 		bool tmp15 = (inFront == null());		HX_STACK_VAR(tmp15,"tmp15");
-		HX_STACK_LINE(114)
+		HX_STACK_LINE(116)
 		if ((tmp15)){
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(119)
 			bool tmp16 = this->followCamera;		HX_STACK_VAR(tmp16,"tmp16");
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(119)
 			Float tmp17;		HX_STACK_VAR(tmp17,"tmp17");
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(119)
 			if ((tmp16)){
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(119)
 				Float tmp18 = this->x;		HX_STACK_VAR(tmp18,"tmp18");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(119)
 				::openfl::_legacy::geom::Point tmp19 = ::com::haxepunk::HXP_obj::camera;		HX_STACK_VAR(tmp19,"tmp19");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(119)
 				Float tmp20 = tmp19->x;		HX_STACK_VAR(tmp20,"tmp20");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(119)
 				tmp17 = (tmp18 + tmp20);
 			}
 			else{
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(119)
 				tmp17 = this->x;
 			}
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(119)
 			bool tmp18 = this->followCamera;		HX_STACK_VAR(tmp18,"tmp18");
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(119)
 			Float tmp19;		HX_STACK_VAR(tmp19,"tmp19");
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(119)
 			if ((tmp18)){
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(119)
 				Float tmp20 = this->y;		HX_STACK_VAR(tmp20,"tmp20");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(119)
 				::openfl::_legacy::geom::Point tmp21 = ::com::haxepunk::HXP_obj::camera;		HX_STACK_VAR(tmp21,"tmp21");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(119)
 				Float tmp22 = tmp21->y;		HX_STACK_VAR(tmp22,"tmp22");
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(119)
 				tmp19 = (tmp20 + tmp22);
 			}
 			else{
-				HX_STACK_LINE(117)
+				HX_STACK_LINE(119)
 				tmp19 = this->y;
 			}
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(119)
 			::com::haxepunk::Entity tmp20 = this->collide(HX_HCSTRING("walker","\xb6","\xc9","\x0a","\xb6"),tmp17,tmp19);		HX_STACK_VAR(tmp20,"tmp20");
-			HX_STACK_LINE(117)
+			HX_STACK_LINE(119)
 			inFront = ((::Walker)(tmp20));
-			HX_STACK_LINE(120)
+			HX_STACK_LINE(122)
 			bool tmp21 = (inFront != null());		HX_STACK_VAR(tmp21,"tmp21");
-			HX_STACK_LINE(120)
+			HX_STACK_LINE(122)
 			bool tmp22 = tmp21;		HX_STACK_VAR(tmp22,"tmp22");
-			HX_STACK_LINE(120)
+			HX_STACK_LINE(122)
 			bool tmp23;		HX_STACK_VAR(tmp23,"tmp23");
-			HX_STACK_LINE(120)
+			HX_STACK_LINE(122)
 			if ((tmp22)){
-				HX_STACK_LINE(120)
+				HX_STACK_LINE(122)
 				int tmp24 = inFront->getWalkerId();		HX_STACK_VAR(tmp24,"tmp24");
-				HX_STACK_LINE(120)
+				HX_STACK_LINE(122)
 				int tmp25 = tmp24;		HX_STACK_VAR(tmp25,"tmp25");
-				HX_STACK_LINE(120)
+				HX_STACK_LINE(122)
 				int tmp26 = tmp25;		HX_STACK_VAR(tmp26,"tmp26");
-				HX_STACK_LINE(120)
+				HX_STACK_LINE(122)
 				int tmp27 = this->dontOvertakeID;		HX_STACK_VAR(tmp27,"tmp27");
-				HX_STACK_LINE(120)
+				HX_STACK_LINE(122)
 				int tmp28 = tmp27;		HX_STACK_VAR(tmp28,"tmp28");
-				HX_STACK_LINE(120)
+				HX_STACK_LINE(122)
 				int tmp29 = tmp28;		HX_STACK_VAR(tmp29,"tmp29");
-				HX_STACK_LINE(120)
+				HX_STACK_LINE(122)
 				tmp23 = (tmp26 != tmp29);
 			}
 			else{
-				HX_STACK_LINE(120)
+				HX_STACK_LINE(122)
 				tmp23 = false;
 			}
-			HX_STACK_LINE(120)
+			HX_STACK_LINE(122)
 			bool tmp24;		HX_STACK_VAR(tmp24,"tmp24");
-			HX_STACK_LINE(120)
+			HX_STACK_LINE(122)
 			if ((tmp23)){
-				HX_STACK_LINE(120)
+				HX_STACK_LINE(122)
 				bool tmp25 = this->_isOld;		HX_STACK_VAR(tmp25,"tmp25");
-				HX_STACK_LINE(120)
+				HX_STACK_LINE(122)
 				bool tmp26 = tmp25;		HX_STACK_VAR(tmp26,"tmp26");
-				HX_STACK_LINE(120)
+				HX_STACK_LINE(122)
 				bool tmp27 = tmp26;		HX_STACK_VAR(tmp27,"tmp27");
-				HX_STACK_LINE(120)
+				HX_STACK_LINE(122)
 				tmp24 = !(tmp27);
 			}
 			else{
-				HX_STACK_LINE(120)
+				HX_STACK_LINE(122)
 				tmp24 = false;
 			}
-			HX_STACK_LINE(120)
+			HX_STACK_LINE(122)
 			if ((tmp24)){
-				HX_STACK_LINE(123)
-				int tmp25 = this->getWalkerId();		HX_STACK_VAR(tmp25,"tmp25");
-				HX_STACK_LINE(123)
-				inFront->dontOvertakeID = tmp25;
 				HX_STACK_LINE(125)
+				int tmp25 = this->getWalkerId();		HX_STACK_VAR(tmp25,"tmp25");
+				HX_STACK_LINE(125)
+				inFront->dontOvertakeID = tmp25;
+				HX_STACK_LINE(127)
 				this->walkFast();
 			}
 			else{
-				HX_STACK_LINE(129)
+				HX_STACK_LINE(131)
 				bool tmp25 = this->isGoingFast();		HX_STACK_VAR(tmp25,"tmp25");
-				HX_STACK_LINE(129)
+				HX_STACK_LINE(131)
 				bool tmp26;		HX_STACK_VAR(tmp26,"tmp26");
-				HX_STACK_LINE(129)
+				HX_STACK_LINE(131)
 				if ((tmp25)){
-					HX_STACK_LINE(129)
+					HX_STACK_LINE(131)
 					bool tmp27 = this->_isOld;		HX_STACK_VAR(tmp27,"tmp27");
-					HX_STACK_LINE(129)
+					HX_STACK_LINE(131)
 					bool tmp28 = tmp27;		HX_STACK_VAR(tmp28,"tmp28");
-					HX_STACK_LINE(129)
+					HX_STACK_LINE(131)
 					bool tmp29 = tmp28;		HX_STACK_VAR(tmp29,"tmp29");
-					HX_STACK_LINE(129)
+					HX_STACK_LINE(131)
 					tmp26 = !(tmp29);
 				}
 				else{
-					HX_STACK_LINE(129)
+					HX_STACK_LINE(131)
 					tmp26 = false;
 				}
-				HX_STACK_LINE(129)
+				HX_STACK_LINE(131)
 				if ((tmp26)){
-					HX_STACK_LINE(132)
+					HX_STACK_LINE(134)
 					this->walk(null());
 				}
 			}
 		}
 		else{
-			HX_STACK_LINE(138)
+			HX_STACK_LINE(140)
 			bool tmp16 = inFront->isGoingRight();		HX_STACK_VAR(tmp16,"tmp16");
-			HX_STACK_LINE(138)
+			HX_STACK_LINE(140)
 			bool tmp17 = this->isGoingRight();		HX_STACK_VAR(tmp17,"tmp17");
-			HX_STACK_LINE(138)
+			HX_STACK_LINE(140)
 			bool tmp18 = (tmp16 == tmp17);		HX_STACK_VAR(tmp18,"tmp18");
-			HX_STACK_LINE(138)
+			HX_STACK_LINE(140)
 			bool tmp19 = tmp18;		HX_STACK_VAR(tmp19,"tmp19");
-			HX_STACK_LINE(138)
+			HX_STACK_LINE(140)
 			bool tmp20;		HX_STACK_VAR(tmp20,"tmp20");
-			HX_STACK_LINE(138)
+			HX_STACK_LINE(140)
 			if ((tmp19)){
-				HX_STACK_LINE(138)
+				HX_STACK_LINE(140)
 				bool tmp21 = inFront->isGoingFast();		HX_STACK_VAR(tmp21,"tmp21");
-				HX_STACK_LINE(138)
+				HX_STACK_LINE(140)
 				bool tmp22 = tmp21;		HX_STACK_VAR(tmp22,"tmp22");
-				HX_STACK_LINE(138)
+				HX_STACK_LINE(140)
 				bool tmp23 = tmp22;		HX_STACK_VAR(tmp23,"tmp23");
-				HX_STACK_LINE(138)
+				HX_STACK_LINE(140)
 				bool tmp24 = tmp23;		HX_STACK_VAR(tmp24,"tmp24");
-				HX_STACK_LINE(138)
+				HX_STACK_LINE(140)
 				bool tmp25 = tmp24;		HX_STACK_VAR(tmp25,"tmp25");
-				HX_STACK_LINE(138)
+				HX_STACK_LINE(140)
 				tmp20 = !(tmp25);
 			}
 			else{
-				HX_STACK_LINE(138)
+				HX_STACK_LINE(140)
 				tmp20 = false;
 			}
-			HX_STACK_LINE(138)
+			HX_STACK_LINE(140)
 			bool tmp21;		HX_STACK_VAR(tmp21,"tmp21");
-			HX_STACK_LINE(138)
+			HX_STACK_LINE(140)
 			if ((tmp20)){
-				HX_STACK_LINE(139)
+				HX_STACK_LINE(141)
 				Float tmp22 = inFront->getSpeed();		HX_STACK_VAR(tmp22,"tmp22");
-				HX_STACK_LINE(139)
+				HX_STACK_LINE(141)
 				Float tmp23 = tmp22;		HX_STACK_VAR(tmp23,"tmp23");
-				HX_STACK_LINE(139)
+				HX_STACK_LINE(141)
 				Float tmp24 = this->_speed;		HX_STACK_VAR(tmp24,"tmp24");
-				HX_STACK_LINE(139)
+				HX_STACK_LINE(141)
 				Float tmp25 = tmp24;		HX_STACK_VAR(tmp25,"tmp25");
-				HX_STACK_LINE(139)
+				HX_STACK_LINE(141)
 				tmp21 = (tmp23 < tmp25);
 			}
 			else{
-				HX_STACK_LINE(138)
+				HX_STACK_LINE(140)
 				tmp21 = false;
 			}
-			HX_STACK_LINE(138)
+			HX_STACK_LINE(140)
 			if ((tmp21)){
-				HX_STACK_LINE(141)
+				HX_STACK_LINE(143)
 				Float tmp22 = ::Math_obj::random();		HX_STACK_VAR(tmp22,"tmp22");
-				HX_STACK_LINE(141)
+				HX_STACK_LINE(143)
 				bool tmp23 = (tmp22 > ((Float)0.5));		HX_STACK_VAR(tmp23,"tmp23");
-				HX_STACK_LINE(141)
+				HX_STACK_LINE(143)
 				bool tmp24;		HX_STACK_VAR(tmp24,"tmp24");
-				HX_STACK_LINE(141)
+				HX_STACK_LINE(143)
 				if ((tmp23)){
-					HX_STACK_LINE(141)
+					HX_STACK_LINE(143)
 					bool tmp25 = this->_isOld;		HX_STACK_VAR(tmp25,"tmp25");
-					HX_STACK_LINE(141)
+					HX_STACK_LINE(143)
 					bool tmp26 = tmp25;		HX_STACK_VAR(tmp26,"tmp26");
-					HX_STACK_LINE(141)
+					HX_STACK_LINE(143)
 					bool tmp27 = tmp26;		HX_STACK_VAR(tmp27,"tmp27");
-					HX_STACK_LINE(141)
+					HX_STACK_LINE(143)
 					tmp24 = !(tmp27);
 				}
 				else{
-					HX_STACK_LINE(141)
+					HX_STACK_LINE(143)
 					tmp24 = false;
 				}
-				HX_STACK_LINE(141)
+				HX_STACK_LINE(143)
 				if ((tmp24)){
-					HX_STACK_LINE(145)
+					HX_STACK_LINE(147)
 					bool tmp25 = this->goingFast;		HX_STACK_VAR(tmp25,"tmp25");
-					HX_STACK_LINE(145)
+					HX_STACK_LINE(147)
 					bool tmp26 = !(tmp25);		HX_STACK_VAR(tmp26,"tmp26");
-					HX_STACK_LINE(145)
+					HX_STACK_LINE(147)
 					if ((tmp26)){
-						HX_STACK_LINE(147)
+						HX_STACK_LINE(149)
 						this->walkFast();
 					}
 				}
 				else{
-					HX_STACK_LINE(153)
+					HX_STACK_LINE(155)
 					Float tmp25 = inFront->getSpeed();		HX_STACK_VAR(tmp25,"tmp25");
-					HX_STACK_LINE(153)
+					HX_STACK_LINE(155)
 					this->_speed = tmp25;
 				}
 			}
 			else{
-				HX_STACK_LINE(158)
+				HX_STACK_LINE(160)
 				bool tmp22 = this->_isOld;		HX_STACK_VAR(tmp22,"tmp22");
-				HX_STACK_LINE(158)
+				HX_STACK_LINE(160)
 				bool tmp23 = !(tmp22);		HX_STACK_VAR(tmp23,"tmp23");
-				HX_STACK_LINE(158)
+				HX_STACK_LINE(160)
 				if ((tmp23)){
-					HX_STACK_LINE(160)
+					HX_STACK_LINE(162)
 					this->walk(null());
 				}
 			}
@@ -759,11 +759,11 @@ return null();
 
 
 int Walker_obj::getWalkerId( ){
-	HX_STACK_FRAME("Walker","getWalkerId",0x65e27f4f,"Walker.getWalkerId","Walker.hx",166,0x225bcea8)
+	HX_STACK_FRAME("Walker","getWalkerId",0x65e27f4f,"Walker.getWalkerId","Walker.hx",168,0x225bcea8)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(167)
+	HX_STACK_LINE(169)
 	int tmp = this->walkerId;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(167)
+	HX_STACK_LINE(169)
 	return tmp;
 }
 
@@ -771,11 +771,11 @@ int Walker_obj::getWalkerId( ){
 HX_DEFINE_DYNAMIC_FUNC0(Walker_obj,getWalkerId,return )
 
 Float Walker_obj::getSpeed( ){
-	HX_STACK_FRAME("Walker","getSpeed",0x8ef2dca9,"Walker.getSpeed","Walker.hx",171,0x225bcea8)
+	HX_STACK_FRAME("Walker","getSpeed",0x8ef2dca9,"Walker.getSpeed","Walker.hx",173,0x225bcea8)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(172)
+	HX_STACK_LINE(174)
 	Float tmp = this->_speed;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(172)
+	HX_STACK_LINE(174)
 	return tmp;
 }
 
@@ -783,11 +783,11 @@ Float Walker_obj::getSpeed( ){
 HX_DEFINE_DYNAMIC_FUNC0(Walker_obj,getSpeed,return )
 
 bool Walker_obj::isGoingRight( ){
-	HX_STACK_FRAME("Walker","isGoingRight",0xd65847e4,"Walker.isGoingRight","Walker.hx",176,0x225bcea8)
+	HX_STACK_FRAME("Walker","isGoingRight",0xd65847e4,"Walker.isGoingRight","Walker.hx",178,0x225bcea8)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(177)
+	HX_STACK_LINE(179)
 	bool tmp = this->goingRight;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(177)
+	HX_STACK_LINE(179)
 	return tmp;
 }
 
@@ -795,11 +795,11 @@ bool Walker_obj::isGoingRight( ){
 HX_DEFINE_DYNAMIC_FUNC0(Walker_obj,isGoingRight,return )
 
 bool Walker_obj::isGoingFast( ){
-	HX_STACK_FRAME("Walker","isGoingFast",0xeb3adf94,"Walker.isGoingFast","Walker.hx",181,0x225bcea8)
+	HX_STACK_FRAME("Walker","isGoingFast",0xeb3adf94,"Walker.isGoingFast","Walker.hx",183,0x225bcea8)
 	HX_STACK_THIS(this)
-	HX_STACK_LINE(182)
+	HX_STACK_LINE(184)
 	bool tmp = this->goingFast;		HX_STACK_VAR(tmp,"tmp");
-	HX_STACK_LINE(182)
+	HX_STACK_LINE(184)
 	return tmp;
 }
 
@@ -808,15 +808,15 @@ HX_DEFINE_DYNAMIC_FUNC0(Walker_obj,isGoingFast,return )
 
 Void Walker_obj::walkFast( ){
 {
-		HX_STACK_FRAME("Walker","walkFast",0xfec139dd,"Walker.walkFast","Walker.hx",186,0x225bcea8)
+		HX_STACK_FRAME("Walker","walkFast",0xfec139dd,"Walker.walkFast","Walker.hx",188,0x225bcea8)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(187)
+		HX_STACK_LINE(189)
 		this->goingFast = true;
-		HX_STACK_LINE(188)
+		HX_STACK_LINE(190)
 		this->_speedMod = ((Float)2.0);
-		HX_STACK_LINE(189)
+		HX_STACK_LINE(191)
 		::com::haxepunk::graphics::Spritemap tmp = this->_animatedSprite;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(189)
+		HX_STACK_LINE(191)
 		tmp->play(HX_HCSTRING("walkFast","\x45","\x04","\x0f","\x51"),null(),null());
 	}
 return null();
@@ -827,16 +827,16 @@ HX_DEFINE_DYNAMIC_FUNC0(Walker_obj,walkFast,(void))
 
 Void Walker_obj::walk( Dynamic data){
 {
-		HX_STACK_FRAME("Walker","walk",0x55c3e6a1,"Walker.walk","Walker.hx",193,0x225bcea8)
+		HX_STACK_FRAME("Walker","walk",0x55c3e6a1,"Walker.walk","Walker.hx",195,0x225bcea8)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(data,"data")
-		HX_STACK_LINE(194)
+		HX_STACK_LINE(196)
 		this->goingFast = false;
-		HX_STACK_LINE(195)
+		HX_STACK_LINE(197)
 		this->_speedMod = ((Float)1.0);
-		HX_STACK_LINE(196)
+		HX_STACK_LINE(198)
 		::com::haxepunk::graphics::Spritemap tmp = this->_animatedSprite;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(196)
+		HX_STACK_LINE(198)
 		tmp->play(HX_HCSTRING("walk","\x09","\x5d","\xf2","\x4e"),null(),null());
 	}
 return null();
@@ -847,14 +847,14 @@ HX_DEFINE_DYNAMIC_FUNC1(Walker_obj,walk,(void))
 
 Void Walker_obj::turn( Dynamic data){
 {
-		HX_STACK_FRAME("Walker","turn",0x53d77515,"Walker.turn","Walker.hx",200,0x225bcea8)
+		HX_STACK_FRAME("Walker","turn",0x53d77515,"Walker.turn","Walker.hx",202,0x225bcea8)
 		HX_STACK_THIS(this)
 		HX_STACK_ARG(data,"data")
-		HX_STACK_LINE(201)
+		HX_STACK_LINE(203)
 		bool tmp = this->goingRight;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(201)
+		HX_STACK_LINE(203)
 		bool tmp1 = !(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(201)
+		HX_STACK_LINE(203)
 		this->goingRight = tmp1;
 	}
 return null();

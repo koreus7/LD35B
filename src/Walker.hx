@@ -1,4 +1,6 @@
 package ;
+import flash.display.BlendMode;
+import com.haxepunk.graphics.Image;
 import com.haxepunk.graphics.Spritemap;
 import com.haxepunk.Graphic;
 import com.haxepunk.HXP;
@@ -58,6 +60,7 @@ class Walker extends BaseWorldEntity
         _isOld = false;
 
         this.graphic = _animatedSprite;
+
 
         if(Utils.coinFlip())
         {

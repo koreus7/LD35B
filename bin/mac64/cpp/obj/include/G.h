@@ -32,6 +32,7 @@ class HXCPP_CLASS_ATTRIBUTES  G_obj : public hx::Object{
 		static Float delta;
 		static Float timeSpeed;
 		static Float ground;
+		static int lighingMult;
 };
 
 

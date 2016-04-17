@@ -1959,6 +1959,8 @@
    <depend name="include/BaseWorld.h"/>
    <depend name="include/BaseWorldEntity.h"/>
    <depend name="include/G.h"/>
+   <depend name="include/Lamp.h"/>
+   <depend name="include/LightMask.h"/>
    <depend name="include/MainScene.h"/>
    <depend name="include/P5.h"/>
    <depend name="include/Paralax.h"/>
@@ -1990,8 +1992,52 @@
   <file name="src/List.cpp">
    <depend name="include/List.h"/>
   </file>
+  <file name="src/LightMask.cpp">
+   <depend name="include/BaseWorldEntity.h"/>
+   <depend name="include/G.h"/>
+   <depend name="include/LightMask.h"/>
+   <depend name="include/com/haxepunk/Entity.h"/>
+   <depend name="include/com/haxepunk/Graphic.h"/>
+   <depend name="include/com/haxepunk/HXP.h"/>
+   <depend name="include/com/haxepunk/Mask.h"/>
+   <depend name="include/com/haxepunk/RenderMode.h"/>
+   <depend name="include/com/haxepunk/Tweener.h"/>
+   <depend name="include/com/haxepunk/ds/Either.h"/>
+   <depend name="include/com/haxepunk/graphics/Image.h"/>
+   <depend name="include/com/haxepunk/graphics/atlas/Atlas.h"/>
+   <depend name="include/com/haxepunk/graphics/atlas/AtlasData.h"/>
+   <depend name="include/com/haxepunk/graphics/atlas/AtlasRegion.h"/>
+   <depend name="include/openfl/_legacy/display/BitmapData.h"/>
+   <depend name="include/openfl/_legacy/display/BlendMode.h"/>
+   <depend name="include/openfl/_legacy/display/IBitmapDrawable.h"/>
+   <depend name="include/openfl/_legacy/geom/Rectangle.h"/>
+  </file>
   <file name="src/Layers.cpp">
    <depend name="include/Layers.h"/>
+  </file>
+  <file name="src/Lamp.cpp">
+   <depend name="include/BaseWorld.h"/>
+   <depend name="include/BaseWorldEntity.h"/>
+   <depend name="include/Lamp.h"/>
+   <depend name="include/com/haxepunk/Entity.h"/>
+   <depend name="include/com/haxepunk/Graphic.h"/>
+   <depend name="include/com/haxepunk/HXP.h"/>
+   <depend name="include/com/haxepunk/Mask.h"/>
+   <depend name="include/com/haxepunk/RenderMode.h"/>
+   <depend name="include/com/haxepunk/Scene.h"/>
+   <depend name="include/com/haxepunk/Tweener.h"/>
+   <depend name="include/com/haxepunk/ds/Either.h"/>
+   <depend name="include/com/haxepunk/graphics/Image.h"/>
+   <depend name="include/com/haxepunk/graphics/atlas/Atlas.h"/>
+   <depend name="include/com/haxepunk/graphics/atlas/AtlasData.h"/>
+   <depend name="include/com/haxepunk/graphics/atlas/AtlasRegion.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/Log.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/openfl/_legacy/display/BitmapData.h"/>
+   <depend name="include/openfl/_legacy/display/IBitmapDrawable.h"/>
+   <depend name="include/openfl/_legacy/geom/Point.h"/>
+   <depend name="include/openfl/_legacy/geom/Rectangle.h"/>
   </file>
   <file name="src/Lambda.cpp">
    <depend name="include/Lambda.h"/>
@@ -2351,8 +2397,23 @@
   </file>
   <file name="src/BaseWorld.cpp">
    <depend name="include/BaseWorld.h"/>
+   <depend name="include/com/haxepunk/Entity.h"/>
+   <depend name="include/com/haxepunk/Graphic.h"/>
+   <depend name="include/com/haxepunk/HXP.h"/>
+   <depend name="include/com/haxepunk/Mask.h"/>
+   <depend name="include/com/haxepunk/RenderMode.h"/>
    <depend name="include/com/haxepunk/Scene.h"/>
    <depend name="include/com/haxepunk/Tweener.h"/>
+   <depend name="include/com/haxepunk/ds/Either.h"/>
+   <depend name="include/com/haxepunk/graphics/Image.h"/>
+   <depend name="include/com/haxepunk/graphics/atlas/Atlas.h"/>
+   <depend name="include/com/haxepunk/graphics/atlas/AtlasData.h"/>
+   <depend name="include/com/haxepunk/graphics/atlas/AtlasRegion.h"/>
+   <depend name="include/haxe/IMap.h"/>
+   <depend name="include/haxe/ds/StringMap.h"/>
+   <depend name="include/openfl/_legacy/display/BitmapData.h"/>
+   <depend name="include/openfl/_legacy/display/IBitmapDrawable.h"/>
+   <depend name="include/openfl/_legacy/geom/Rectangle.h"/>
   </file>
   <file name="src/com/haxepunk/Scene.cpp">
    <depend name="include/List.h"/>
@@ -2414,15 +2475,18 @@
    <depend name="include/com/haxepunk/Tweener.h"/>
    <depend name="include/com/haxepunk/debug/Console.h"/>
    <depend name="include/com/haxepunk/debug/TraceCapture.h"/>
+   <depend name="include/com/haxepunk/ds/Either.h"/>
+   <depend name="include/com/haxepunk/utils/Input.h"/>
+   <depend name="include/com/haxepunk/utils/_Input/InputType_Impl_.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObject.h"/>
    <depend name="include/openfl/_legacy/display/DisplayObjectContainer.h"/>
    <depend name="include/openfl/_legacy/display/IBitmapDrawable.h"/>
    <depend name="include/openfl/_legacy/display/InteractiveObject.h"/>
    <depend name="include/openfl/_legacy/display/Sprite.h"/>
    <depend name="include/openfl/_legacy/display/Stage.h"/>
-   <depend name="include/openfl/_legacy/events/Event.h"/>
    <depend name="include/openfl/_legacy/events/EventDispatcher.h"/>
    <depend name="include/openfl/_legacy/events/IEventDispatcher.h"/>
+   <depend name="include/openfl/display/StageDisplayState.h"/>
   </file>
   <file name="src/com/haxepunk/Engine.cpp">
    <depend name="include/List.h"/>

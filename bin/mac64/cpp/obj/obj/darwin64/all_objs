@@ -227,7 +227,9 @@ obj/darwin64/7124a18f_Graphic.o
 obj/darwin64/57588eaa_MainScene.o
 obj/darwin64/232d3d90_ListIterator.o
 obj/darwin64/57588eaa_List.o
+obj/darwin64/57588eaa_LightMask.o
 obj/darwin64/57588eaa_Layers.o
+obj/darwin64/57588eaa_Lamp.o
 obj/darwin64/57588eaa_Lambda.o
 obj/darwin64/57588eaa_G.o
 obj/darwin64/57588eaa_EReg.o

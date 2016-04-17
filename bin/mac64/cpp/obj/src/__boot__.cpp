@@ -771,6 +771,12 @@
 #ifndef INCLUDED_List
 #include <List.h>
 #endif
+#ifndef INCLUDED_LightMask
+#include <LightMask.h>
+#endif
+#ifndef INCLUDED_Lamp
+#include <Lamp.h>
+#endif
 #ifndef INCLUDED_Lambda
 #include <Lambda.h>
 #endif
@@ -1119,6 +1125,8 @@ hx::RegisterResources( hx::GetResources() );
 ::MainScene_obj::__register();
 ::_List::ListIterator_obj::__register();
 ::List_obj::__register();
+::LightMask_obj::__register();
+::Lamp_obj::__register();
 ::Lambda_obj::__register();
 ::cpp::vm::Deque_obj::__register();
 ::openfl::_legacy::AssetLibrary_obj::__register();

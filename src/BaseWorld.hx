@@ -1,4 +1,6 @@
 package ;
+import com.haxepunk.graphics.Image;
+import com.haxepunk.Entity;
 import com.haxepunk.Scene;
 /**
  * ...
@@ -12,13 +14,14 @@ class BaseWorld extends Scene
 		super();
 	}
 
-/*
-	public function delay(time : Float, callback : Dynamic) : TimerEntity
-    {
-        var t : TimerEntity = new TimerEntity(time, callback);
-        add(t);
-        return t;
-    }
+	public function addLight(image : String, x : Float, y : Float) : Entity
+	{
 
-	*/
+		var light : Light = new Light(x,y, new Image(image));
+		light.layer = Layers.lights;
+		add(light);
+
+		return light;
+	}
+
 }

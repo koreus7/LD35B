@@ -94,6 +94,30 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("graphics/runneralt.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("graphics/walker.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("audio/Noir Jazz - Click Button.wav");
+		types.push (lime.Assets.AssetType.SOUND);
+		
+		
+		urls.push ("audio/Noir Jazz - Footsteps.wav");
+		types.push (lime.Assets.AssetType.SOUND);
+		
+		
+		urls.push ("audio/Noir Jazz - In Game Music.wav");
+		types.push (lime.Assets.AssetType.SOUND);
+		
+		
+		urls.push ("audio/Noir Jazz - Main Theme.wav");
+		types.push (lime.Assets.AssetType.SOUND);
+		
+		
 		
 		if (config.assetsPrefix != null) {
 			
@@ -154,7 +178,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "20",
+			build: "233",
 			company: "",
 			file: "Main",
 			fps: 60,

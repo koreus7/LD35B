@@ -41,4 +41,9 @@ class Utils
         return value;
     }
 
+    public static function aproxEq( a : Int,  b : Int, tollerance : Int = 10)
+    {
+        return  a <= b - tollerance && a + tollerance >= b;
+    }
+
 }

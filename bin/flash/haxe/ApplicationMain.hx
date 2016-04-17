@@ -78,6 +78,22 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("graphics/lamp.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("graphics/lampLight.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("graphics/lightingMask.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("graphics/overlay.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("graphics/paralax1.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -92,6 +108,22 @@ class ApplicationMain {
 		
 		urls.push ("graphics/runner.png");
 		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("graphics/runneralt.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("graphics/walker.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("shaders/invert.frag");
+		types.push (lime.Assets.AssetType.TEXT);
+		
+		
+		urls.push ("shaders/lighting.frag");
+		types.push (lime.Assets.AssetType.TEXT);
 		
 		
 		
@@ -154,7 +186,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "15",
+			build: "464",
 			company: "",
 			file: "Main",
 			fps: 60,

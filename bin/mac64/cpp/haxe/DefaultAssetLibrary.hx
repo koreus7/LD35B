@@ -80,6 +80,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
@@ -116,6 +120,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("font/04B_03__.ttf.png", __ASSET__font_04b_03___ttf_png);
 		type.set ("font/04B_03__.ttf.png", AssetType.IMAGE);
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -637,6 +645,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("font/04B_03__.ttf.png", AssetType.IMAGE);
 		path.set ("graphics/background.png", "graphics/background.png");
 		type.set ("graphics/background.png", AssetType.IMAGE);
+		path.set ("graphics/lamp.png", "graphics/lamp.png");
+		type.set ("graphics/lamp.png", AssetType.IMAGE);
+		path.set ("graphics/lampLight.png", "graphics/lampLight.png");
+		type.set ("graphics/lampLight.png", AssetType.IMAGE);
 		path.set ("graphics/paralax1.png", "graphics/paralax1.png");
 		type.set ("graphics/paralax1.png", AssetType.IMAGE);
 		path.set ("graphics/paralax2.png", "graphics/paralax2.png");
@@ -657,6 +669,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("audio/Noir Jazz - In Game Music.wav", AssetType.SOUND);
 		path.set ("audio/Noir Jazz - Main Theme.wav", "audio/Noir Jazz - Main Theme.wav");
 		type.set ("audio/Noir Jazz - Main Theme.wav", AssetType.SOUND);
+		path.set ("shaders/invert.frag", "shaders/invert.frag");
+		type.set ("shaders/invert.frag", AssetType.TEXT);
+		path.set ("shaders/lighting.frag", "shaders/lighting.frag");
+		type.set ("shaders/lighting.frag", AssetType.TEXT);
 		
 		
 		#elseif html5
@@ -709,6 +725,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "graphics/background.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "graphics/lamp.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "graphics/lampLight.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "graphics/paralax1.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
@@ -739,6 +761,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "audio/Noir Jazz - Main Theme.wav";
 		path.set (id, id);
 		type.set (id, AssetType.SOUND);
+		id = "shaders/invert.frag";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
+		id = "shaders/lighting.frag";
+		path.set (id, id);
+		type.set (id, AssetType.TEXT);
 		
 		
 		var assetsPrefix = ApplicationMain.config.assetsPrefix;
@@ -762,6 +790,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		openfl.text.Font.registerFont (__ASSET__OPENFL__font_04b_03___ttf);
+		
+		
+		
+		
 		
 		
 		
@@ -813,6 +845,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("font/04B_03__.ttf.png", __ASSET__font_04b_03___ttf_png);
 		type.set ("font/04B_03__.ttf.png", AssetType.IMAGE);
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -1543,6 +1579,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
 #elseif html5
 
 
@@ -1555,6 +1595,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 @:keep #if display private #end class __ASSET__font_04b_03___ttf extends lime.text.Font { public function new () { super (); name = "04b03"; } } 
+
+
+
+
 
 
 

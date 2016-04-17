@@ -15,7 +15,6 @@ HX_DECLARE_CLASS3(openfl,_legacy,display,DisplayObjectContainer)
 HX_DECLARE_CLASS3(openfl,_legacy,display,IBitmapDrawable)
 HX_DECLARE_CLASS3(openfl,_legacy,display,InteractiveObject)
 HX_DECLARE_CLASS3(openfl,_legacy,display,Sprite)
-HX_DECLARE_CLASS3(openfl,_legacy,events,Event)
 HX_DECLARE_CLASS3(openfl,_legacy,events,EventDispatcher)
 HX_DECLARE_CLASS3(openfl,_legacy,events,IEventDispatcher)
 
@@ -44,10 +43,7 @@ class HXCPP_CLASS_ATTRIBUTES  Main_obj : public ::com::haxepunk::Engine_obj{
 		static void __boot();
 		virtual Void init( );
 
-		virtual Void onStage( ::openfl::_legacy::events::Event e);
-
-		virtual Void onResize( ::openfl::_legacy::events::Event event);
-		Dynamic onResize_dyn();
+		virtual Void update( );
 
 		static int kScreenWidth;
 		static int kScreenHeight;

@@ -1,3 +1,4 @@
+import com.haxepunk.Entity;
 import com.haxepunk.graphics.Image;
 import com.haxepunk.Scene;
 import com.haxepunk.HXP;
@@ -25,7 +26,7 @@ class MainScene extends BaseWorld
         p2 = new Paralax(0,0,"graphics/paralax2.png");
         p2.layer = Layers.backParalax;
 
-        p1.rate = 0.01;
+        p1.rate = 0.006;
         p2.rate = 0.015;
 
 		player = new Runner();
@@ -44,9 +45,20 @@ class MainScene extends BaseWorld
         this.add(p2);
         this.add(p1);
         this.add(road);
+        this.add(new LightMask());
+
+        var lampA = new Lamp(0, G.ground - 134);
+        lampA.centerX = 200;
+
+        this.add(lampA);
+
+        var lampB = new Lamp(0, G.ground - 134);
+        lampB.centerX = 526;
+
+        this.add(lampB);
 
 
-        for(i in 0...20)
+        for(i in 0...3)
         {
             var walker : Walker = new Walker(
                 Utils.clamp(Utils.randInt(HXP.width), 0, HXP.width - 64),
@@ -56,10 +68,10 @@ class MainScene extends BaseWorld
         }
 
 
-
 		this.add(player);
-        add(new Walker(player.x + 50, player.y));
+
 	}
+
 
     override public function update()
     {

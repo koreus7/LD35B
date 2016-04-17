@@ -40,6 +40,10 @@ class AssetData {
 			type.set ("font/04B_03__.ttf.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("graphics/background.png", "graphics/background.png");
 			type.set ("graphics/background.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("graphics/lamp.png", "graphics/lamp.png");
+			type.set ("graphics/lamp.png", Reflect.field (AssetType, "image".toUpperCase ()));
+			path.set ("graphics/lampLight.png", "graphics/lampLight.png");
+			type.set ("graphics/lampLight.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("graphics/paralax1.png", "graphics/paralax1.png");
 			type.set ("graphics/paralax1.png", Reflect.field (AssetType, "image".toUpperCase ()));
 			path.set ("graphics/paralax2.png", "graphics/paralax2.png");
@@ -60,6 +64,10 @@ class AssetData {
 			type.set ("audio/Noir Jazz - In Game Music.wav", Reflect.field (AssetType, "sound".toUpperCase ()));
 			path.set ("audio/Noir Jazz - Main Theme.wav", "audio/Noir Jazz - Main Theme.wav");
 			type.set ("audio/Noir Jazz - Main Theme.wav", Reflect.field (AssetType, "sound".toUpperCase ()));
+			path.set ("shaders/invert.frag", "shaders/invert.frag");
+			type.set ("shaders/invert.frag", Reflect.field (AssetType, "text".toUpperCase ()));
+			path.set ("shaders/lighting.frag", "shaders/lighting.frag");
+			type.set ("shaders/lighting.frag", Reflect.field (AssetType, "text".toUpperCase ()));
 			
 			
 			initialized = true;

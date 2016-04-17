@@ -28,6 +28,8 @@ Float G_obj::timeSpeed;
 
 Float G_obj::ground;
 
+int G_obj::lighingMult;
+
 
 G_obj::G_obj()
 {
@@ -44,6 +46,9 @@ bool G_obj::__GetStatic(const ::String &inName, Dynamic &outValue, hx::PropertyA
 		break;
 	case 9:
 		if (HX_FIELD_EQ(inName,"timeSpeed") ) { outValue = timeSpeed; return true;  }
+		break;
+	case 11:
+		if (HX_FIELD_EQ(inName,"lighingMult") ) { outValue = lighingMult; return true;  }
 	}
 	return false;
 }
@@ -54,6 +59,7 @@ static hx::StaticInfo sStaticStorageInfo[] = {
 	{hx::fsFloat,(void *) &G_obj::delta,HX_HCSTRING("delta","\xf8","\xe7","\x26","\xd7")},
 	{hx::fsFloat,(void *) &G_obj::timeSpeed,HX_HCSTRING("timeSpeed","\x3a","\x6c","\x5a","\x36")},
 	{hx::fsFloat,(void *) &G_obj::ground,HX_HCSTRING("ground","\x87","\x22","\x28","\x1c")},
+	{hx::fsInt,(void *) &G_obj::lighingMult,HX_HCSTRING("lighingMult","\xd4","\xbf","\x13","\xe3")},
 	{ hx::fsUnknown, 0, null()}
 };
 #endif
@@ -63,6 +69,7 @@ static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(G_obj::delta,"delta");
 	HX_MARK_MEMBER_NAME(G_obj::timeSpeed,"timeSpeed");
 	HX_MARK_MEMBER_NAME(G_obj::ground,"ground");
+	HX_MARK_MEMBER_NAME(G_obj::lighingMult,"lighingMult");
 };
 
 #ifdef HXCPP_VISIT_ALLOCS
@@ -71,6 +78,7 @@ static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(G_obj::delta,"delta");
 	HX_VISIT_MEMBER_NAME(G_obj::timeSpeed,"timeSpeed");
 	HX_VISIT_MEMBER_NAME(G_obj::ground,"ground");
+	HX_VISIT_MEMBER_NAME(G_obj::lighingMult,"lighingMult");
 };
 
 #endif
@@ -81,6 +89,7 @@ static ::String sStaticFields[] = {
 	HX_HCSTRING("delta","\xf8","\xe7","\x26","\xd7"),
 	HX_HCSTRING("timeSpeed","\x3a","\x6c","\x5a","\x36"),
 	HX_HCSTRING("ground","\x87","\x22","\x28","\x1c"),
+	HX_HCSTRING("lighingMult","\xd4","\xbf","\x13","\xe3"),
 	::String(null()) };
 
 void G_obj::__register()
@@ -113,5 +122,6 @@ void G_obj::__boot()
 	delta= ((Float)0.0);
 	timeSpeed= ((Float)1.0);
 	ground= ((Float)0.0);
+	lighingMult= (int)13619151;
 }
 

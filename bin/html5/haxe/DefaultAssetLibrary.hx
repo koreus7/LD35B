@@ -67,6 +67,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
 		#end
 		
 		#if flash
@@ -103,6 +109,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("graphics/road.png", AssetType.IMAGE);
 		className.set ("graphics/runner.png", __ASSET__graphics_runner_png);
 		type.set ("graphics/runner.png", AssetType.IMAGE);
+		className.set ("graphics/runneralt.png", __ASSET__graphics_runneralt_png);
+		type.set ("graphics/runneralt.png", AssetType.IMAGE);
+		className.set ("graphics/walker.png", __ASSET__graphics_walker_png);
+		type.set ("graphics/walker.png", AssetType.IMAGE);
+		className.set ("audio/Noir Jazz - Click Button.wav", __ASSET__audio_noir_jazz___click_button_wav);
+		type.set ("audio/Noir Jazz - Click Button.wav", AssetType.SOUND);
+		className.set ("audio/Noir Jazz - Footsteps.wav", __ASSET__audio_noir_jazz___footsteps_wav);
+		type.set ("audio/Noir Jazz - Footsteps.wav", AssetType.SOUND);
+		className.set ("audio/Noir Jazz - In Game Music.wav", __ASSET__audio_noir_jazz___in_game_music_wav);
+		type.set ("audio/Noir Jazz - In Game Music.wav", AssetType.SOUND);
+		className.set ("audio/Noir Jazz - Main Theme.wav", __ASSET__audio_noir_jazz___main_theme_wav);
+		type.set ("audio/Noir Jazz - Main Theme.wav", AssetType.SOUND);
 		
 		
 		#elseif html5
@@ -172,6 +190,30 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "graphics/runneralt.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "graphics/walker.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "audio/Noir Jazz - Click Button.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Noir Jazz - Footsteps.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Noir Jazz - In Game Music.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
+		id = "audio/Noir Jazz - Main Theme.wav";
+		path.set (id, id);
+		
+		type.set (id, AssetType.SOUND);
 		
 		
 		var assetsPrefix = ApplicationMain.config.assetsPrefix;
@@ -234,6 +276,24 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("graphics/runner.png", __ASSET__graphics_runner_png);
 		type.set ("graphics/runner.png", AssetType.IMAGE);
+		
+		className.set ("graphics/runneralt.png", __ASSET__graphics_runneralt_png);
+		type.set ("graphics/runneralt.png", AssetType.IMAGE);
+		
+		className.set ("graphics/walker.png", __ASSET__graphics_walker_png);
+		type.set ("graphics/walker.png", AssetType.IMAGE);
+		
+		className.set ("audio/Noir Jazz - Click Button.wav", __ASSET__audio_noir_jazz___click_button_wav);
+		type.set ("audio/Noir Jazz - Click Button.wav", AssetType.SOUND);
+		
+		className.set ("audio/Noir Jazz - Footsteps.wav", __ASSET__audio_noir_jazz___footsteps_wav);
+		type.set ("audio/Noir Jazz - Footsteps.wav", AssetType.SOUND);
+		
+		className.set ("audio/Noir Jazz - In Game Music.wav", __ASSET__audio_noir_jazz___in_game_music_wav);
+		type.set ("audio/Noir Jazz - In Game Music.wav", AssetType.SOUND);
+		
+		className.set ("audio/Noir Jazz - Main Theme.wav", __ASSET__audio_noir_jazz___main_theme_wav);
+		type.set ("audio/Noir Jazz - Main Theme.wav", AssetType.SOUND);
 		
 		
 		if (useManifest) {
@@ -941,6 +1001,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__graphics_paralax2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_road_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_runner_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__graphics_runneralt_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__graphics_walker_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__audio_noir_jazz___click_button_wav extends null { }
+@:keep @:bind #if display private #end class __ASSET__audio_noir_jazz___footsteps_wav extends null { }
+@:keep @:bind #if display private #end class __ASSET__audio_noir_jazz___in_game_music_wav extends null { }
+@:keep @:bind #if display private #end class __ASSET__audio_noir_jazz___main_theme_wav extends null { }
 
 
 #elseif html5
@@ -955,6 +1021,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 @:keep #if display private #end class __ASSET__font_04b_03___ttf extends lime.text.Font { public function new () { super (); name = "04b03"; } } 
+
+
+
+
+
+
 
 
 
@@ -986,6 +1058,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/graphics/paralax2.png") #if display private #end class __ASSET__graphics_paralax2_png extends lime.graphics.Image {}
 @:image("assets/graphics/road.png") #if display private #end class __ASSET__graphics_road_png extends lime.graphics.Image {}
 @:image("assets/graphics/runner.png") #if display private #end class __ASSET__graphics_runner_png extends lime.graphics.Image {}
+@:image("assets/graphics/runneralt.png") #if display private #end class __ASSET__graphics_runneralt_png extends lime.graphics.Image {}
+@:image("assets/graphics/walker.png") #if display private #end class __ASSET__graphics_walker_png extends lime.graphics.Image {}
+@:file("assets/audio/Noir Jazz - Click Button.wav") #if display private #end class __ASSET__audio_noir_jazz___click_button_wav extends lime.utils.ByteArray {}
+@:file("assets/audio/Noir Jazz - Footsteps.wav") #if display private #end class __ASSET__audio_noir_jazz___footsteps_wav extends lime.utils.ByteArray {}
+@:file("assets/audio/Noir Jazz - In Game Music.wav") #if display private #end class __ASSET__audio_noir_jazz___in_game_music_wav extends lime.utils.ByteArray {}
+@:file("assets/audio/Noir Jazz - Main Theme.wav") #if display private #end class __ASSET__audio_noir_jazz___main_theme_wav extends lime.utils.ByteArray {}
 
 
 

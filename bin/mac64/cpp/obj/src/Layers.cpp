@@ -32,6 +32,10 @@ int Layers_obj::main;
 
 int Layers_obj::top;
 
+int Layers_obj::lightMask;
+
+int Layers_obj::lights;
+
 int Layers_obj::hud;
 
 
@@ -47,6 +51,8 @@ static hx::StaticInfo sStaticStorageInfo[] = {
 	{hx::fsInt,(void *) &Layers_obj::forwardParalax,HX_HCSTRING("forwardParalax","\x3e","\x49","\x06","\xcd")},
 	{hx::fsInt,(void *) &Layers_obj::main,HX_HCSTRING("main","\x39","\x38","\x56","\x48")},
 	{hx::fsInt,(void *) &Layers_obj::top,HX_HCSTRING("top","\x95","\x66","\x58","\x00")},
+	{hx::fsInt,(void *) &Layers_obj::lightMask,HX_HCSTRING("lightMask","\xe2","\x20","\x74","\xc1")},
+	{hx::fsInt,(void *) &Layers_obj::lights,HX_HCSTRING("lights","\xdd","\x2a","\x02","\xe8")},
 	{hx::fsInt,(void *) &Layers_obj::hud,HX_HCSTRING("hud","\xb7","\x50","\x4f","\x00")},
 	{ hx::fsUnknown, 0, null()}
 };
@@ -59,6 +65,8 @@ static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(Layers_obj::forwardParalax,"forwardParalax");
 	HX_MARK_MEMBER_NAME(Layers_obj::main,"main");
 	HX_MARK_MEMBER_NAME(Layers_obj::top,"top");
+	HX_MARK_MEMBER_NAME(Layers_obj::lightMask,"lightMask");
+	HX_MARK_MEMBER_NAME(Layers_obj::lights,"lights");
 	HX_MARK_MEMBER_NAME(Layers_obj::hud,"hud");
 };
 
@@ -70,6 +78,8 @@ static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(Layers_obj::forwardParalax,"forwardParalax");
 	HX_VISIT_MEMBER_NAME(Layers_obj::main,"main");
 	HX_VISIT_MEMBER_NAME(Layers_obj::top,"top");
+	HX_VISIT_MEMBER_NAME(Layers_obj::lightMask,"lightMask");
+	HX_VISIT_MEMBER_NAME(Layers_obj::lights,"lights");
 	HX_VISIT_MEMBER_NAME(Layers_obj::hud,"hud");
 };
 
@@ -83,6 +93,8 @@ static ::String sStaticFields[] = {
 	HX_HCSTRING("forwardParalax","\x3e","\x49","\x06","\xcd"),
 	HX_HCSTRING("main","\x39","\x38","\x56","\x48"),
 	HX_HCSTRING("top","\x95","\x66","\x58","\x00"),
+	HX_HCSTRING("lightMask","\xe2","\x20","\x74","\xc1"),
+	HX_HCSTRING("lights","\xdd","\x2a","\x02","\xe8"),
 	HX_HCSTRING("hud","\xb7","\x50","\x4f","\x00"),
 	::String(null()) };
 
@@ -118,6 +130,8 @@ void Layers_obj::__boot()
 	forwardParalax= (int)80;
 	main= (int)70;
 	top= (int)60;
+	lightMask= (int)50;
+	lights= (int)40;
 	hud= (int)0;
 }
 
