@@ -1,4 +1,5 @@
 package ;
+import com.haxepunk.Sfx;
 class Utils
 {
     public static inline function randomRange(lowerBound:Float, upperBound:Float):Float
@@ -72,6 +73,21 @@ class Utils
     public static function linearEase(t : Float) : Float
     {
         return t;
+    }
+
+    public static function audex(x : String) : Sfx
+    {
+
+
+        var y : String = x;
+        y = "audio/" + x +  ".wav";
+
+        #if flash
+        y = "audio/" +  x +  ".mp3";
+        #end
+
+
+        return new Sfx(y);
     }
 
 }

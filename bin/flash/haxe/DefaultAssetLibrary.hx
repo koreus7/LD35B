@@ -123,10 +123,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("graphics/runneralt.png", AssetType.IMAGE);
 		className.set ("graphics/walker.png", __ASSET__graphics_walker_png);
 		type.set ("graphics/walker.png", AssetType.IMAGE);
-		className.set ("shaders/invert.frag", __ASSET__shaders_invert_frag);
-		type.set ("shaders/invert.frag", AssetType.TEXT);
-		className.set ("shaders/lighting.frag", __ASSET__shaders_lighting_frag);
-		type.set ("shaders/lighting.frag", AssetType.TEXT);
+		className.set ("audio/ExitSlowMo.mp3", __ASSET__audio_exitslowmo_mp3);
+		type.set ("audio/ExitSlowMo.mp3", AssetType.MUSIC);
+		className.set ("audio/SlowMoFx.mp3", __ASSET__audio_slowmofx_mp3);
+		type.set ("audio/SlowMoFx.mp3", AssetType.MUSIC);
 		
 		
 		#elseif html5
@@ -220,14 +220,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
-		id = "shaders/invert.frag";
+		id = "audio/ExitSlowMo.mp3";
 		path.set (id, id);
 		
-		type.set (id, AssetType.TEXT);
-		id = "shaders/lighting.frag";
+		type.set (id, AssetType.MUSIC);
+		id = "audio/SlowMoFx.mp3";
 		path.set (id, id);
 		
-		type.set (id, AssetType.TEXT);
+		type.set (id, AssetType.MUSIC);
 		
 		
 		var assetsPrefix = ApplicationMain.config.assetsPrefix;
@@ -309,11 +309,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("graphics/walker.png", __ASSET__graphics_walker_png);
 		type.set ("graphics/walker.png", AssetType.IMAGE);
 		
-		className.set ("shaders/invert.frag", __ASSET__shaders_invert_frag);
-		type.set ("shaders/invert.frag", AssetType.TEXT);
+		className.set ("audio/ExitSlowMo.mp3", __ASSET__audio_exitslowmo_mp3);
+		type.set ("audio/ExitSlowMo.mp3", AssetType.MUSIC);
 		
-		className.set ("shaders/lighting.frag", __ASSET__shaders_lighting_frag);
-		type.set ("shaders/lighting.frag", AssetType.TEXT);
+		className.set ("audio/SlowMoFx.mp3", __ASSET__audio_slowmofx_mp3);
+		type.set ("audio/SlowMoFx.mp3", AssetType.MUSIC);
 		
 		
 		if (useManifest) {
@@ -1027,8 +1027,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__graphics_runner_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_runneralt_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_walker_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
-@:keep @:bind #if display private #end class __ASSET__shaders_invert_frag extends flash.utils.ByteArray { }
-@:keep @:bind #if display private #end class __ASSET__shaders_lighting_frag extends flash.utils.ByteArray { }
+@:keep @:bind #if display private #end class __ASSET__audio_exitslowmo_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_slowmofx_mp3 extends flash.media.Sound { }
 
 
 #elseif html5
@@ -1088,8 +1088,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/graphics/runner.png") #if display private #end class __ASSET__graphics_runner_png extends lime.graphics.Image {}
 @:image("assets/graphics/runneralt.png") #if display private #end class __ASSET__graphics_runneralt_png extends lime.graphics.Image {}
 @:image("assets/graphics/walker.png") #if display private #end class __ASSET__graphics_walker_png extends lime.graphics.Image {}
-@:file("assets/shaders/invert.frag") #if display private #end class __ASSET__shaders_invert_frag extends lime.utils.ByteArray {}
-@:file("assets/shaders/lighting.frag") #if display private #end class __ASSET__shaders_lighting_frag extends lime.utils.ByteArray {}
+@:file("assets/audio/ExitSlowMo.mp3") #if display private #end class __ASSET__audio_exitslowmo_mp3 extends lime.utils.ByteArray {}
+@:file("assets/audio/SlowMoFx.mp3") #if display private #end class __ASSET__audio_slowmofx_mp3 extends lime.utils.ByteArray {}
 
 
 

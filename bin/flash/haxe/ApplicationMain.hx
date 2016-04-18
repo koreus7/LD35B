@@ -118,12 +118,12 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
-		urls.push ("shaders/invert.frag");
-		types.push (lime.Assets.AssetType.TEXT);
+		urls.push ("audio/ExitSlowMo.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
-		urls.push ("shaders/lighting.frag");
-		types.push (lime.Assets.AssetType.TEXT);
+		urls.push ("audio/SlowMoFx.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
 		
@@ -186,7 +186,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "720",
+			build: "838",
 			company: "",
 			file: "Main",
 			fps: 60,

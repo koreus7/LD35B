@@ -56,16 +56,7 @@ class MainScene extends BaseWorld
 
         for(i in 0...10)
         {
-
-            var shifter = Utils.randInt(10) <= 2;
-            var walker : Walker = new Walker(
-                Utils.clamp(Utils.randInt(HXP.width), 0, HXP.width - 64),
-                player.y,
-                Utils.coinFlip(),
-                shifter,
-                Utils.coinFlip()
-            );
-            add(walker);
+            addWalker();
         }
 
 
@@ -73,6 +64,19 @@ class MainScene extends BaseWorld
 
 	}
 
+    private function addWalker() : Void
+    {
+        var shifter = Utils.randInt(10) <= 8;
+        var walker : Walker = new Walker(
+            Utils.clamp(Utils.randInt(HXP.width), 0, HXP.width - 64),
+            player.y,
+            Utils.coinFlip(),
+            shifter,
+            Utils.coinFlip()
+        );
+
+        add(walker);
+    }
 
     override public function update()
     {

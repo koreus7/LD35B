@@ -1,0 +1,25 @@
+{
+
+  project : {
+    name : 'koreus.ld35',
+    version : '1.0.0',
+    author : 'Leo Mahon',
+
+    app : {
+      name : 'koreusLD35',
+      package : ''
+    },
+
+    build : {
+      dependencies : {
+        HaxePunk : '*',
+      }
+    },
+
+    files : {
+      assets : 'assets/'
+    }
+
+  }
+
+}

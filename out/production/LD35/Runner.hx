@@ -10,6 +10,7 @@ import com.haxepunk.Mask;
 import com.haxepunk.HXP;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
+import com.haxepunk.Sfx;
 
 /**
  * ...
@@ -28,10 +29,14 @@ class Runner extends BaseWorldEntity
     private var _jumpHeight : Float;
     private var _jumpUpTime : Float;
     private var _fallDownTime : Float;
+    private var _slowTimeAmount : Float;
     private var _yBeforeJump : Float;
     private var _jumping : Bool;
+    private var _falling : Bool;
     private var _landing : Bool;
     private var _startedUpwardMovement : Bool;
+    private var slowMoFX : Sfx;
+    private var exitSlowMoFx : Sfx;
 
 	
 	public function new(x:Float=100, y:Float=100, graphic:Graphic=null, mask:Mask=null)  
@@ -42,13 +47,17 @@ class Runner extends BaseWorldEntity
         _jumpHeight = 200;
         _jumpUpTime = 2.7;
         _jumping = false;
+        _falling = false;
         _fallDownTime = 0.5;
+        _slowTimeAmount = 0.2;
 
+        slowMoFX =  Utils.audex("SlowMoFx");
+        exitSlowMoFx = Utils.audex("ExitSlowMo");
 
 		_animatedSprite = new Spritemap("graphics/runner.png", 64, 64);
 		_animatedSprite.add("run", [0, 1, 2, 3, 4, 5], 12);
 		_animatedSprite.add("idle", [6], 10);
-		_animatedSprite.add("jump", [8,9,10], 5, false);
+		_animatedSprite.add("jump", [8,9,10,11], 5, false);
         _animatedSprite.add("fall", [12], 5);
         _animatedSprite.add("land", [13], 5);
 		_animatedSprite.play("run");
@@ -91,13 +100,13 @@ class Runner extends BaseWorldEntity
             G.world.add(t);
         }
 
-
 	}
 
     private function startUpMovmement(data :Dynamic = null)
     {
-        var t = new TimerEntity(0.7, slowDownTime);
+        var t = new TimerEntity(0.08, slowDownTime);
         G.world.add(t);
+        G.runAway = true;
 
         _startedUpwardMovement  = true;
 
@@ -113,24 +122,45 @@ class Runner extends BaseWorldEntity
 
         this.addTween(_jumpTweenY, true);
         this.addTween(_jumpTweenX, true);
+
+
+        var t = new TimerEntity(_jumpUpTime/_slowTimeAmount -2.0, function( data : Dynamic = null ) {
+            exitSlowMoFx.play();
+            exitSlowMoFx.complete = function(){
+                slowMoFX.stop();
+            }
+        });
+        G.world.add(t);
+
     }
+
+
 
 
     private function slowDownTime(data : Dynamic = null)
     {
-        G.timeSpeed = 0.25;
+        slowMoFX.play();
+
+        var t = new TimerEntity(0.08, function( data : Dynamic = null ) {
+            G.timeSpeed = _slowTimeAmount;
+        });
+        G.world.add(t);
+
     }
+
 
 
     public function jumpFinished(data : Dynamic) : Void
     {
         _animatedSprite.play("land");
+        _falling = false;
         _landing = true;
         _jumping = false;
     }
 
     public function fall(data : Dynamic) : Void
     {
+        _falling = true;
         G.timeSpeed = 1.0;
 
         _animatedSprite.play("fall");
@@ -138,6 +168,8 @@ class Runner extends BaseWorldEntity
         _fallTweenY = new TimeScaleTween(jumpFinished, TweenType.OneShot);
         _fallTweenY.tween(this, "y", _yBeforeJump, _fallDownTime, Ease.quadIn);
         this.addTween(_fallTweenY, true);
+
+        G.timeSpeed = 1.0;
 
     }
 }

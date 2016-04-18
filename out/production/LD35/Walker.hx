@@ -43,6 +43,9 @@ class Walker extends BaseWorldEntity
 
     private var shifted : Bool;
 
+    private var runSpeed : Float;
+
+
     public function new(x : Float, y : Float, isOld : Bool, isShapeShifter : Bool, goingRight : Bool)
     {
         super(x,y);
@@ -60,6 +63,7 @@ class Walker extends BaseWorldEntity
         _speedMod = 1.0;
         goingFast = false;
         shifted = false;
+        runSpeed = 90.0;
 
         _animatedSprite = new Spritemap("graphics/walker.png", 64, 64);
 
@@ -74,6 +78,7 @@ class Walker extends BaseWorldEntity
             _speed = 50 + Utils.randInt(20);
             _animatedSprite.add("walk", [0, 1, 2, 3, 4, 5, 6, 7], _speed * _speed2FR * 0.9);
             _animatedSprite.add("walkFast", [0, 1, 2, 3, 4, 5, 6, 7], _speed * _speed2FR * 0.9 * 2.0);
+            _animatedSprite.add("run", [16,17,18,19,20,21], 10);
             _animatedSprite.play("walk");
 
         }
@@ -81,6 +86,7 @@ class Walker extends BaseWorldEntity
         {
             _speed = 30 + Utils.randInt(20);
             _animatedSprite.add("hobble", [8, 9, 10, 11, 12, 13, 14, 15], _speed * _speed2FR);
+            _animatedSprite.add("hobbleFast", [8, 9, 10, 11, 12, 13, 14, 15], _speed * _speed2FR * 2.0);
             _animatedSprite.play("hobble");
 
         }
@@ -97,6 +103,57 @@ class Walker extends BaseWorldEntity
     {
         _animatedSprite.rate = G.timeSpeed;
 
+
+        if(G.runAway)
+        {
+            runAwayAI();
+        }
+        else
+        {
+            crowdAI();
+        }
+
+        if(collide("Lamp",x,y) == null)
+        {
+            inLight = false;
+        }
+        else
+        {
+            inLight = true;
+        }
+
+        super.update();
+    }
+
+    private function runAwayAI()
+    {
+
+        if(x > HXP.width/2)
+        {
+            _animatedSprite.flipped = false;
+            moveBy(runSpeed * G.delta,0);
+        }
+        else
+        {
+            _animatedSprite.flipped = true;
+            moveBy(-runSpeed * G.delta,0);
+        }
+
+        if(_isOld)
+        {
+            if(_animatedSprite.currentAnim != "hobbleFast ")
+                _animatedSprite.play("hobbleFast");
+        }
+        else
+        {
+            
+            if(_animatedSprite.currentAnim != "run")
+                _animatedSprite.play("run");
+        }
+    }
+
+    private function crowdAI()
+    {
         if( x  >= HXP.width && goingRight)
         {
             x = -_animatedSprite.width;
@@ -114,7 +171,7 @@ class Walker extends BaseWorldEntity
         else
         {
             _animatedSprite.flipped = true;
-            moveBy( -_speed *  _speedMod * G.delta, 0);   
+            moveBy( -_speed *  _speedMod * G.delta, 0);
         }
 
         var checkOffset : Float = isGoingRight() ? _animatedSprite.width : - _animatedSprite.width;
@@ -126,8 +183,8 @@ class Walker extends BaseWorldEntity
         {
             //Check for parralel walkers.
             inFront = cast collide("walker", x  , y);
-            
-            
+
+
             if(inFront != null && inFront.getWalkerId() != dontOvertakeID && !_isOld)
             {
                 //Stop the other one from trying to overtake
@@ -142,12 +199,12 @@ class Walker extends BaseWorldEntity
                     //Slow down becase there is no one to overtake.
                     walk();
                 }
-                
+
             }
         }
-        //We are gonna bump into the person in front.
-        else if (inFront.isGoingRight() == isGoingRight() && ! inFront.isGoingFast() 
-            && inFront.getSpeed() < _speed )
+            //We are gonna bump into the person in front.
+        else if (inFront.isGoingRight() == isGoingRight() && ! inFront.isGoingFast()
+        && inFront.getSpeed() < _speed )
         {
             if(Utils.coinFlip() && !_isOld)// && inFront.getWalkerId() != dontOvertakeID)
             {
@@ -164,23 +221,12 @@ class Walker extends BaseWorldEntity
                 _speed = inFront.getSpeed();
             }
         }
-        //Not gonna bump in so should walk.
-        //Old can only hobble.
+            //Not gonna bump in so should walk.
+            //Old can only hobble.
         else if(!_isOld)
         {
             walk();
         }
-
-        if(collide("Lamp",x,y) == null)
-        {
-            inLight = false;
-        }
-        else
-        {
-            inLight = true;
-        }
-
-        super.update();
     }
 
     override public function firstUpdateCallback() : Void
@@ -246,7 +292,6 @@ class Walker extends BaseWorldEntity
             shapeShift();
         }
     }
-
 
     private function shapeShift() : Void
     {
