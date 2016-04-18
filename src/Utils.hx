@@ -69,4 +69,9 @@ class Utils
         return angle / 57.2957795;
     }
 
+    public static function linearEase(t : Float) : Float
+    {
+        return t;
+    }
+
 }
