@@ -75,6 +75,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
 		#end
 		
 		#if flash
@@ -103,12 +106,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("font/04B_03__.ttf.png", AssetType.IMAGE);
 		className.set ("graphics/background.png", __ASSET__graphics_background_png);
 		type.set ("graphics/background.png", AssetType.IMAGE);
+		className.set ("graphics/bullet.png", __ASSET__graphics_bullet_png);
+		type.set ("graphics/bullet.png", AssetType.IMAGE);
 		className.set ("graphics/lamp.png", __ASSET__graphics_lamp_png);
 		type.set ("graphics/lamp.png", AssetType.IMAGE);
 		className.set ("graphics/lampLight.png", __ASSET__graphics_lamplight_png);
 		type.set ("graphics/lampLight.png", AssetType.IMAGE);
 		className.set ("graphics/lightingMask.png", __ASSET__graphics_lightingmask_png);
 		type.set ("graphics/lightingMask.png", AssetType.IMAGE);
+		className.set ("graphics/mouse.png", __ASSET__graphics_mouse_png);
+		type.set ("graphics/mouse.png", AssetType.IMAGE);
 		className.set ("graphics/overlay.png", __ASSET__graphics_overlay_png);
 		type.set ("graphics/overlay.png", AssetType.IMAGE);
 		className.set ("graphics/paralax1.png", __ASSET__graphics_paralax1_png);
@@ -121,6 +128,8 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("graphics/runner.png", AssetType.IMAGE);
 		className.set ("graphics/runneralt.png", __ASSET__graphics_runneralt_png);
 		type.set ("graphics/runneralt.png", AssetType.IMAGE);
+		className.set ("graphics/topGun.png", __ASSET__graphics_topgun_png);
+		type.set ("graphics/topGun.png", AssetType.IMAGE);
 		className.set ("graphics/walker.png", __ASSET__graphics_walker_png);
 		type.set ("graphics/walker.png", AssetType.IMAGE);
 		className.set ("audio/ExitSlowMo.mp3", __ASSET__audio_exitslowmo_mp3);
@@ -180,6 +189,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "graphics/bullet.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "graphics/lamp.png";
 		path.set (id, id);
 		
@@ -189,6 +202,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.IMAGE);
 		id = "graphics/lightingMask.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "graphics/mouse.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -213,6 +230,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.IMAGE);
 		id = "graphics/runneralt.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "graphics/topGun.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -279,6 +300,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("graphics/background.png", __ASSET__graphics_background_png);
 		type.set ("graphics/background.png", AssetType.IMAGE);
 		
+		className.set ("graphics/bullet.png", __ASSET__graphics_bullet_png);
+		type.set ("graphics/bullet.png", AssetType.IMAGE);
+		
 		className.set ("graphics/lamp.png", __ASSET__graphics_lamp_png);
 		type.set ("graphics/lamp.png", AssetType.IMAGE);
 		
@@ -287,6 +311,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("graphics/lightingMask.png", __ASSET__graphics_lightingmask_png);
 		type.set ("graphics/lightingMask.png", AssetType.IMAGE);
+		
+		className.set ("graphics/mouse.png", __ASSET__graphics_mouse_png);
+		type.set ("graphics/mouse.png", AssetType.IMAGE);
 		
 		className.set ("graphics/overlay.png", __ASSET__graphics_overlay_png);
 		type.set ("graphics/overlay.png", AssetType.IMAGE);
@@ -305,6 +332,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("graphics/runneralt.png", __ASSET__graphics_runneralt_png);
 		type.set ("graphics/runneralt.png", AssetType.IMAGE);
+		
+		className.set ("graphics/topGun.png", __ASSET__graphics_topgun_png);
+		type.set ("graphics/topGun.png", AssetType.IMAGE);
 		
 		className.set ("graphics/walker.png", __ASSET__graphics_walker_png);
 		type.set ("graphics/walker.png", AssetType.IMAGE);
@@ -1017,15 +1047,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__font_04b_03___ttf extends flash.text.Font { }
 @:keep @:bind #if display private #end class __ASSET__font_04b_03___ttf_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_background_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__graphics_bullet_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_lamp_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_lamplight_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_lightingmask_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__graphics_mouse_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_overlay_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_paralax1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_paralax2_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_road_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_runner_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_runneralt_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__graphics_topgun_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_walker_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__audio_exitslowmo_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_slowmofx_mp3 extends flash.media.Sound { }
@@ -1043,6 +1076,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 @:keep #if display private #end class __ASSET__font_04b_03___ttf extends lime.text.Font { public function new () { super (); name = "04b03"; } } 
+
+
+
 
 
 
@@ -1078,15 +1114,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:font("/usr/lib/haxelib/HaxePunk/2,5,6/assets/font/04B_03__.ttf") #if display private #end class __ASSET__font_04b_03___ttf extends lime.text.Font {}
 @:image("/usr/lib/haxelib/HaxePunk/2,5,6/assets/font/04B_03__.ttf.png") #if display private #end class __ASSET__font_04b_03___ttf_png extends lime.graphics.Image {}
 @:image("assets/graphics/background.png") #if display private #end class __ASSET__graphics_background_png extends lime.graphics.Image {}
+@:image("assets/graphics/bullet.png") #if display private #end class __ASSET__graphics_bullet_png extends lime.graphics.Image {}
 @:image("assets/graphics/lamp.png") #if display private #end class __ASSET__graphics_lamp_png extends lime.graphics.Image {}
 @:image("assets/graphics/lampLight.png") #if display private #end class __ASSET__graphics_lamplight_png extends lime.graphics.Image {}
 @:image("assets/graphics/lightingMask.png") #if display private #end class __ASSET__graphics_lightingmask_png extends lime.graphics.Image {}
+@:image("assets/graphics/mouse.png") #if display private #end class __ASSET__graphics_mouse_png extends lime.graphics.Image {}
 @:image("assets/graphics/overlay.png") #if display private #end class __ASSET__graphics_overlay_png extends lime.graphics.Image {}
 @:image("assets/graphics/paralax1.png") #if display private #end class __ASSET__graphics_paralax1_png extends lime.graphics.Image {}
 @:image("assets/graphics/paralax2.png") #if display private #end class __ASSET__graphics_paralax2_png extends lime.graphics.Image {}
 @:image("assets/graphics/road.png") #if display private #end class __ASSET__graphics_road_png extends lime.graphics.Image {}
 @:image("assets/graphics/runner.png") #if display private #end class __ASSET__graphics_runner_png extends lime.graphics.Image {}
 @:image("assets/graphics/runneralt.png") #if display private #end class __ASSET__graphics_runneralt_png extends lime.graphics.Image {}
+@:image("assets/graphics/topGun.png") #if display private #end class __ASSET__graphics_topgun_png extends lime.graphics.Image {}
 @:image("assets/graphics/walker.png") #if display private #end class __ASSET__graphics_walker_png extends lime.graphics.Image {}
 @:file("assets/audio/ExitSlowMo.mp3") #if display private #end class __ASSET__audio_exitslowmo_mp3 extends lime.utils.ByteArray {}
 @:file("assets/audio/SlowMoFx.mp3") #if display private #end class __ASSET__audio_slowmofx_mp3 extends lime.utils.ByteArray {}

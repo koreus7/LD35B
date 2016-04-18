@@ -2,12 +2,15 @@ import com.haxepunk.Entity;
 import com.haxepunk.graphics.Image;
 import com.haxepunk.Scene;
 import com.haxepunk.HXP;
+import com.haxepunk.utils.Input;
 
 class MainScene extends BaseWorld
 {
     private var p1 : Paralax;
     private var p2 : Paralax;
     private var player : Runner;
+
+    private var mouse : Entity;
 
     override public function begin()
 	{
@@ -62,6 +65,11 @@ class MainScene extends BaseWorld
 
 		this.add(player);
 
+        mouse = new Entity(0,0,new Image("graphics/mouse.png"));
+        mouse.layer = Layers.hud;
+        this.add(mouse);
+        
+
 	}
 
     private function addWalker() : Void
@@ -82,6 +90,9 @@ class MainScene extends BaseWorld
     {
         G.delta = HXP.elapsed * G.timeSpeed;
         Paralax.offset = HXP.width/2.0 - player.x;
+        mouse.x  = Input.mouseX - 4;
+        mouse.y = Input.mouseY - 4;
+
         super.update();
     }
 }

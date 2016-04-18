@@ -78,6 +78,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("graphics/bullet.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("graphics/lamp.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -87,6 +91,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("graphics/lightingMask.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("graphics/mouse.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -111,6 +119,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("graphics/runneralt.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("graphics/topGun.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -186,7 +198,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "838",
+			build: "1014",
 			company: "",
 			file: "Main",
 			fps: 60,

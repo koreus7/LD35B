@@ -11,6 +11,7 @@ import com.haxepunk.HXP;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
 import com.haxepunk.Sfx;
+import com.haxepunk.graphics.Image;
 
 /**
  * ...
@@ -37,6 +38,11 @@ class Runner extends BaseWorldEntity
     private var _startedUpwardMovement : Bool;
     private var slowMoFX : Sfx;
     private var exitSlowMoFx : Sfx;
+    private var _gunTop : Image;
+    private var _gunRotateOffX : Float;
+    private var _gunRotateOffY : Float;
+    private var _topRot : Float;
+    
 
 	
 	public function new(x:Float=100, y:Float=100, graphic:Graphic=null, mask:Mask=null)  
@@ -44,12 +50,15 @@ class Runner extends BaseWorldEntity
 		
 		_speed = 550;
 
+
+
         _jumpHeight = 200;
         _jumpUpTime = 2.7;
         _jumping = false;
         _falling = false;
         _fallDownTime = 0.5;
         _slowTimeAmount = 0.2;
+
 
         slowMoFX =  Utils.audex("SlowMoFx");
         exitSlowMoFx = Utils.audex("ExitSlowMo");
@@ -61,14 +70,72 @@ class Runner extends BaseWorldEntity
         _animatedSprite.add("fall", [12], 5);
         _animatedSprite.add("land", [13], 5);
 		_animatedSprite.play("run");
-		this.graphic = _animatedSprite;
+
+        _gunTop = new Image("graphics/topGun.png");
+        _gunTop.visible = false;
+        _gunRotateOffX = 35;
+        _gunRotateOffY = 29;
+        _gunTop.originX = _gunRotateOffX;
+        _gunTop.originY = _gunRotateOffY;
+        _gunTop.x = _gunRotateOffX;
+        _gunTop.y = _gunRotateOffY;
+
+
+
+		this.addGraphic(_animatedSprite);
+        this.addGraphic(_gunTop);
 		
 		super(x, y, graphic, mask);
 		
 	}
+
+    private function rotateTop(x : Float, y : Float)
+    {
+
+        var ox : Float;
+        var oy : Float;
+
+
+        //TODO FIX THIS ROTATIONTHING
+        if(x > this.x && false)
+        {
+
+            _gunTop.originX = _gunTop.x =   width - _gunRotateOffX;
+            _gunTop.originY = _gunTop.y =   _gunRotateOffY;
+
+            ox = this.x + _gunTop.originX;
+            oy = this.y + _gunTop.originY;
+
+            _animatedSprite.flipped = true;
+            _gunTop.flipped = true;
+        }
+        else
+        {
+            _gunTop.originX = _gunTop.x =   _gunRotateOffX;
+            _gunTop.originY = _gunTop.y =   _gunRotateOffY;
+
+            ox = this.x + _gunTop.originX;
+            oy = this.y + _gunTop.originY - 40;
+            _animatedSprite.flipped = false;
+            _gunTop.flipped = false;
+        }
+
+        var d =  Utils.distance(ox, oy, x , y );
+
+        var alpha = Math.PI/2 - Math.atan2(y - oy, x - ox);
+        var beta = Math.acos(_gunRotateOffY / d);
+
+        _topRot = alpha + beta;
+
+        _gunTop.angle = Utils.radToDeg(
+            _topRot
+        );
+    }
 	
 	override public function update()
 	{
+        rotateTop(Input.mouseX, Input.mouseY);
+
 		_animatedSprite.rate = G.timeSpeed;
 
         if(!_jumping && !_landing)
@@ -96,9 +163,39 @@ class Runner extends BaseWorldEntity
             _yBeforeJump = y;
             _jumping = true;
             _animatedSprite.play("jump");
+
             var t = new TimerEntity(0.3, startUpMovmement);
             G.world.add(t);
+
+            var t1 = new TimerEntity(0.85, function( data : Dynamic = null){
+                _gunTop.visible = true;
+            });
+
+            G.world.add(t);
+            G.world.add(t1);
         }
+
+        if(_jumping && !_falling && !_landing)
+        {
+            if(Input.mousePressed)
+            {
+                var ox = this.x + _gunTop.x  - 14*Math.sin(_topRot);
+                var oy = this.y + _gunTop.y  - 14*Math.cos(_topRot);
+
+                var v : Vector2D = new Vector2D(Input.mouseX - ox, Input.mouseY - oy);
+
+                v.normalize();
+
+                var b = v.normalized().returnScaled(17);
+                v.scale(10);
+
+                var b = new Bullet(ox + b.x,oy + b.y,v.x,v.y);
+                b.layer = Layers.main;
+                G.world.add(b);
+            }
+        }
+
+
 
 	}
 
@@ -163,6 +260,7 @@ class Runner extends BaseWorldEntity
         _falling = true;
         G.timeSpeed = 1.0;
 
+        _gunTop.visible = false;
         _animatedSprite.play("fall");
 
         _fallTweenY = new TimeScaleTween(jumpFinished, TweenType.OneShot);

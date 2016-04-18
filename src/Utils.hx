@@ -90,4 +90,12 @@ class Utils
         return new Sfx(y);
     }
 
+    public static function distance( x : Float , y : Float , x1 : Float, y1 : Float)
+    {
+        var a = x1 - x;
+        var b = y1 - y;
+
+        return Math.sqrt(a*a + b*b);
+    }
+
 }

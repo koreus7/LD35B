@@ -1,3 +1,4 @@
+import openfl._legacy.ui.Mouse;
 import flash.display.BitmapData;
 import com.haxepunk.Engine;
 import com.haxepunk.HXP;
@@ -15,11 +16,13 @@ class Main extends Engine
 
     function new()
     {
+
         super(kScreenWidth, kScreenHeight, kFrameRate, false);
     }
 
 	override public function init()
 	{
+        Mouse.hide();
 //#if debug
 		HXP.console.enable();
 

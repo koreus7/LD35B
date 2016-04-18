@@ -4,6 +4,8 @@ import com.haxepunk.graphics.Image;
 import com.haxepunk.graphics.Spritemap;
 import com.haxepunk.Graphic;
 import com.haxepunk.HXP;
+import com.haxepunk.utils.Input;
+import com.haxepunk.utils.Key;
 
 
 class Walker extends BaseWorldEntity
@@ -45,6 +47,10 @@ class Walker extends BaseWorldEntity
 
     private var runSpeed : Float;
 
+    public var dead : Bool;
+
+
+
 
     public function new(x : Float, y : Float, isOld : Bool, isShapeShifter : Bool, goingRight : Bool)
     {
@@ -63,7 +69,7 @@ class Walker extends BaseWorldEntity
         _speedMod = 1.0;
         goingFast = false;
         shifted = false;
-        runSpeed = 90.0;
+        runSpeed = 2.5;
 
         _animatedSprite = new Spritemap("graphics/walker.png", 64, 64);
 
@@ -86,12 +92,14 @@ class Walker extends BaseWorldEntity
         {
             _speed = 30 + Utils.randInt(20);
             _animatedSprite.add("hobble", [8, 9, 10, 11, 12, 13, 14, 15], _speed * _speed2FR);
-            _animatedSprite.add("hobbleFast", [8, 9, 10, 11, 12, 13, 14, 15], _speed * _speed2FR * 2.0);
+            _animatedSprite.add("hobbleFast", [8, 9, 10, 11, 12, 13, 14, 15], _speed * _speed2FR * runSpeed);
             _animatedSprite.play("hobble");
 
         }
         setHitbox(_animatedSprite.width, _animatedSprite.height);
 
+
+        _animatedSprite.add("die", [22,23,24,25], 13, false);
 
         this.goingRight = goingRight;
 
@@ -103,25 +111,42 @@ class Walker extends BaseWorldEntity
     {
         _animatedSprite.rate = G.timeSpeed;
 
-
-        if(G.runAway)
+        if(dead)
         {
-            runAwayAI();
+
         }
         else
         {
-            crowdAI();
+            if(G.runAway)
+            {
+                runAwayAI();
+            }
+            else
+            {
+                crowdAI();
+            }
+
+            if(collide("Lamp",x,y) == null)
+            {
+                inLight = false;
+            }
+            else
+            {
+                inLight = true;
+            }
         }
 
-        if(collide("Lamp",x,y) == null)
+        var bullet : Bullet = cast collide("bullet",x,y);
+        if(bullet != null)
         {
-            inLight = false;
+            trace("OUCH");
+            if(isShapeShifter)
+            {
+                die();
+            }
+            G.world.remove(bullet);
         }
-        else
-        {
-            inLight = true;
-        }
-
+  
         super.update();
     }
 
@@ -131,12 +156,12 @@ class Walker extends BaseWorldEntity
         if(x > HXP.width/2)
         {
             _animatedSprite.flipped = false;
-            moveBy(runSpeed * G.delta,0);
+            moveBy(runSpeed * G.delta * _speed ,0);
         }
         else
         {
             _animatedSprite.flipped = true;
-            moveBy(-runSpeed * G.delta,0);
+            moveBy(-runSpeed * G.delta * _speed,0);
         }
 
         if(_isOld)
@@ -227,6 +252,8 @@ class Walker extends BaseWorldEntity
         {
             walk();
         }
+
+
     }
 
     override public function firstUpdateCallback() : Void
@@ -293,9 +320,14 @@ class Walker extends BaseWorldEntity
         }
     }
 
+    public function getIsShapeShifter() : Bool
+    {
+        return isShapeShifter;
+    }
+
     private function shapeShift() : Void
     {
-        if(!shifted)
+        if(!shifted && !G.runAway)
         {
             var newForm : Walker = new Walker(x,y, !_isOld, true, !goingRight);
             if(G.world== null) trace("baseWorld");
@@ -305,5 +337,11 @@ class Walker extends BaseWorldEntity
             G.world.remove(this);
             shifted = true;
         }
+    }
+
+    private function die() : Void
+    {
+        dead = true;
+        _animatedSprite.play("die");    
     }
 }

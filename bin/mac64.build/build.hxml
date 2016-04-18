@@ -1,0 +1,16 @@
+-main Main
+-cpp bin/mac64.build/cpp
+-D no-compilation
+-D mac
+-D arch-64
+-D desktop
+-D HaxePunk
+-D hxcpp
+-D lime
+-D openfl
+-cp bin/mac64.build/haxe
+-cp src/
+-lib hxcpp
+-lib openfl
+-lib lime
+-lib HaxePunk
