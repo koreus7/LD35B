@@ -16,11 +16,11 @@ class Lamp extends BaseWorldEntity
 
         graphic = lampSprite;
 
-
-
         setHitbox(128,128);
 
         type = "Lamp";
+
+        layer = Layers.mainBack;
 
     }
 

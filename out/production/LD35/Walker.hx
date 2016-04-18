@@ -91,12 +91,12 @@ class Walker extends BaseWorldEntity
 
         turn();
 
-
-
     }
 
     override public function update() : Void
     {
+        _animatedSprite.rate = G.timeSpeed;
+
         if( x  >= HXP.width && goingRight)
         {
             x = -_animatedSprite.width;
@@ -252,7 +252,6 @@ class Walker extends BaseWorldEntity
     {
         if(!shifted)
         {
-            trace("shift" + getWalkerId());
             var newForm : Walker = new Walker(x,y, !_isOld, true, !goingRight);
             if(G.world== null) trace("baseWorld");
             G.world.add(newForm);

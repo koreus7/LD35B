@@ -9,6 +9,7 @@ class Layers
 	public static inline var back = 100;
 	public static inline var backParalax = 90;
     public static inline var forwardParalax = 80;
+    public static inline var mainBack = 75;
 	public static inline var main = 70;
 	public static inline var top  = 60;
 	public static inline var lightMask = 50;

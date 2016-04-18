@@ -95,6 +95,8 @@ class Walker extends BaseWorldEntity
 
     override public function update() : Void
     {
+        _animatedSprite.rate = G.timeSpeed;
+
         if( x  >= HXP.width && goingRight)
         {
             x = -_animatedSprite.width;
