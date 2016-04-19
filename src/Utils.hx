@@ -42,6 +42,12 @@ class Utils
         return value;
     }
 
+    public static inline function onScreen(x, y, width, height)
+    {
+        return x > HXP.width || x + width < 0 || y + height  < 0 || y > HXP.height;
+    }
+
+
     public static function aproxEq( a : Int,  b : Int, tollerance : Int = 10)
     {
         return  a <= b - tollerance && a + tollerance >= b;

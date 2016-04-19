@@ -24,11 +24,11 @@ class Main extends Engine
 	{
         Mouse.hide();
 //#if debug
-		HXP.console.enable();
+		//HXP.console.enable();
 
-        HXP.console.toggleKey = Key.F3;
+        //HXP.console.toggleKey = Key.F3;
 //#end
-		HXP.scene = new MainScene();
+		HXP.scene = new Menu();
         super.init();
 	}
 

@@ -6,6 +6,7 @@ import com.haxepunk.Graphic;
 import com.haxepunk.HXP;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
+import com.haxepunk.Sfx;
 
 
 class Walker extends BaseWorldEntity
@@ -47,8 +48,9 @@ class Walker extends BaseWorldEntity
 
     private var runSpeed : Float;
 
-    private var dead : Bool;
+    public var dead : Bool;
 
+    private var bulletFX : Sfx;
 
 
 
@@ -60,6 +62,7 @@ class Walker extends BaseWorldEntity
         walkerId = idCount;
         idCount ++;
 
+        bulletFX = Utils.audex("Gun Impact");
 
         type = "walker";
 
@@ -139,10 +142,10 @@ class Walker extends BaseWorldEntity
         var bullet : Bullet = cast collide("bullet",x,y);
         if(bullet != null)
         {
-            trace("OUCH");
             if(isShapeShifter)
             {
                 die();
+                bulletFX.play();
             }
             G.world.remove(bullet);
         }
@@ -318,6 +321,11 @@ class Walker extends BaseWorldEntity
         {
             shapeShift();
         }
+    }
+
+    public function getIsShapeShifter() : Bool
+    {
+        return isShapeShifter;
     }
 
     private function shapeShift() : Void

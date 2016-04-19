@@ -2,37 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c5a790b3-d666-4364-a719-f51354387859" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/Exit Slow Mo.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/Gun Impact.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/In Game FX V2.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/Jump .mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/Land.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/Main Theme Master.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/Main Theme V2 Master.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/Menu Click.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/Protaginist Walk.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/Shapeshifter .mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/Slow Mo Cartridge.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/Slow Mo Fx.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/Slow Mo Gun Shot.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/Teleport 1.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/audio/Teleport 2.mp3" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Bullet.hx" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Vector2D.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/graphics/runner.png" afterPath="$PROJECT_DIR$/assets/graphics/runner.png" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/graphics/runneralt.xcf" afterPath="$PROJECT_DIR$/assets/graphics/runneralt.xcf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/graphics/walkerAlt.xcf" afterPath="$PROJECT_DIR$/assets/graphics/walkerAlt.xcf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/assets/font/Zorus_Serif.ttf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Menu.hx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TextOverlay.hx" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TransitionScene.hx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/assets/graphics/topGun.png" afterPath="$PROJECT_DIR$/assets/graphics/topGun.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/flash/bin/Main.swf" afterPath="$PROJECT_DIR$/bin/flash/bin/Main.swf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/flash/obj/assets.swf" afterPath="$PROJECT_DIR$/bin/flash/obj/assets.swf" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/neko/bin/Main.app/Contents/MacOS/Main" afterPath="$PROJECT_DIR$/bin/mac64/neko/bin/Main.app/Contents/MacOS/Main" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/neko/bin/Main.app/Contents/Resources/graphics/runner.png" afterPath="$PROJECT_DIR$/bin/mac64/neko/bin/Main.app/Contents/Resources/graphics/runner.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/neko/bin/Main.app/Contents/Resources/graphics/walker.png" afterPath="$PROJECT_DIR$/bin/mac64/neko/bin/Main.app/Contents/Resources/graphics/walker.png" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/neko/obj/ApplicationMain.n" afterPath="$PROJECT_DIR$/bin/mac64/neko/obj/ApplicationMain.n" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/.build" afterPath="$PROJECT_DIR$/bin/.build" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/flash/haxe/ApplicationMain.hx" afterPath="$PROJECT_DIR$/bin/flash/haxe/ApplicationMain.hx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/flash/haxe/DefaultAssetLibrary.hx" afterPath="$PROJECT_DIR$/bin/flash/haxe/DefaultAssetLibrary.hx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/flash/haxe/debug.hxml" afterPath="$PROJECT_DIR$/bin/flash/haxe/debug.hxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/flash/haxe/final.hxml" afterPath="$PROJECT_DIR$/bin/flash/haxe/final.hxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/flash/haxe/release.hxml" afterPath="$PROJECT_DIR$/bin/flash/haxe/release.hxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/neko/bin/Main.app/Contents/Info.plist" afterPath="$PROJECT_DIR$/bin/mac64/neko/bin/Main.app/Contents/Info.plist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/neko/bin/Main.app/Contents/Resources/manifest" afterPath="$PROJECT_DIR$/bin/mac64/neko/bin/Main.app/Contents/Resources/manifest" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/neko/haxe/ApplicationMain.hx" afterPath="$PROJECT_DIR$/bin/mac64/neko/haxe/ApplicationMain.hx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/neko/haxe/DefaultAssetLibrary.hx" afterPath="$PROJECT_DIR$/bin/mac64/neko/haxe/DefaultAssetLibrary.hx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/mac64/neko/haxe/lime/AssetData.hx" afterPath="$PROJECT_DIR$/bin/mac64/neko/haxe/lime/AssetData.hx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LD35/G.hx" afterPath="$PROJECT_DIR$/out/production/LD35/G.hx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LD35/Main.hx" afterPath="$PROJECT_DIR$/out/production/LD35/Main.hx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LD35/MainScene.hx" afterPath="$PROJECT_DIR$/out/production/LD35/MainScene.hx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LD35/Runner.hx" afterPath="$PROJECT_DIR$/out/production/LD35/Runner.hx" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LD35/Utils.hx" afterPath="$PROJECT_DIR$/out/production/LD35/Utils.hx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/LD35/Walker.hx" afterPath="$PROJECT_DIR$/out/production/LD35/Walker.hx" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.flow" afterPath="$PROJECT_DIR$/project.flow" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/G.hx" afterPath="$PROJECT_DIR$/src/G.hx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.hx" afterPath="$PROJECT_DIR$/src/Main.hx" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MainScene.hx" afterPath="$PROJECT_DIR$/src/MainScene.hx" />
@@ -60,102 +58,42 @@
     <favorites_list name="LD35" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="MainScene.hx" pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="MainScene.hx" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainScene.hx">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.025764896">
-              <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="148" column="42" selection-start-line="148" selection-start-column="42" selection-end-line="148" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Layers.hx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Layers.hx">
+      <file leaf-file-name="Menu.hx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Menu.hx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+              <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Runner.hx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Runner.hx">
+      <file leaf-file-name="TextOverlay.hx" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TextOverlay.hx">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="189" column="26" selection-start-line="189" selection-start-column="26" selection-end-line="189" selection-end-column="26" />
+              <caret line="23" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bullet.hx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Bullet.hx">
+      <file leaf-file-name="TransitionScene.hx" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TransitionScene.hx">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TimeScaleTween.hx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TimeScaleTween.hx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Lamp.hx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Lamp.hx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Utils.hx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Utils.hx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.hx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Main.hx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Walker.hx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Walker.hx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="144" column="22" selection-start-line="144" selection-start-column="22" selection-end-line="144" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Vector2D.hx" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Vector2D.hx">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.56666666">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -200,10 +138,13 @@
         <option value="$PROJECT_DIR$/src/Utils.hx" />
         <option value="$PROJECT_DIR$/src/Main.hx" />
         <option value="$PROJECT_DIR$/src/Vector2D.hx" />
-        <option value="$PROJECT_DIR$/src/Runner.hx" />
         <option value="$PROJECT_DIR$/src/Bullet.hx" />
         <option value="$PROJECT_DIR$/src/Walker.hx" />
+        <option value="$PROJECT_DIR$/src/Menu.hx" />
+        <option value="$PROJECT_DIR$/src/Runner.hx" />
+        <option value="$PROJECT_DIR$/src/TextOverlay.hx" />
         <option value="$PROJECT_DIR$/src/MainScene.hx" />
+        <option value="$PROJECT_DIR$/src/TransitionScene.hx" />
       </list>
     </option>
   </component>
@@ -250,9 +191,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -352,6 +290,10 @@
               <option name="myItemId" value="assets" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="font" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -373,6 +315,9 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -386,6 +331,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/font" />
       <recent name="$PROJECT_DIR$/assets/audio" />
       <recent name="$PROJECT_DIR$/src" />
       <recent name="$PROJECT_DIR$/assets" />
@@ -906,40 +852,41 @@
       <workItem from="1460822126603" duration="23433000" />
       <workItem from="1460857867391" duration="84000" />
       <workItem from="1460857981700" duration="146000" />
-      <workItem from="1460858753486" duration="73163000" />
+      <workItem from="1460858753486" duration="79651000" />
+      <workItem from="1461030926201" duration="246000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="97136000" />
+    <option name="totallyTimeSpent" value="103870000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1920" y="-649" width="1920" height="1057" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17510122" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17510122" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.34311742" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.110416666" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15208334" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13765182" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17813765" sideWeight="0.49791667" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34311742" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13765182" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -962,6 +909,30 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/MainScene.hx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Menu.hx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TextOverlay.hx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/MainScene.hx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1022,7 +993,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0503937">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1030,7 +1000,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33280757">
           <caret line="129" column="4" selection-start-line="129" selection-start-column="4" selection-end-line="129" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1070,7 +1039,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.27287066">
           <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1094,7 +1062,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="3.840694">
           <caret line="205" column="7" selection-start-line="205" selection-start-column="7" selection-end-line="205" selection-end-column="7" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1102,7 +1069,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.19242902">
           <caret line="40" column="44" selection-start-line="40" selection-start-column="44" selection-end-line="40" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1110,15 +1076,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="88" column="36" selection-start-line="88" selection-start-column="36" selection-end-line="88" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Lamp.hx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1126,14 +1083,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5100671">
           <caret line="19" column="83" selection-start-line="19" selection-start-column="83" selection-end-line="19" selection-end-column="83" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TimeScaleTween.hx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1154,22 +1103,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Utils.hx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.hx">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Layers.hx">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1178,9 +1111,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Bullet.hx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5925926">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TimeScaleTween.hx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76328504">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Lamp.hx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.24798712">
+          <caret line="14" column="52" selection-start-line="14" selection-start-column="52" selection-end-line="14" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Utils.hx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.5507247">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.hx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38164252">
+          <caret line="24" column="21" selection-start-line="24" selection-start-column="21" selection-end-line="24" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Vector2D.hx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.76811594">
           <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
           <folding />
         </state>
@@ -1188,32 +1161,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Runner.hx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="189" column="26" selection-start-line="189" selection-start-column="26" selection-end-line="189" selection-end-column="26" />
+        <state vertical-scroll-proportion="0.6183575">
+          <caret line="48" column="4" selection-start-line="48" selection-start-column="4" selection-end-line="48" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Bullet.hx">
+    <entry file="file://$PROJECT_DIR$/assets/font/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Menu.hx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="13" column="36" selection-start-line="13" selection-start-column="36" selection-end-line="13" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TextOverlay.hx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="23" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="39" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Walker.hx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="144" column="22" selection-start-line="144" selection-start-column="22" selection-end-line="144" selection-end-column="22" />
+        <state vertical-scroll-proportion="0.42693773">
+          <caret line="56" column="64" selection-start-line="56" selection-start-column="64" selection-end-line="56" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainScene.hx">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.025764896">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="148" column="42" selection-start-line="148" selection-start-column="42" selection-end-line="148" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TransitionScene.hx">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.56666666">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>

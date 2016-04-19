@@ -12,7 +12,6 @@
 -D flash-use-stage
 -D no-compilation
 -D openfl-flash
--D verbose=1
 -D web
 -swf-lib bin/flash/obj/assets.swf
 -swf-version 11.2

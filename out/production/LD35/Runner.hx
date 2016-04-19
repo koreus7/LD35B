@@ -38,20 +38,30 @@ class Runner extends BaseWorldEntity
     private var _startedUpwardMovement : Bool;
     private var slowMoFX : Sfx;
     private var exitSlowMoFx : Sfx;
+    private var jumpFX : Sfx;
+    private var landFX : Sfx;
+    private var shootFX : Sfx;
     private var _gunTop : Image;
     private var _gunRotateOffX : Float;
     private var _gunRotateOffY : Float;
     private var _topRot : Float;
+    private var backgroundSound : Sfx;
+    private var shots : Int;
     
 
 	
 	public function new(x:Float=100, y:Float=100, graphic:Graphic=null, mask:Mask=null)  
 	{
+
+
+        backgroundSound = Utils.audex("In Game FX V2");
+        backgroundSound.loop();
+
 		
 		_speed = 550;
 
 
-
+        shots = 6;
         _jumpHeight = 200;
         _jumpUpTime = 2.7;
         _jumping = false;
@@ -62,6 +72,9 @@ class Runner extends BaseWorldEntity
 
         slowMoFX =  Utils.audex("SlowMoFx");
         exitSlowMoFx = Utils.audex("ExitSlowMo");
+        jumpFX = Utils.audex("Jump ");
+        landFX = Utils.audex("Land");
+        shootFX = Utils.audex("Slow Mo Gun Shot");
 
 		_animatedSprite = new Spritemap("graphics/runner.png", 64, 64);
 		_animatedSprite.add("run", [0, 1, 2, 3, 4, 5], 12);
@@ -160,6 +173,9 @@ class Runner extends BaseWorldEntity
 
         if(Input.pressed(Key.W) && !_jumping)
         {
+
+            jumpFX.play();
+
             _yBeforeJump = y;
             _jumping = true;
             _animatedSprite.play("jump");
@@ -177,8 +193,10 @@ class Runner extends BaseWorldEntity
 
         if(_jumping && !_falling && !_landing)
         {
-            if(Input.mousePressed)
+            if(Input.mousePressed && shots > 0)
             {
+                shots -= 1;
+                shootFX.play();
                 var ox = this.x + _gunTop.x  - 14*Math.sin(_topRot);
                 var oy = this.y + _gunTop.y  - 14*Math.cos(_topRot);
 
@@ -236,6 +254,7 @@ class Runner extends BaseWorldEntity
 
     private function slowDownTime(data : Dynamic = null)
     {
+        backgroundSound.stop();
         slowMoFX.play();
 
         var t = new TimerEntity(0.08, function( data : Dynamic = null ) {
@@ -249,7 +268,16 @@ class Runner extends BaseWorldEntity
 
     public function jumpFinished(data : Dynamic) : Void
     {
+        landFX.play();
         _animatedSprite.play("land");
+
+
+
+        var t = new TimerEntity(0.2, function( data : Dynamic = null ) {
+            G.stageOver = true;
+        });
+        G.world.add(t);
+
         _falling = false;
         _landing = true;
         _jumping = false;

@@ -10,4 +10,7 @@ class G {
     public static var runAway : Bool;
     public static var stageOver : Bool = false;
     public static var stageNumber : Int = 0;
+    public static var transitionText : String = "Press Space";
+    public static var killCount : Int = 0;
+    public static var shifterCount : Int = 0;
 }

@@ -6,6 +6,7 @@ import com.haxepunk.Graphic;
 import com.haxepunk.HXP;
 import com.haxepunk.utils.Input;
 import com.haxepunk.utils.Key;
+import com.haxepunk.Sfx;
 
 
 class Walker extends BaseWorldEntity
@@ -49,6 +50,10 @@ class Walker extends BaseWorldEntity
 
     public var dead : Bool;
 
+    private var bulletFX : Sfx;
+    private var tel1 : Sfx;
+    private var tel2 : Sfx;
+    private var shift : Sfx;
 
 
 
@@ -60,6 +65,10 @@ class Walker extends BaseWorldEntity
         walkerId = idCount;
         idCount ++;
 
+        bulletFX = Utils.audex("Gun Impact");
+        tel1 = Utils.audex("Teleport 1");
+        tel2= Utils.audex("Teleport 2");
+        shift = Utils.audex("Shapeshifter ");
 
         type = "walker";
 
@@ -69,6 +78,7 @@ class Walker extends BaseWorldEntity
         _speedMod = 1.0;
         goingFast = false;
         shifted = false;
+        dead = false;
         runSpeed = 2.5;
 
         _animatedSprite = new Spritemap("graphics/walker.png", 64, 64);
@@ -96,7 +106,7 @@ class Walker extends BaseWorldEntity
             _animatedSprite.play("hobble");
 
         }
-        setHitbox(_animatedSprite.width, _animatedSprite.height);
+        setHitbox(_animatedSprite.width - 10, _animatedSprite.height - 10);
 
 
         _animatedSprite.add("die", [22,23,24,25], 13, false);
@@ -139,10 +149,10 @@ class Walker extends BaseWorldEntity
         var bullet : Bullet = cast collide("bullet",x,y);
         if(bullet != null)
         {
-            trace("OUCH");
             if(isShapeShifter)
             {
                 die();
+                bulletFX.play();
             }
             G.world.remove(bullet);
         }
@@ -177,15 +187,30 @@ class Walker extends BaseWorldEntity
         }
     }
 
+    private function telFX()
+    {
+        if(Utils.coinFlip())
+        {
+            tel1.play();
+        }
+        else
+        {
+            tel2.play();
+        }
+    }
+
     private function crowdAI()
     {
         if( x  >= HXP.width && goingRight)
         {
             x = -_animatedSprite.width;
+
+            telFX();
         }
         else if( x + _animatedSprite.width  <= -2 && !goingRight)
         {
             x = HXP.width;
+            telFX();
         }
 
         if(goingRight)
@@ -329,6 +354,7 @@ class Walker extends BaseWorldEntity
     {
         if(!shifted && !G.runAway)
         {
+            shift.play();
             var newForm : Walker = new Walker(x,y, !_isOld, true, !goingRight);
             if(G.world== null) trace("baseWorld");
             G.world.add(newForm);
@@ -341,6 +367,12 @@ class Walker extends BaseWorldEntity
 
     private function die() : Void
     {
+        
+        if(!dead)
+        {
+            G.killCount ++;
+        }
+        
         dead = true;
         _animatedSprite.play("die");    
     }

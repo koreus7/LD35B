@@ -3,17 +3,27 @@ import com.haxepunk.graphics.Image;
 import com.haxepunk.Scene;
 import com.haxepunk.HXP;
 import com.haxepunk.utils.Input;
+import com.haxepunk.Sfx;
 
 class MainScene extends BaseWorld
 {
     private var p1 : Paralax;
     private var p2 : Paralax;
     private var player : Runner;
+    private var walkers : Array<Walker>;
+    private var handledEndStage : Bool;
+
+
 
     private var mouse : Entity;
 
     override public function begin()
 	{
+
+
+        handledEndStage = false;
+
+        walkers = new Array<Walker>();
 
         G.ground = HXP.height - 30.0;
 		P5.fill(0x272727, 1.0);
@@ -57,24 +67,25 @@ class MainScene extends BaseWorld
         this.add(lightMask);
 
 
-        for(i in 0...10)
+        addWalker(true);
+
+        for(i in 0...(3*G.stageNumber))
         {
-            addWalker();
+            addWalker(false);
         }
 
 
 		this.add(player);
 
         mouse = new Entity(0,0,new Image("graphics/mouse.png"));
-        mouse.layer = Layers.hud;
-        this.add(mouse);
-        
+        add(mouse);
+
 
 	}
 
-    private function addWalker() : Void
+    private function addWalker(hack : Bool ) : Void
     {
-        var shifter = Utils.randInt(10) <= 8;
+        var shifter = Utils.randInt(10) <= 5 || hack;
         var walker : Walker = new Walker(
             Utils.clamp(Utils.randInt(HXP.width), 0, HXP.width - 64),
             player.y,
@@ -83,6 +94,8 @@ class MainScene extends BaseWorld
             Utils.coinFlip()
         );
 
+        walkers.push(walker);
+
         add(walker);
     }
 
@@ -90,9 +103,42 @@ class MainScene extends BaseWorld
     {
         G.delta = HXP.elapsed * G.timeSpeed;
         Paralax.offset = HXP.width/2.0 - player.x;
-        mouse.x  = Input.mouseX - 4;
+        mouse.x = Input.mouseX - 4;
         mouse.y = Input.mouseY - 4;
 
+
+
+
+        if(G.stageOver && !handledEndStage)
+        {
+            handleStageOver();
+        } 
+
+
+
         super.update();
+    }
+
+    private function handleStageOver()
+    {
+        var totalShapeShifters = 0;
+        var deadShapeShifers = 0;
+
+        for(walker in walkers)
+        {
+            if(walker.getIsShapeShifter())
+            {
+                totalShapeShifters += 1;
+                
+                if(walker.dead)
+                {
+                    deadShapeShifers += 1;
+                }
+            }
+        }
+
+        G.stageNumber ++;
+        HXP.scene = new TransitionScene("You killed " + Std.string(deadShapeShifers) + " / " + Std.string(totalShapeShifters) + "\n" + "\n" + "Press Space");
+
     }
 }

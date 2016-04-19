@@ -28,7 +28,7 @@ class Main extends Engine
 
         HXP.console.toggleKey = Key.F3;
 //#end
-		HXP.scene = new MainScene();
+		HXP.scene = new Menu();
         super.init();
 	}
 

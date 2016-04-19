@@ -78,6 +78,24 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		openfl.text.Font.registerFont (__ASSET__OPENFL__font_zorus_serif_ttf);
+		
 		#end
 		
 		#if flash
@@ -108,12 +126,16 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("graphics/background.png", AssetType.IMAGE);
 		className.set ("graphics/bullet.png", __ASSET__graphics_bullet_png);
 		type.set ("graphics/bullet.png", AssetType.IMAGE);
+		className.set ("graphics/howToPlay.png", __ASSET__graphics_howtoplay_png);
+		type.set ("graphics/howToPlay.png", AssetType.IMAGE);
 		className.set ("graphics/lamp.png", __ASSET__graphics_lamp_png);
 		type.set ("graphics/lamp.png", AssetType.IMAGE);
 		className.set ("graphics/lampLight.png", __ASSET__graphics_lamplight_png);
 		type.set ("graphics/lampLight.png", AssetType.IMAGE);
 		className.set ("graphics/lightingMask.png", __ASSET__graphics_lightingmask_png);
 		type.set ("graphics/lightingMask.png", AssetType.IMAGE);
+		className.set ("graphics/menu.png", __ASSET__graphics_menu_png);
+		type.set ("graphics/menu.png", AssetType.IMAGE);
 		className.set ("graphics/mouse.png", __ASSET__graphics_mouse_png);
 		type.set ("graphics/mouse.png", AssetType.IMAGE);
 		className.set ("graphics/overlay.png", __ASSET__graphics_overlay_png);
@@ -132,10 +154,42 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("graphics/topGun.png", AssetType.IMAGE);
 		className.set ("graphics/walker.png", __ASSET__graphics_walker_png);
 		type.set ("graphics/walker.png", AssetType.IMAGE);
+		className.set ("audio/Exit Slow Mo.mp3", __ASSET__audio_exit_slow_mo_mp3);
+		type.set ("audio/Exit Slow Mo.mp3", AssetType.MUSIC);
 		className.set ("audio/ExitSlowMo.mp3", __ASSET__audio_exitslowmo_mp3);
 		type.set ("audio/ExitSlowMo.mp3", AssetType.MUSIC);
+		className.set ("audio/Gun Impact.mp3", __ASSET__audio_gun_impact_mp3);
+		type.set ("audio/Gun Impact.mp3", AssetType.MUSIC);
+		className.set ("audio/In Game FX V2.mp3", __ASSET__audio_in_game_fx_v2_mp3);
+		type.set ("audio/In Game FX V2.mp3", AssetType.MUSIC);
+		className.set ("audio/Jump .mp3", __ASSET__audio_jump__mp3);
+		type.set ("audio/Jump .mp3", AssetType.MUSIC);
+		className.set ("audio/Land.mp3", __ASSET__audio_land_mp3);
+		type.set ("audio/Land.mp3", AssetType.MUSIC);
+		className.set ("audio/Main Theme Master.mp3", __ASSET__audio_main_theme_master_mp3);
+		type.set ("audio/Main Theme Master.mp3", AssetType.MUSIC);
+		className.set ("audio/Main Theme V2 Master.mp3", __ASSET__audio_main_theme_v2_master_mp3);
+		type.set ("audio/Main Theme V2 Master.mp3", AssetType.MUSIC);
+		className.set ("audio/Menu Click.mp3", __ASSET__audio_menu_click_mp3);
+		type.set ("audio/Menu Click.mp3", AssetType.MUSIC);
+		className.set ("audio/Protaginist Walk.mp3", __ASSET__audio_protaginist_walk_mp3);
+		type.set ("audio/Protaginist Walk.mp3", AssetType.MUSIC);
+		className.set ("audio/Shapeshifter .mp3", __ASSET__audio_shapeshifter__mp3);
+		type.set ("audio/Shapeshifter .mp3", AssetType.MUSIC);
+		className.set ("audio/Slow Mo Cartridge.mp3", __ASSET__audio_slow_mo_cartridge_mp3);
+		type.set ("audio/Slow Mo Cartridge.mp3", AssetType.MUSIC);
+		className.set ("audio/Slow Mo Fx.mp3", __ASSET__audio_slow_mo_fx_mp3);
+		type.set ("audio/Slow Mo Fx.mp3", AssetType.MUSIC);
+		className.set ("audio/Slow Mo Gun Shot.mp3", __ASSET__audio_slow_mo_gun_shot_mp3);
+		type.set ("audio/Slow Mo Gun Shot.mp3", AssetType.MUSIC);
 		className.set ("audio/SlowMoFx.mp3", __ASSET__audio_slowmofx_mp3);
 		type.set ("audio/SlowMoFx.mp3", AssetType.MUSIC);
+		className.set ("audio/Teleport 1.mp3", __ASSET__audio_teleport_1_mp3);
+		type.set ("audio/Teleport 1.mp3", AssetType.MUSIC);
+		className.set ("audio/Teleport 2.mp3", __ASSET__audio_teleport_2_mp3);
+		type.set ("audio/Teleport 2.mp3", AssetType.MUSIC);
+		className.set ("font/Zorus_Serif.ttf", __ASSET__font_zorus_serif_ttf);
+		type.set ("font/Zorus_Serif.ttf", AssetType.FONT);
 		
 		
 		#elseif html5
@@ -193,6 +247,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "graphics/howToPlay.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
 		id = "graphics/lamp.png";
 		path.set (id, id);
 		
@@ -202,6 +260,10 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		type.set (id, AssetType.IMAGE);
 		id = "graphics/lightingMask.png";
+		path.set (id, id);
+		
+		type.set (id, AssetType.IMAGE);
+		id = "graphics/menu.png";
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
@@ -241,7 +303,59 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.IMAGE);
+		id = "audio/Exit Slow Mo.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
 		id = "audio/ExitSlowMo.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "audio/Gun Impact.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "audio/In Game FX V2.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "audio/Jump .mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "audio/Land.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "audio/Main Theme Master.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "audio/Main Theme V2 Master.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "audio/Menu Click.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "audio/Protaginist Walk.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "audio/Shapeshifter .mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "audio/Slow Mo Cartridge.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "audio/Slow Mo Fx.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "audio/Slow Mo Gun Shot.mp3";
 		path.set (id, id);
 		
 		type.set (id, AssetType.MUSIC);
@@ -249,6 +363,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		path.set (id, id);
 		
 		type.set (id, AssetType.MUSIC);
+		id = "audio/Teleport 1.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "audio/Teleport 2.mp3";
+		path.set (id, id);
+		
+		type.set (id, AssetType.MUSIC);
+		id = "font/Zorus_Serif.ttf";
+		className.set (id, __ASSET__font_zorus_serif_ttf);
+		
+		type.set (id, AssetType.FONT);
 		
 		
 		var assetsPrefix = ApplicationMain.config.assetsPrefix;
@@ -303,6 +429,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("graphics/bullet.png", __ASSET__graphics_bullet_png);
 		type.set ("graphics/bullet.png", AssetType.IMAGE);
 		
+		className.set ("graphics/howToPlay.png", __ASSET__graphics_howtoplay_png);
+		type.set ("graphics/howToPlay.png", AssetType.IMAGE);
+		
 		className.set ("graphics/lamp.png", __ASSET__graphics_lamp_png);
 		type.set ("graphics/lamp.png", AssetType.IMAGE);
 		
@@ -311,6 +440,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("graphics/lightingMask.png", __ASSET__graphics_lightingmask_png);
 		type.set ("graphics/lightingMask.png", AssetType.IMAGE);
+		
+		className.set ("graphics/menu.png", __ASSET__graphics_menu_png);
+		type.set ("graphics/menu.png", AssetType.IMAGE);
 		
 		className.set ("graphics/mouse.png", __ASSET__graphics_mouse_png);
 		type.set ("graphics/mouse.png", AssetType.IMAGE);
@@ -339,11 +471,59 @@ class DefaultAssetLibrary extends AssetLibrary {
 		className.set ("graphics/walker.png", __ASSET__graphics_walker_png);
 		type.set ("graphics/walker.png", AssetType.IMAGE);
 		
+		className.set ("audio/Exit Slow Mo.mp3", __ASSET__audio_exit_slow_mo_mp3);
+		type.set ("audio/Exit Slow Mo.mp3", AssetType.MUSIC);
+		
 		className.set ("audio/ExitSlowMo.mp3", __ASSET__audio_exitslowmo_mp3);
 		type.set ("audio/ExitSlowMo.mp3", AssetType.MUSIC);
 		
+		className.set ("audio/Gun Impact.mp3", __ASSET__audio_gun_impact_mp3);
+		type.set ("audio/Gun Impact.mp3", AssetType.MUSIC);
+		
+		className.set ("audio/In Game FX V2.mp3", __ASSET__audio_in_game_fx_v2_mp3);
+		type.set ("audio/In Game FX V2.mp3", AssetType.MUSIC);
+		
+		className.set ("audio/Jump .mp3", __ASSET__audio_jump__mp3);
+		type.set ("audio/Jump .mp3", AssetType.MUSIC);
+		
+		className.set ("audio/Land.mp3", __ASSET__audio_land_mp3);
+		type.set ("audio/Land.mp3", AssetType.MUSIC);
+		
+		className.set ("audio/Main Theme Master.mp3", __ASSET__audio_main_theme_master_mp3);
+		type.set ("audio/Main Theme Master.mp3", AssetType.MUSIC);
+		
+		className.set ("audio/Main Theme V2 Master.mp3", __ASSET__audio_main_theme_v2_master_mp3);
+		type.set ("audio/Main Theme V2 Master.mp3", AssetType.MUSIC);
+		
+		className.set ("audio/Menu Click.mp3", __ASSET__audio_menu_click_mp3);
+		type.set ("audio/Menu Click.mp3", AssetType.MUSIC);
+		
+		className.set ("audio/Protaginist Walk.mp3", __ASSET__audio_protaginist_walk_mp3);
+		type.set ("audio/Protaginist Walk.mp3", AssetType.MUSIC);
+		
+		className.set ("audio/Shapeshifter .mp3", __ASSET__audio_shapeshifter__mp3);
+		type.set ("audio/Shapeshifter .mp3", AssetType.MUSIC);
+		
+		className.set ("audio/Slow Mo Cartridge.mp3", __ASSET__audio_slow_mo_cartridge_mp3);
+		type.set ("audio/Slow Mo Cartridge.mp3", AssetType.MUSIC);
+		
+		className.set ("audio/Slow Mo Fx.mp3", __ASSET__audio_slow_mo_fx_mp3);
+		type.set ("audio/Slow Mo Fx.mp3", AssetType.MUSIC);
+		
+		className.set ("audio/Slow Mo Gun Shot.mp3", __ASSET__audio_slow_mo_gun_shot_mp3);
+		type.set ("audio/Slow Mo Gun Shot.mp3", AssetType.MUSIC);
+		
 		className.set ("audio/SlowMoFx.mp3", __ASSET__audio_slowmofx_mp3);
 		type.set ("audio/SlowMoFx.mp3", AssetType.MUSIC);
+		
+		className.set ("audio/Teleport 1.mp3", __ASSET__audio_teleport_1_mp3);
+		type.set ("audio/Teleport 1.mp3", AssetType.MUSIC);
+		
+		className.set ("audio/Teleport 2.mp3", __ASSET__audio_teleport_2_mp3);
+		type.set ("audio/Teleport 2.mp3", AssetType.MUSIC);
+		
+		className.set ("font/Zorus_Serif.ttf", __ASSET__font_zorus_serif_ttf);
+		type.set ("font/Zorus_Serif.ttf", AssetType.FONT);
 		
 		
 		if (useManifest) {
@@ -1048,9 +1228,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__font_04b_03___ttf_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_background_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_bullet_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__graphics_howtoplay_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_lamp_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_lamplight_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_lightingmask_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__graphics_menu_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_mouse_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_overlay_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_paralax1_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
@@ -1060,8 +1242,24 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:keep @:bind #if display private #end class __ASSET__graphics_runneralt_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_topgun_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
 @:keep @:bind #if display private #end class __ASSET__graphics_walker_png extends flash.display.BitmapData { public function new () { super (0, 0, true, 0); } }
+@:keep @:bind #if display private #end class __ASSET__audio_exit_slow_mo_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_exitslowmo_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_gun_impact_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_in_game_fx_v2_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_jump__mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_land_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_main_theme_master_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_main_theme_v2_master_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_menu_click_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_protaginist_walk_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_shapeshifter__mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_slow_mo_cartridge_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_slow_mo_fx_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_slow_mo_gun_shot_mp3 extends flash.media.Sound { }
 @:keep @:bind #if display private #end class __ASSET__audio_slowmofx_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_teleport_1_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__audio_teleport_2_mp3 extends flash.media.Sound { }
+@:keep @:bind #if display private #end class __ASSET__font_zorus_serif_ttf extends flash.text.Font { }
 
 
 #elseif html5
@@ -1095,6 +1293,24 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@:keep #if display private #end class __ASSET__font_zorus_serif_ttf extends lime.text.Font { public function new () { super (); name = "Zorus Serif"; } } 
+
+
 #else
 
 
@@ -1115,9 +1331,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("/usr/lib/haxelib/HaxePunk/2,5,6/assets/font/04B_03__.ttf.png") #if display private #end class __ASSET__font_04b_03___ttf_png extends lime.graphics.Image {}
 @:image("assets/graphics/background.png") #if display private #end class __ASSET__graphics_background_png extends lime.graphics.Image {}
 @:image("assets/graphics/bullet.png") #if display private #end class __ASSET__graphics_bullet_png extends lime.graphics.Image {}
+@:image("assets/graphics/howToPlay.png") #if display private #end class __ASSET__graphics_howtoplay_png extends lime.graphics.Image {}
 @:image("assets/graphics/lamp.png") #if display private #end class __ASSET__graphics_lamp_png extends lime.graphics.Image {}
 @:image("assets/graphics/lampLight.png") #if display private #end class __ASSET__graphics_lamplight_png extends lime.graphics.Image {}
 @:image("assets/graphics/lightingMask.png") #if display private #end class __ASSET__graphics_lightingmask_png extends lime.graphics.Image {}
+@:image("assets/graphics/menu.png") #if display private #end class __ASSET__graphics_menu_png extends lime.graphics.Image {}
 @:image("assets/graphics/mouse.png") #if display private #end class __ASSET__graphics_mouse_png extends lime.graphics.Image {}
 @:image("assets/graphics/overlay.png") #if display private #end class __ASSET__graphics_overlay_png extends lime.graphics.Image {}
 @:image("assets/graphics/paralax1.png") #if display private #end class __ASSET__graphics_paralax1_png extends lime.graphics.Image {}
@@ -1127,8 +1345,24 @@ class DefaultAssetLibrary extends AssetLibrary {
 @:image("assets/graphics/runneralt.png") #if display private #end class __ASSET__graphics_runneralt_png extends lime.graphics.Image {}
 @:image("assets/graphics/topGun.png") #if display private #end class __ASSET__graphics_topgun_png extends lime.graphics.Image {}
 @:image("assets/graphics/walker.png") #if display private #end class __ASSET__graphics_walker_png extends lime.graphics.Image {}
+@:file("assets/audio/Exit Slow Mo.mp3") #if display private #end class __ASSET__audio_exit_slow_mo_mp3 extends lime.utils.ByteArray {}
 @:file("assets/audio/ExitSlowMo.mp3") #if display private #end class __ASSET__audio_exitslowmo_mp3 extends lime.utils.ByteArray {}
+@:file("assets/audio/Gun Impact.mp3") #if display private #end class __ASSET__audio_gun_impact_mp3 extends lime.utils.ByteArray {}
+@:file("assets/audio/In Game FX V2.mp3") #if display private #end class __ASSET__audio_in_game_fx_v2_mp3 extends lime.utils.ByteArray {}
+@:file("assets/audio/Jump .mp3") #if display private #end class __ASSET__audio_jump__mp3 extends lime.utils.ByteArray {}
+@:file("assets/audio/Land.mp3") #if display private #end class __ASSET__audio_land_mp3 extends lime.utils.ByteArray {}
+@:file("assets/audio/Main Theme Master.mp3") #if display private #end class __ASSET__audio_main_theme_master_mp3 extends lime.utils.ByteArray {}
+@:file("assets/audio/Main Theme V2 Master.mp3") #if display private #end class __ASSET__audio_main_theme_v2_master_mp3 extends lime.utils.ByteArray {}
+@:file("assets/audio/Menu Click.mp3") #if display private #end class __ASSET__audio_menu_click_mp3 extends lime.utils.ByteArray {}
+@:file("assets/audio/Protaginist Walk.mp3") #if display private #end class __ASSET__audio_protaginist_walk_mp3 extends lime.utils.ByteArray {}
+@:file("assets/audio/Shapeshifter .mp3") #if display private #end class __ASSET__audio_shapeshifter__mp3 extends lime.utils.ByteArray {}
+@:file("assets/audio/Slow Mo Cartridge.mp3") #if display private #end class __ASSET__audio_slow_mo_cartridge_mp3 extends lime.utils.ByteArray {}
+@:file("assets/audio/Slow Mo Fx.mp3") #if display private #end class __ASSET__audio_slow_mo_fx_mp3 extends lime.utils.ByteArray {}
+@:file("assets/audio/Slow Mo Gun Shot.mp3") #if display private #end class __ASSET__audio_slow_mo_gun_shot_mp3 extends lime.utils.ByteArray {}
 @:file("assets/audio/SlowMoFx.mp3") #if display private #end class __ASSET__audio_slowmofx_mp3 extends lime.utils.ByteArray {}
+@:file("assets/audio/Teleport 1.mp3") #if display private #end class __ASSET__audio_teleport_1_mp3 extends lime.utils.ByteArray {}
+@:file("assets/audio/Teleport 2.mp3") #if display private #end class __ASSET__audio_teleport_2_mp3 extends lime.utils.ByteArray {}
+@:font("assets/font/Zorus_Serif.ttf") #if display private #end class __ASSET__font_zorus_serif_ttf extends lime.text.Font {}
 
 
 
@@ -1137,6 +1371,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 #if (openfl && !flash)
 @:keep #if display private #end class __ASSET__OPENFL__font_04b_03___ttf extends openfl.text.Font { public function new () { var font = new __ASSET__font_04b_03___ttf (); src = font.src; name = font.name; super (); }}
+@:keep #if display private #end class __ASSET__OPENFL__font_zorus_serif_ttf extends openfl.text.Font { public function new () { var font = new __ASSET__font_zorus_serif_ttf (); src = font.src; name = font.name; super (); }}
 
 #end
 

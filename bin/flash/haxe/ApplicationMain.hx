@@ -82,6 +82,10 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("graphics/howToPlay.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
 		urls.push ("graphics/lamp.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
@@ -91,6 +95,10 @@ class ApplicationMain {
 		
 		
 		urls.push ("graphics/lightingMask.png");
+		types.push (lime.Assets.AssetType.IMAGE);
+		
+		
+		urls.push ("graphics/menu.png");
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
@@ -130,12 +138,76 @@ class ApplicationMain {
 		types.push (lime.Assets.AssetType.IMAGE);
 		
 		
+		urls.push ("audio/Exit Slow Mo.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
 		urls.push ("audio/ExitSlowMo.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("audio/Gun Impact.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("audio/In Game FX V2.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("audio/Jump .mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("audio/Land.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("audio/Main Theme Master.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("audio/Main Theme V2 Master.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("audio/Menu Click.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("audio/Protaginist Walk.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("audio/Shapeshifter .mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("audio/Slow Mo Cartridge.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("audio/Slow Mo Fx.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("audio/Slow Mo Gun Shot.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
 		
 		
 		urls.push ("audio/SlowMoFx.mp3");
 		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("audio/Teleport 1.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("audio/Teleport 2.mp3");
+		types.push (lime.Assets.AssetType.MUSIC);
+		
+		
+		urls.push ("Zorus Serif");
+		types.push (lime.Assets.AssetType.FONT);
 		
 		
 		
@@ -198,7 +270,7 @@ class ApplicationMain {
 		
 		config = {
 			
-			build: "1014",
+			build: "1115",
 			company: "",
 			file: "Main",
 			fps: 60,
