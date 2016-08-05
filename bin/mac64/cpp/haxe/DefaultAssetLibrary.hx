@@ -84,6 +84,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		Font.registerFont (__ASSET__font_zorus_serif_ttf);
+		
+		
 		#if (windows || mac || linux)
 		
 		var useManifest = false;
@@ -120,6 +123,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		className.set ("font/04B_03__.ttf.png", __ASSET__font_04b_03___ttf_png);
 		type.set ("font/04B_03__.ttf.png", AssetType.IMAGE);
+		useManifest = true;
+		useManifest = true;
+		useManifest = true;
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
@@ -554,12 +560,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+@:keep class __ASSET__font_zorus_serif_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "font/Zorus_Serif.ttf"; fontName = "Zorus Serif"; }}
 
 
 #else
 
 
 class __ASSET__font_04b_03___ttf extends openfl.text.Font { public function new () { super (); __fontPath = "font/04B_03__.ttf"; fontName = "04b03";  }}
+class __ASSET__font_zorus_serif_ttf extends openfl.text.Font { public function new () { super (); __fontPath = "font/Zorus_Serif.ttf"; fontName = "Zorus Serif";  }}
 
 
 #end
@@ -645,10 +653,22 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("font/04B_03__.ttf.png", AssetType.IMAGE);
 		path.set ("graphics/background.png", "graphics/background.png");
 		type.set ("graphics/background.png", AssetType.IMAGE);
+		path.set ("graphics/bullet.png", "graphics/bullet.png");
+		type.set ("graphics/bullet.png", AssetType.IMAGE);
+		path.set ("graphics/howToPlay.png", "graphics/howToPlay.png");
+		type.set ("graphics/howToPlay.png", AssetType.IMAGE);
 		path.set ("graphics/lamp.png", "graphics/lamp.png");
 		type.set ("graphics/lamp.png", AssetType.IMAGE);
 		path.set ("graphics/lampLight.png", "graphics/lampLight.png");
 		type.set ("graphics/lampLight.png", AssetType.IMAGE);
+		path.set ("graphics/lightingMask.png", "graphics/lightingMask.png");
+		type.set ("graphics/lightingMask.png", AssetType.IMAGE);
+		path.set ("graphics/menu.png", "graphics/menu.png");
+		type.set ("graphics/menu.png", AssetType.IMAGE);
+		path.set ("graphics/mouse.png", "graphics/mouse.png");
+		type.set ("graphics/mouse.png", AssetType.IMAGE);
+		path.set ("graphics/overlay.png", "graphics/overlay.png");
+		type.set ("graphics/overlay.png", AssetType.IMAGE);
 		path.set ("graphics/paralax1.png", "graphics/paralax1.png");
 		type.set ("graphics/paralax1.png", AssetType.IMAGE);
 		path.set ("graphics/paralax2.png", "graphics/paralax2.png");
@@ -659,20 +679,14 @@ class DefaultAssetLibrary extends AssetLibrary {
 		type.set ("graphics/runner.png", AssetType.IMAGE);
 		path.set ("graphics/runneralt.png", "graphics/runneralt.png");
 		type.set ("graphics/runneralt.png", AssetType.IMAGE);
+		path.set ("graphics/topGun.png", "graphics/topGun.png");
+		type.set ("graphics/topGun.png", AssetType.IMAGE);
 		path.set ("graphics/walker.png", "graphics/walker.png");
 		type.set ("graphics/walker.png", AssetType.IMAGE);
-		path.set ("audio/Noir Jazz - Click Button.wav", "audio/Noir Jazz - Click Button.wav");
-		type.set ("audio/Noir Jazz - Click Button.wav", AssetType.SOUND);
-		path.set ("audio/Noir Jazz - Footsteps.wav", "audio/Noir Jazz - Footsteps.wav");
-		type.set ("audio/Noir Jazz - Footsteps.wav", AssetType.SOUND);
-		path.set ("audio/Noir Jazz - In Game Music.wav", "audio/Noir Jazz - In Game Music.wav");
-		type.set ("audio/Noir Jazz - In Game Music.wav", AssetType.SOUND);
-		path.set ("audio/Noir Jazz - Main Theme.wav", "audio/Noir Jazz - Main Theme.wav");
-		type.set ("audio/Noir Jazz - Main Theme.wav", AssetType.SOUND);
-		path.set ("shaders/invert.frag", "shaders/invert.frag");
-		type.set ("shaders/invert.frag", AssetType.TEXT);
-		path.set ("shaders/lighting.frag", "shaders/lighting.frag");
-		type.set ("shaders/lighting.frag", AssetType.TEXT);
+		path.set ("audio/SlowMoFx.wav", "audio/SlowMoFx.wav");
+		type.set ("audio/SlowMoFx.wav", AssetType.SOUND);
+		path.set ("font/Zorus_Serif.ttf", "font/Zorus_Serif.ttf");
+		type.set ("font/Zorus_Serif.ttf", AssetType.FONT);
 		
 		
 		#elseif html5
@@ -725,10 +739,28 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "graphics/background.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "graphics/bullet.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "graphics/howToPlay.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "graphics/lamp.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "graphics/lampLight.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "graphics/lightingMask.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "graphics/menu.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "graphics/mouse.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
+		id = "graphics/overlay.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
 		id = "graphics/paralax1.png";
@@ -746,27 +778,18 @@ class DefaultAssetLibrary extends AssetLibrary {
 		id = "graphics/runneralt.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
+		id = "graphics/topGun.png";
+		path.set (id, id);
+		type.set (id, AssetType.IMAGE);
 		id = "graphics/walker.png";
 		path.set (id, id);
 		type.set (id, AssetType.IMAGE);
-		id = "audio/Noir Jazz - Click Button.wav";
+		id = "audio/SlowMoFx.wav";
 		path.set (id, id);
 		type.set (id, AssetType.SOUND);
-		id = "audio/Noir Jazz - Footsteps.wav";
+		id = "font/Zorus_Serif.ttf";
 		path.set (id, id);
-		type.set (id, AssetType.SOUND);
-		id = "audio/Noir Jazz - In Game Music.wav";
-		path.set (id, id);
-		type.set (id, AssetType.SOUND);
-		id = "audio/Noir Jazz - Main Theme.wav";
-		path.set (id, id);
-		type.set (id, AssetType.SOUND);
-		id = "shaders/invert.frag";
-		path.set (id, id);
-		type.set (id, AssetType.TEXT);
-		id = "shaders/lighting.frag";
-		path.set (id, id);
-		type.set (id, AssetType.TEXT);
+		type.set (id, AssetType.FONT);
 		
 		
 		var assetsPrefix = ApplicationMain.config.assetsPrefix;
@@ -806,6 +829,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 		
 		
 		
+		
+		
+		openfl.text.Font.registerFont (__ASSET__OPENFL__font_zorus_serif_ttf);
 		
 		#end
 		
@@ -860,6 +886,11 @@ class DefaultAssetLibrary extends AssetLibrary {
 		useManifest = true;
 		useManifest = true;
 		useManifest = true;
+		useManifest = true;
+		useManifest = true;
+		
+		className.set ("font/Zorus_Serif.ttf", __ASSET__font_zorus_serif_ttf);
+		type.set ("font/Zorus_Serif.ttf", AssetType.FONT);
 		
 		
 		if (useManifest) {
@@ -1583,6 +1614,9 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+
+
+
 #elseif html5
 
 
@@ -1613,8 +1647,12 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 
 
+@:keep #if display private #end class __ASSET__font_zorus_serif_ttf extends lime.text.Font { public function new () { super (); name = "Zorus Serif"; } } 
+
+
 #else
 
+@:keep #if display private #end class __ASSET__font_zorus_serif_ttf extends lime.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "font/Zorus_Serif.ttf"; name = "Zorus Serif"; super (); }}
 
 
 #if (windows || mac || linux)
@@ -1638,6 +1676,7 @@ class DefaultAssetLibrary extends AssetLibrary {
 
 #if openfl
 @:keep #if display private #end class __ASSET__OPENFL__font_04b_03___ttf extends openfl.text.Font { public function new () { var font = new __ASSET__font_04b_03___ttf (); src = font.src; name = font.name; super (); }}
+@:keep #if display private #end class __ASSET__OPENFL__font_zorus_serif_ttf extends openfl.text.Font { public function new () { __fontPath = #if ios "assets/" + #end "font/Zorus_Serif.ttf"; name = "Zorus Serif"; super (); }}
 
 #end
 

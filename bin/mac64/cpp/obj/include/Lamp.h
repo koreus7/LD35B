@@ -42,7 +42,6 @@ class HXCPP_CLASS_ATTRIBUTES  Lamp_obj : public ::BaseWorldEntity_obj{
 		::String __ToString() const { return HX_HCSTRING("Lamp","\x38","\x31","\x86","\x32"); }
 
 		::com::haxepunk::graphics::Image lampSprite;
-		::com::haxepunk::Entity light;
 		virtual Void firstUpdateCallback( );
 
 		virtual Void update( );

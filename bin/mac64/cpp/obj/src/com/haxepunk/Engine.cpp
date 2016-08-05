@@ -1099,6 +1099,26 @@ Void Engine_obj::onStage( ::openfl::_legacy::events::Event e){
 		bool tmp7 = (tmp6 == ::com::haxepunk::RenderMode_obj::BUFFER);		HX_STACK_VAR(tmp7,"tmp7");
 		HX_STACK_LINE(272)
 		if ((tmp7)){
+			HX_STACK_LINE(275)
+			::com::haxepunk::debug::Console tmp8;		HX_STACK_VAR(tmp8,"tmp8");
+			HX_STACK_LINE(275)
+			{
+				HX_STACK_LINE(275)
+				::com::haxepunk::debug::Console tmp9 = ::com::haxepunk::HXP_obj::_console;		HX_STACK_VAR(tmp9,"tmp9");
+				HX_STACK_LINE(275)
+				bool tmp10 = (tmp9 == null());		HX_STACK_VAR(tmp10,"tmp10");
+				HX_STACK_LINE(275)
+				if ((tmp10)){
+					HX_STACK_LINE(275)
+					::com::haxepunk::debug::Console tmp11 = ::com::haxepunk::debug::Console_obj::__new();		HX_STACK_VAR(tmp11,"tmp11");
+					HX_STACK_LINE(275)
+					::com::haxepunk::HXP_obj::_console = tmp11;
+				}
+				HX_STACK_LINE(275)
+				tmp8 = ::com::haxepunk::HXP_obj::_console;
+			}
+			HX_STACK_LINE(275)
+			tmp8->log(cpp::ArrayBase_obj::__new().Add(HX_HCSTRING("Warning: Using RenderMode.BUFFER on native target may result in bad performance","\x64","\xcf","\x82","\x99")));
 		}
 		else{
 		}

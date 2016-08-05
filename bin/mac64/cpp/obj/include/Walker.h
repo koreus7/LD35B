@@ -13,6 +13,7 @@ HX_DECLARE_CLASS0(TimerEntity)
 HX_DECLARE_CLASS0(Walker)
 HX_DECLARE_CLASS2(com,haxepunk,Entity)
 HX_DECLARE_CLASS2(com,haxepunk,Graphic)
+HX_DECLARE_CLASS2(com,haxepunk,Sfx)
 HX_DECLARE_CLASS2(com,haxepunk,Tweener)
 HX_DECLARE_CLASS3(com,haxepunk,graphics,Image)
 HX_DECLARE_CLASS3(com,haxepunk,graphics,Spritemap)
@@ -23,12 +24,12 @@ class HXCPP_CLASS_ATTRIBUTES  Walker_obj : public ::BaseWorldEntity_obj{
 		typedef ::BaseWorldEntity_obj super;
 		typedef Walker_obj OBJ_;
 		Walker_obj();
-		Void __construct(Float x,Float y);
+		Void __construct(Float x,Float y,bool isOld,bool isShapeShifter,bool goingRight);
 
 	public:
 		inline void *operator new( size_t inSize, bool inContainer=true,const char *inName="Walker")
 			{ return hx::Object::operator new(inSize,inContainer,inName); }
-		static hx::ObjectPtr< Walker_obj > __new(Float x,Float y);
+		static hx::ObjectPtr< Walker_obj > __new(Float x,Float y,bool isOld,bool isShapeShifter,bool goingRight);
 		static Dynamic __CreateEmpty();
 		static Dynamic __Create(hx::DynamicArray inArgs);
 		//~Walker_obj();
@@ -48,18 +49,41 @@ class HXCPP_CLASS_ATTRIBUTES  Walker_obj : public ::BaseWorldEntity_obj{
 		::com::haxepunk::graphics::Spritemap _animatedSprite;
 		Float _speed;
 		Float _speedMod;
-		bool isShapeShifter;
 		::TimerEntity turnTimer;
 		Float _maxTurnTime;
 		Float _minTurnTime;
 		bool goingRight;
+		bool isShapeShifter;
 		::TimerEntity slowDownTimer;
 		bool _isOld;
 		Float _speed2FR;
 		bool goingFast;
 		int walkerId;
 		int dontOvertakeID;
+		bool inLight;
+		::TimerEntity shiftTimer;
+		bool shifted;
+		Float runSpeed;
+		bool dead;
+		::com::haxepunk::Sfx bulletFX;
+		::com::haxepunk::Sfx tel1;
+		::com::haxepunk::Sfx tel2;
+		::com::haxepunk::Sfx shift;
 		virtual Void update( );
+
+		virtual Void runAwayAI( );
+		Dynamic runAwayAI_dyn();
+
+		virtual Void telFX( );
+		Dynamic telFX_dyn();
+
+		virtual Void crowdAI( );
+		Dynamic crowdAI_dyn();
+
+		virtual Void firstUpdateCallback( );
+
+		virtual Void shapeShiftTimerCallback( Dynamic data);
+		Dynamic shapeShiftTimerCallback_dyn();
 
 		virtual int getWalkerId( );
 		Dynamic getWalkerId_dyn();
@@ -81,6 +105,18 @@ class HXCPP_CLASS_ATTRIBUTES  Walker_obj : public ::BaseWorldEntity_obj{
 
 		virtual Void turn( Dynamic data);
 		Dynamic turn_dyn();
+
+		virtual Void triggerShapeShift( );
+		Dynamic triggerShapeShift_dyn();
+
+		virtual bool getIsShapeShifter( );
+		Dynamic getIsShapeShifter_dyn();
+
+		virtual Void shapeShift( );
+		Dynamic shapeShift_dyn();
+
+		virtual Void die( );
+		Dynamic die_dyn();
 
 		static int idCount;
 };

@@ -261,43 +261,62 @@ bool Input_obj::check( ::com::haxepunk::ds::Either input){
 				::String s = tmp;		HX_STACK_VAR(s,"s");
 				HX_STACK_LINE(191)
 				{
+					HX_STACK_LINE(193)
+					::haxe::ds::StringMap tmp1 = ::com::haxepunk::utils::Input_obj::_control;		HX_STACK_VAR(tmp1,"tmp1");
+					HX_STACK_LINE(193)
+					::String tmp2 = s;		HX_STACK_VAR(tmp2,"tmp2");
+					HX_STACK_LINE(193)
+					bool tmp3 = tmp1->exists(tmp2);		HX_STACK_VAR(tmp3,"tmp3");
+					HX_STACK_LINE(193)
+					bool tmp4 = !(tmp3);		HX_STACK_VAR(tmp4,"tmp4");
+					HX_STACK_LINE(193)
+					if ((tmp4)){
+						HX_STACK_LINE(195)
+						::String tmp5 = (HX_HCSTRING("Input '","\x71","\x9e","\x6f","\xa1") + s);		HX_STACK_VAR(tmp5,"tmp5");
+						HX_STACK_LINE(195)
+						::String tmp6 = (tmp5 + HX_HCSTRING("' not defined","\x43","\xf2","\xd6","\xf4"));		HX_STACK_VAR(tmp6,"tmp6");
+						HX_STACK_LINE(195)
+						::com::haxepunk::HXP_obj::log(tmp6);
+						HX_STACK_LINE(196)
+						return false;
+					}
 					HX_STACK_LINE(199)
 					{
 						HX_STACK_LINE(199)
 						int _g1 = (int)0;		HX_STACK_VAR(_g1,"_g1");
 						HX_STACK_LINE(199)
-						::haxe::ds::StringMap tmp1 = ::com::haxepunk::utils::Input_obj::_control;		HX_STACK_VAR(tmp1,"tmp1");
+						::haxe::ds::StringMap tmp5 = ::com::haxepunk::utils::Input_obj::_control;		HX_STACK_VAR(tmp5,"tmp5");
 						HX_STACK_LINE(199)
-						::String tmp2 = s;		HX_STACK_VAR(tmp2,"tmp2");
+						::String tmp6 = s;		HX_STACK_VAR(tmp6,"tmp6");
 						HX_STACK_LINE(199)
-						Array< int > _g2 = ((Array< int >)(tmp1->get(tmp2)));		HX_STACK_VAR(_g2,"_g2");
+						Array< int > _g2 = ((Array< int >)(tmp5->get(tmp6)));		HX_STACK_VAR(_g2,"_g2");
 						HX_STACK_LINE(199)
 						while((true)){
 							HX_STACK_LINE(199)
-							bool tmp3 = (_g1 < _g2->length);		HX_STACK_VAR(tmp3,"tmp3");
+							bool tmp7 = (_g1 < _g2->length);		HX_STACK_VAR(tmp7,"tmp7");
 							HX_STACK_LINE(199)
-							bool tmp4 = !(tmp3);		HX_STACK_VAR(tmp4,"tmp4");
+							bool tmp8 = !(tmp7);		HX_STACK_VAR(tmp8,"tmp8");
 							HX_STACK_LINE(199)
-							if ((tmp4)){
+							if ((tmp8)){
 								HX_STACK_LINE(199)
 								break;
 							}
 							HX_STACK_LINE(199)
-							int tmp5 = _g2->__get(_g1);		HX_STACK_VAR(tmp5,"tmp5");
+							int tmp9 = _g2->__get(_g1);		HX_STACK_VAR(tmp9,"tmp9");
 							HX_STACK_LINE(199)
-							int key = tmp5;		HX_STACK_VAR(key,"key");
+							int key = tmp9;		HX_STACK_VAR(key,"key");
 							HX_STACK_LINE(199)
 							++(_g1);
 							HX_STACK_LINE(201)
-							bool tmp6 = (key < (int)0);		HX_STACK_VAR(tmp6,"tmp6");
+							bool tmp10 = (key < (int)0);		HX_STACK_VAR(tmp10,"tmp10");
 							HX_STACK_LINE(201)
-							if ((tmp6)){
+							if ((tmp10)){
 								HX_STACK_LINE(203)
-								int tmp7 = ::com::haxepunk::utils::Input_obj::_keyNum;		HX_STACK_VAR(tmp7,"tmp7");
+								int tmp11 = ::com::haxepunk::utils::Input_obj::_keyNum;		HX_STACK_VAR(tmp11,"tmp11");
 								HX_STACK_LINE(203)
-								bool tmp8 = (tmp7 > (int)0);		HX_STACK_VAR(tmp8,"tmp8");
+								bool tmp12 = (tmp11 > (int)0);		HX_STACK_VAR(tmp12,"tmp12");
 								HX_STACK_LINE(203)
-								if ((tmp8)){
+								if ((tmp12)){
 									HX_STACK_LINE(203)
 									return true;
 								}
@@ -305,17 +324,17 @@ bool Input_obj::check( ::com::haxepunk::ds::Either input){
 								continue;
 							}
 							HX_STACK_LINE(206)
-							::haxe::ds::IntMap tmp7 = ::com::haxepunk::utils::Input_obj::_key;		HX_STACK_VAR(tmp7,"tmp7");
+							::haxe::ds::IntMap tmp11 = ::com::haxepunk::utils::Input_obj::_key;		HX_STACK_VAR(tmp11,"tmp11");
 							HX_STACK_LINE(206)
-							int tmp8 = key;		HX_STACK_VAR(tmp8,"tmp8");
+							int tmp12 = key;		HX_STACK_VAR(tmp12,"tmp12");
 							HX_STACK_LINE(206)
-							Dynamic tmp9 = tmp7->get(tmp8);		HX_STACK_VAR(tmp9,"tmp9");
+							Dynamic tmp13 = tmp11->get(tmp12);		HX_STACK_VAR(tmp13,"tmp13");
 							HX_STACK_LINE(206)
-							Dynamic tmp10 = tmp9;		HX_STACK_VAR(tmp10,"tmp10");
+							Dynamic tmp14 = tmp13;		HX_STACK_VAR(tmp14,"tmp14");
 							HX_STACK_LINE(206)
-							bool tmp11 = (tmp10 == true);		HX_STACK_VAR(tmp11,"tmp11");
+							bool tmp15 = (tmp14 == true);		HX_STACK_VAR(tmp15,"tmp15");
 							HX_STACK_LINE(206)
-							if ((tmp11)){
+							if ((tmp15)){
 								HX_STACK_LINE(206)
 								return true;
 							}

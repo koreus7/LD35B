@@ -6,8 +6,8 @@
 #ifndef INCLUDED_Main
 #include <Main.h>
 #endif
-#ifndef INCLUDED_MainScene
-#include <MainScene.h>
+#ifndef INCLUDED_Menu
+#include <Menu.h>
 #endif
 #ifndef INCLUDED_com_haxepunk_Engine
 #include <com/haxepunk/Engine.h>
@@ -23,12 +23,6 @@
 #endif
 #ifndef INCLUDED_com_haxepunk_Tweener
 #include <com/haxepunk/Tweener.h>
-#endif
-#ifndef INCLUDED_com_haxepunk_debug_Console
-#include <com/haxepunk/debug/Console.h>
-#endif
-#ifndef INCLUDED_com_haxepunk_debug_TraceCapture
-#include <com/haxepunk/debug/TraceCapture.h>
 #endif
 #ifndef INCLUDED_com_haxepunk_ds_Either
 #include <com/haxepunk/ds/Either.h>
@@ -63,16 +57,19 @@
 #ifndef INCLUDED_openfl__legacy_events_IEventDispatcher
 #include <openfl/_legacy/events/IEventDispatcher.h>
 #endif
+#ifndef INCLUDED_openfl__legacy_ui_Mouse
+#include <openfl/_legacy/ui/Mouse.h>
+#endif
 #ifndef INCLUDED_openfl_display_StageDisplayState
 #include <openfl/display/StageDisplayState.h>
 #endif
 
 Void Main_obj::__construct()
 {
-HX_STACK_FRAME("Main","new",0x6616a5cb,"Main.new","Main.hx",16,0x087e5c05)
+HX_STACK_FRAME("Main","new",0x6616a5cb,"Main.new","Main.hx",20,0x087e5c05)
 HX_STACK_THIS(this)
 {
-	HX_STACK_LINE(16)
+	HX_STACK_LINE(20)
 	super::__construct((int)750,(int)450,(int)30,false,null());
 }
 ;
@@ -94,62 +91,24 @@ Dynamic Main_obj::__Create(hx::DynamicArray inArgs)
 
 Void Main_obj::init( ){
 {
-		HX_STACK_FRAME("Main","init",0xea732345,"Main.init","Main.hx",20,0x087e5c05)
+		HX_STACK_FRAME("Main","init",0xea732345,"Main.init","Main.hx",24,0x087e5c05)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(22)
-		::com::haxepunk::debug::Console tmp;		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(22)
+		HX_STACK_LINE(25)
+		::openfl::_legacy::ui::Mouse_obj::hide();
+		HX_STACK_LINE(31)
 		{
-			HX_STACK_LINE(22)
-			::com::haxepunk::debug::Console tmp1 = ::com::haxepunk::HXP_obj::_console;		HX_STACK_VAR(tmp1,"tmp1");
-			HX_STACK_LINE(22)
-			bool tmp2 = (tmp1 == null());		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(22)
-			if ((tmp2)){
-				HX_STACK_LINE(22)
-				::com::haxepunk::debug::Console tmp3 = ::com::haxepunk::debug::Console_obj::__new();		HX_STACK_VAR(tmp3,"tmp3");
-				HX_STACK_LINE(22)
-				::com::haxepunk::HXP_obj::_console = tmp3;
-			}
-			HX_STACK_LINE(22)
-			tmp = ::com::haxepunk::HXP_obj::_console;
+			HX_STACK_LINE(31)
+			::Menu tmp = ::Menu_obj::__new();		HX_STACK_VAR(tmp,"tmp");
+			HX_STACK_LINE(31)
+			::com::haxepunk::Scene value = tmp;		HX_STACK_VAR(value,"value");
+			HX_STACK_LINE(31)
+			::com::haxepunk::Engine tmp1 = ::com::haxepunk::HXP_obj::engine;		HX_STACK_VAR(tmp1,"tmp1");
+			HX_STACK_LINE(31)
+			::com::haxepunk::Scene tmp2 = value;		HX_STACK_VAR(tmp2,"tmp2");
+			HX_STACK_LINE(31)
+			tmp1->set_scene(tmp2);
 		}
-		HX_STACK_LINE(22)
-		tmp->enable(null(),null());
-		HX_STACK_LINE(24)
-		::com::haxepunk::debug::Console tmp1;		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(24)
-		{
-			HX_STACK_LINE(24)
-			::com::haxepunk::debug::Console tmp2 = ::com::haxepunk::HXP_obj::_console;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(24)
-			bool tmp3 = (tmp2 == null());		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(24)
-			if ((tmp3)){
-				HX_STACK_LINE(24)
-				::com::haxepunk::debug::Console tmp4 = ::com::haxepunk::debug::Console_obj::__new();		HX_STACK_VAR(tmp4,"tmp4");
-				HX_STACK_LINE(24)
-				::com::haxepunk::HXP_obj::_console = tmp4;
-			}
-			HX_STACK_LINE(24)
-			tmp1 = ::com::haxepunk::HXP_obj::_console;
-		}
-		HX_STACK_LINE(24)
-		tmp1->toggleKey = (int)114;
-		HX_STACK_LINE(26)
-		{
-			HX_STACK_LINE(26)
-			::MainScene tmp2 = ::MainScene_obj::__new();		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(26)
-			::com::haxepunk::Scene value = tmp2;		HX_STACK_VAR(value,"value");
-			HX_STACK_LINE(26)
-			::com::haxepunk::Engine tmp3 = ::com::haxepunk::HXP_obj::engine;		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(26)
-			::com::haxepunk::Scene tmp4 = value;		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(26)
-			tmp3->set_scene(tmp4);
-		}
-		HX_STACK_LINE(27)
+		HX_STACK_LINE(32)
 		this->super::init();
 	}
 return null();
@@ -158,43 +117,43 @@ return null();
 
 Void Main_obj::update( ){
 {
-		HX_STACK_FRAME("Main","update",0xb7afa57e,"Main.update","Main.hx",33,0x087e5c05)
+		HX_STACK_FRAME("Main","update",0xb7afa57e,"Main.update","Main.hx",38,0x087e5c05)
 		HX_STACK_THIS(this)
-		HX_STACK_LINE(34)
+		HX_STACK_LINE(39)
 		::com::haxepunk::ds::Either tmp = ::com::haxepunk::utils::_Input::InputType_Impl__obj::fromRight((int)70);		HX_STACK_VAR(tmp,"tmp");
-		HX_STACK_LINE(34)
+		HX_STACK_LINE(39)
 		bool tmp1 = ::com::haxepunk::utils::Input_obj::pressed(tmp);		HX_STACK_VAR(tmp1,"tmp1");
-		HX_STACK_LINE(34)
+		HX_STACK_LINE(39)
 		if ((tmp1)){
-			HX_STACK_LINE(36)
+			HX_STACK_LINE(41)
 			::openfl::_legacy::display::Stage tmp2 = ::com::haxepunk::HXP_obj::stage;		HX_STACK_VAR(tmp2,"tmp2");
-			HX_STACK_LINE(36)
+			HX_STACK_LINE(41)
 			::openfl::display::StageDisplayState tmp3 = tmp2->get_displayState();		HX_STACK_VAR(tmp3,"tmp3");
-			HX_STACK_LINE(36)
+			HX_STACK_LINE(41)
 			bool tmp4 = (tmp3 == ::openfl::display::StageDisplayState_obj::FULL_SCREEN);		HX_STACK_VAR(tmp4,"tmp4");
-			HX_STACK_LINE(36)
+			HX_STACK_LINE(41)
 			bool tmp5 = !(tmp4);		HX_STACK_VAR(tmp5,"tmp5");
-			HX_STACK_LINE(36)
+			HX_STACK_LINE(41)
 			bool value = tmp5;		HX_STACK_VAR(value,"value");
-			HX_STACK_LINE(36)
+			HX_STACK_LINE(41)
 			bool tmp6 = value;		HX_STACK_VAR(tmp6,"tmp6");
-			HX_STACK_LINE(36)
+			HX_STACK_LINE(41)
 			if ((tmp6)){
-				HX_STACK_LINE(36)
+				HX_STACK_LINE(41)
 				::openfl::_legacy::display::Stage tmp7 = ::com::haxepunk::HXP_obj::stage;		HX_STACK_VAR(tmp7,"tmp7");
-				HX_STACK_LINE(36)
+				HX_STACK_LINE(41)
 				tmp7->set_displayState(::openfl::display::StageDisplayState_obj::FULL_SCREEN);
 			}
 			else{
-				HX_STACK_LINE(36)
+				HX_STACK_LINE(41)
 				::openfl::_legacy::display::Stage tmp7 = ::com::haxepunk::HXP_obj::stage;		HX_STACK_VAR(tmp7,"tmp7");
-				HX_STACK_LINE(36)
+				HX_STACK_LINE(41)
 				tmp7->set_displayState(::openfl::display::StageDisplayState_obj::NORMAL);
 			}
-			HX_STACK_LINE(36)
+			HX_STACK_LINE(41)
 			value;
 		}
-		HX_STACK_LINE(39)
+		HX_STACK_LINE(44)
 		this->super::update();
 	}
 return null();
@@ -209,8 +168,8 @@ int Main_obj::kFrameRate;
 
 Void Main_obj::main( ){
 {
-		HX_STACK_FRAME("Main","main",0xed0e206e,"Main.main","Main.hx",30,0x087e5c05)
-		HX_STACK_LINE(30)
+		HX_STACK_FRAME("Main","main",0xed0e206e,"Main.main","Main.hx",35,0x087e5c05)
+		HX_STACK_LINE(35)
 		::Main_obj::__new();
 	}
 return null();

@@ -657,6 +657,27 @@ Void Text_obj::matchStyles( ){
 				HX_STACK_LINE(243)
 				tmp29->setTextFormat(tmp32,tmp33,tmp34);
 			}
+			else{
+				HX_STACK_LINE(248)
+				::String tmp29 = (HX_HCSTRING("Could not found text style '","\xef","\x49","\x8f","\xea") + tagName);		HX_STACK_VAR(tmp29,"tmp29");
+				HX_STACK_LINE(248)
+				::String tmp30 = (tmp29 + HX_HCSTRING("'","\x27","\x00","\x00","\x00"));		HX_STACK_VAR(tmp30,"tmp30");
+				HX_STACK_LINE(248)
+				::com::haxepunk::HXP_obj::log(tmp30);
+			}
+		}
+		HX_STACK_LINE(254)
+		::openfl::_legacy::text::TextField tmp7 = this->_field;		HX_STACK_VAR(tmp7,"tmp7");
+		HX_STACK_LINE(254)
+		::String tmp8 = tmp7->get_text();		HX_STACK_VAR(tmp8,"tmp8");
+		HX_STACK_LINE(254)
+		::String tmp9 = this->_text;		HX_STACK_VAR(tmp9,"tmp9");
+		HX_STACK_LINE(254)
+		bool tmp10 = (tmp8 != tmp9);		HX_STACK_VAR(tmp10,"tmp10");
+		HX_STACK_LINE(254)
+		if ((tmp10)){
+			HX_STACK_LINE(256)
+			::com::haxepunk::HXP_obj::log(HX_HCSTRING("Text field and _text do not match!","\xc8","\xe8","\x00","\xd6"));
 		}
 	}
 return null();

@@ -22,31 +22,38 @@ class Runner extends BaseWorldEntity
 
 	private var _animatedSprite : Spritemap;
 	
-	private var _speed : Float;
     private var _jumpTweenX : TimeScaleTween;
     private var _jumpTweenY : TimeScaleTween;
     private var _fallTweenX : TimeScaleTween;
     private var _fallTweenY : TimeScaleTween;
-    private var _jumpHeight : Float;
-    private var _jumpUpTime : Float;
-    private var _fallDownTime : Float;
+
+
+    private var _speed          : Float;
+    private var _jumpHeight     : Float;
+    private var _jumpUpTime     : Float;
+    private var _fallDownTime   : Float;
     private var _slowTimeAmount : Float;
-    private var _yBeforeJump : Float;
+    private var _yBeforeJump    : Float;
+    
     private var _jumping : Bool;
     private var _falling : Bool;
     private var _landing : Bool;
     private var _startedUpwardMovement : Bool;
-    private var slowMoFX : Sfx;
-    private var exitSlowMoFx : Sfx;
-    private var jumpFX : Sfx;
-    private var landFX : Sfx;
-    private var shootFX : Sfx;
-    private var runFX : Sfx;
+
+    private var slowMoFX        : Sfx;
+    private var exitSlowMoFx    : Sfx;
+    private var jumpFX          : Sfx;
+    private var landFX          : Sfx;
+    private var shootFX         : Sfx;
+    private var runFX           : Sfx;
+    private var backgroundSound : Sfx;
+
+
     private var _gunTop : Image;
     private var _gunRotateOffX : Float;
     private var _gunRotateOffY : Float;
     private var _topRot : Float;
-    private var backgroundSound : Sfx;
+    
     private var shots : Int;
     
 
@@ -80,6 +87,7 @@ class Runner extends BaseWorldEntity
         landFX = Utils.audex("Land");
         shootFX = Utils.audex("Slow Mo Gun Shot");
 
+
 		_animatedSprite = new Spritemap("graphics/runner.png", 64, 64);
 		_animatedSprite.add("run", [0, 1, 2, 3, 4, 5], 12);
 		_animatedSprite.add("idle", [6], 10);
@@ -96,7 +104,6 @@ class Runner extends BaseWorldEntity
         _gunTop.originY = _gunRotateOffY;
         _gunTop.x = _gunRotateOffX;
         _gunTop.y = _gunRotateOffY;
-
 
 
 		this.addGraphic(_animatedSprite);

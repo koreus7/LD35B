@@ -38,7 +38,6 @@ class BaseWorldEntity extends Entity
 	
 	public function firstUpdateCallback():Void
 	{
-				
 		this.baseWorld = cast(this.scene, BaseWorld);
 	}
 	

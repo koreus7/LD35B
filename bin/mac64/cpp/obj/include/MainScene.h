@@ -13,6 +13,7 @@ HX_DECLARE_CLASS0(BaseWorldEntity)
 HX_DECLARE_CLASS0(MainScene)
 HX_DECLARE_CLASS0(Paralax)
 HX_DECLARE_CLASS0(Runner)
+HX_DECLARE_CLASS0(Walker)
 HX_DECLARE_CLASS2(com,haxepunk,Entity)
 HX_DECLARE_CLASS2(com,haxepunk,Scene)
 HX_DECLARE_CLASS2(com,haxepunk,Tweener)
@@ -35,6 +36,7 @@ class HXCPP_CLASS_ATTRIBUTES  MainScene_obj : public ::BaseWorld_obj{
 
 		HX_DO_RTTI_ALL;
 		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
+		static bool __GetStatic(const ::String &inString, Dynamic &outValue, hx::PropertyAccess inCallProp);
 		Dynamic __SetField(const ::String &inString,const Dynamic &inValue, hx::PropertyAccess inCallProp);
 		static bool __SetStatic(const ::String &inString, Dynamic &ioValue, hx::PropertyAccess inCallProp);
 		void __GetFields(Array< ::String> &outFields);
@@ -43,13 +45,25 @@ class HXCPP_CLASS_ATTRIBUTES  MainScene_obj : public ::BaseWorld_obj{
 		void __Visit(HX_VISIT_PARAMS);
 		::String __ToString() const { return HX_HCSTRING("MainScene","\x33","\x82","\x48","\x34"); }
 
+		static void __boot();
 		::Paralax p1;
 		::Paralax p2;
 		::Runner player;
+		Array< ::Dynamic > walkers;
+		bool handledEndStage;
+		int shifterCount;
+		::com::haxepunk::Entity mouse;
 		virtual Void begin( );
+
+		virtual Void addWalker( bool hack);
+		Dynamic addWalker_dyn();
 
 		virtual Void update( );
 
+		virtual Void handleStageOver( );
+		Dynamic handleStageOver_dyn();
+
+		static int maxShifters;
 };
 
 

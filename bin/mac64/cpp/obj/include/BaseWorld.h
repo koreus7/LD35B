@@ -9,7 +9,6 @@
 #include <com/haxepunk/Scene.h>
 #endif
 HX_DECLARE_CLASS0(BaseWorld)
-HX_DECLARE_CLASS2(com,haxepunk,Entity)
 HX_DECLARE_CLASS2(com,haxepunk,Scene)
 HX_DECLARE_CLASS2(com,haxepunk,Tweener)
 
@@ -30,12 +29,8 @@ class HXCPP_CLASS_ATTRIBUTES  BaseWorld_obj : public ::com::haxepunk::Scene_obj{
 		//~BaseWorld_obj();
 
 		HX_DO_RTTI_ALL;
-		Dynamic __Field(const ::String &inString, hx::PropertyAccess inCallProp);
 		static void __register();
 		::String __ToString() const { return HX_HCSTRING("BaseWorld","\x61","\x20","\x1c","\x80"); }
-
-		virtual ::com::haxepunk::Entity addLight( ::String image,Float x,Float y);
-		Dynamic addLight_dyn();
 
 };
 

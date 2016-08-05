@@ -4,8 +4,196 @@
 		"selected_items":
 		[
 			[
+				"shif",
+				"shift"
+			],
+			[
+				"tel",
+				"telFX"
+			],
+			[
+				"shi",
+				"shifter"
+			],
+			[
+				"ma",
+				"maxShifters"
+			],
+			[
+				"sh",
+				"shifterCount"
+			],
+			[
+				"add",
+				"addWalker"
+			],
+			[
+				"pl",
+				"p· playing	Bool"
+			],
+			[
 				"run",
-				"runSpeed"
+				"runFX"
+			],
+			[
+				"st",
+				"p· transitionText	String"
+			],
+			[
+				"sta",
+				"p· stageOver	Bool"
+			],
+			[
+				"f",
+				"m· fadeIn	 "
+			],
+			[
+				"bul",
+				"bulletFX"
+			],
+			[
+				"al",
+				"p· alpha	Float"
+			],
+			[
+				"qua",
+				"m· quadInOut	Float"
+			],
+			[
+				"gra",
+				"p· graphic	com.haxepunk.Graphic"
+			],
+			[
+				"text",
+				"textG"
+			],
+			[
+				"EN",
+				"p· ENTER	Int"
+			],
+			[
+				"back",
+				"backgroundSound"
+			],
+			[
+				"lan",
+				"landFX"
+			],
+			[
+				"jum",
+				"jumpFX"
+			],
+			[
+				"han",
+				"handleStageOver"
+			],
+			[
+				"dead",
+				"deadShapeShifers"
+			],
+			[
+				"w",
+				"walker"
+			],
+			[
+				"walk",
+				"walker"
+			],
+			[
+				"wal",
+				"walkers"
+			],
+			[
+				"is",
+				"isShapeShifter"
+			],
+			[
+				"Mouse",
+				"mouseX"
+			],
+			[
+				"_gun",
+				"_gunTop"
+			],
+			[
+				"_",
+				"_gunTop"
+			],
+			[
+				"top",
+				"_topRot"
+			],
+			[
+				"mous",
+				"p· mousePressed	Bool"
+			],
+			[
+				"_f",
+				"_falling"
+			],
+			[
+				"vel",
+				"velX"
+			],
+			[
+				"mo",
+				"p· mouseX	Int"
+			],
+			[
+				"_g",
+				"_gunTop"
+			],
+			[
+				"mou",
+				"p· mouseY	Int"
+			],
+			[
+				"_gu",
+				"_gunRotateOffY"
+			],
+			[
+				"ra",
+				"m· radToDeg	Float"
+			],
+			[
+				"s",
+				"m· sqrt	Float"
+			],
+			[
+				"y",
+				"_gunRotateOffY"
+			],
+			[
+				"tan",
+				"m· atan2	Float"
+			],
+			[
+				"or",
+				"p· originY	Float"
+			],
+			[
+				"speed",
+				"_speed"
+			],
+			[
+				"pla",
+				"m· play	 "
+			],
+			[
+				"ex",
+				"exitSlowMoFx"
+			],
+			[
+				"tim",
+				"timeTween"
+			],
+			[
+				"slow",
+				"slowMoFX"
+			],
+			[
+				"S",
+				"p· Sfx	Sfx"
 			],
 			[
 				"get",
@@ -16,24 +204,12 @@
 				"isGoingFast"
 			],
 			[
-				"walk",
-				"walk"
-			],
-			[
-				"is",
-				"isGoingRight"
-			],
-			[
 				"_sp",
 				"_speed"
 			],
 			[
 				"in",
 				"inFront"
-			],
-			[
-				"_",
-				"_speed"
 			],
 			[
 				"_spee",
@@ -52,10 +228,34 @@
 	"buffers":
 	[
 		{
+			"file": "src/Runner.hx",
+			"settings":
+			{
+				"buffer_size": 8150,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/Utils.hx",
+			"settings":
+			{
+				"buffer_size": 2216,
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "src/Walker.hx",
 			"settings":
 			{
-				"buffer_size": 7164,
+				"buffer_size": 8709,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "assets/audio/Shapeshifter .mp3",
+			"settings":
+			{
+				"buffer_size": 34880,
 				"line_ending": "Unix"
 			}
 		},
@@ -63,16 +263,8 @@
 			"file": "src/MainScene.hx",
 			"settings":
 			{
-				"buffer_size": 1899,
+				"buffer_size": 3157,
 				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "project.flow",
-			"settings":
-			{
-				"buffer_size": 288,
-				"line_ending": "Unix"
 			}
 		}
 	],
@@ -83,10 +275,26 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "ins",
+		"height": 327.0,
+		"last_filter": "haxe",
 		"selected_items":
 		[
+			[
+				"haxe",
+				"Haxe: Choose Build Target"
+			],
+			[
+				"haxeli",
+				"Haxelib: List Installed"
+			],
+			[
+				"prefere",
+				"Preferences: Settings - User"
+			],
+			[
+				"ed",
+				"Project: Edit Project"
+			],
 			[
 				"ins",
 				"Package Control: Install Package"
@@ -160,7 +368,7 @@
 				"Package Control: Add Repository"
 			]
 		],
-		"width": 449.0
+		"width": 433.0
 	},
 	"console":
 	{
@@ -179,13 +387,39 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/Users/user/IdeaProjects/LD35",
+		"/Users/user/IdeaProjects/LD35/assets",
+		"/Users/user/IdeaProjects/LD35/assets/audio",
+		"/Users/user/IdeaProjects/LD35/assets/graphics"
+	],
 	"file_history":
 	[
-		"/Users/user/IdeaProjects/LD35/project.flow",
-		"/Users/user/IdeaProjects/LD35/src/Lamp.hx",
+		"/Users/user/IdeaProjects/LD35/assets/graphics/paralax2.png",
+		"/Users/user/IdeaProjects/LD35/assets/graphics/paralax1.png",
+		"/Users/user/IdeaProjects/LD35/assets/graphics/background.png",
+		"/Users/user/IdeaProjects/LD35/assets/graphics/bullet.png",
+		"/Users/user/IdeaProjects/LD35/assets/graphics/howToPlay.png",
+		"/Users/user/IdeaProjects/LD35/assets/graphics/lamp.png",
+		"/Users/user/IdeaProjects/LD35/assets/graphics/lightingMask.png",
 		"/Users/user/IdeaProjects/LD35/src/MainScene.hx",
-		"/Users/user/IdeaProjects/LD35/assets/shaders/lighting.glsl",
+		"/Users/user/IdeaProjects/LD35/src/Runner.hx",
+		"/Users/user/IdeaProjects/LD35/src/Bullet.hx",
+		"/Users/user/IdeaProjects/LD35/src/G.hx",
 		"/Users/user/IdeaProjects/LD35/src/Walker.hx",
+		"/Users/user/IdeaProjects/LD35/src/Utils.hx",
+		"/Users/user/IdeaProjects/LD35/src/TextOverlay.hx",
+		"/Users/user/IdeaProjects/LD35/src/Main.hx",
+		"/Users/user/IdeaProjects/LD35/src/Menu.hx",
+		"/Users/user/IdeaProjects/LD35/project.flow",
+		"/Users/user/Desktop/functionstyle.py",
+		"/Users/user/IdeaProjects/LD35/src/TransitionScene.hx",
+		"/Users/user/IdeaProjects/LD35/src/Vector2D.hx",
+		"/Users/user/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/user/IdeaProjects/LD35/LD35.sublime-project",
+		"/Users/user/IdeaProjects/LD35/src/Lamp.hx",
+		"/Users/user/IdeaProjects/LD35/assets/shaders/lighting.glsl",
 		"/Users/user/IdeaProjects/LD35/src/BaseWorld.hx",
 		"/Users/user/DEV/LD/project.flow",
 		"/usr/lib/haxelib/luxe/git/tests/features/camera/src/Main.hx",
@@ -201,9 +435,11 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			"",
+			"selection"
 		]
 	},
 	"find_state":
@@ -211,6 +447,13 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"shoot",
+			"isSha",
+			"Float",
+			"hobbleFast",
+			"hobble",
+			"jump",
+			"run",
 			"runAway"
 		],
 		"highlight": true,
@@ -229,36 +472,133 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 3,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "src/Walker.hx",
+					"file": "src/Runner.hx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 7164,
+						"buffer_size": 8150,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1001,
-								1001
+								2983,
+								2983
 							]
 						],
 						"settings":
 						{
 							"glslvalidator_configured": true,
 							"glslvalidator_enabled": 1,
-							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 21.0,
+						"translation.y": 1185.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/Utils.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2216,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								60,
+								60
+							]
+						],
+						"settings":
+						{
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 32.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "src/Walker.hx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 8709,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								8656,
+								8656
+							]
+						],
+						"settings":
+						{
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 524.0,
+						"translation.y": 5118.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "assets/audio/Shapeshifter .mp3",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 34880,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"glslvalidator_configured": true,
+							"glslvalidator_enabled": 1,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -267,71 +607,40 @@
 			]
 		},
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
-					"buffer": 1,
+					"buffer": 4,
 					"file": "src/MainScene.hx",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1899,
+						"buffer_size": 3157,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1344,
-								1344
+								0,
+								0
 							]
 						],
 						"settings":
 						{
 							"glslvalidator_configured": true,
 							"glslvalidator_enabled": 1,
-							"syntax": "Packages/sublime_haxe/Haxe.tmLanguage",
+							"haxe-build-id": 0,
+							"syntax": "Packages/Haxe/Haxe.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": -0.0,
-						"translation.y": 327.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "project.flow",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 288,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								227,
-								227
-							]
-						],
-						"settings":
-						{
-							"glslvalidator_configured": true,
-							"glslvalidator_enabled": 1,
-							"syntax": "Packages/sublime_flow/flow-file.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
+						"translation.x": 11.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -377,7 +686,7 @@
 	"menu_visible": true,
 	"output.exec":
 	{
-		"height": 81.0
+		"height": 55.0
 	},
 	"output.find_results":
 	{
@@ -396,6 +705,102 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"wal",
+				"src/Walker.hx"
+			],
+			[
+				"uti",
+				"src/Utils.hx"
+			],
+			[
+				"main",
+				"src/MainScene.hx"
+			],
+			[
+				"ru",
+				"src/Runner.hx"
+			],
+			[
+				"ut",
+				"src/Utils.hx"
+			],
+			[
+				"walk",
+				"src/Walker.hx"
+			],
+			[
+				"men",
+				"src/Menu.hx"
+			],
+			[
+				"tran",
+				"src/TransitionScene.hx"
+			],
+			[
+				"g",
+				"src/G.hx"
+			],
+			[
+				"run",
+				"src/Runner.hx"
+			],
+			[
+				"tex",
+				"src/TextOverlay.hx"
+			],
+			[
+				"tr",
+				"src/TransitionScene.hx"
+			],
+			[
+				"runn",
+				"src/Runner.hx"
+			],
+			[
+				"text",
+				"src/TextOverlay.hx"
+			],
+			[
+				"mai",
+				"src/MainScene.hx"
+			],
+			[
+				"walker",
+				"src/Walker.hx"
+			],
+			[
+				"runner",
+				"src/Runner.hx"
+			],
+			[
+				"t",
+				"src/TextOverlay.hx"
+			],
+			[
+				"b",
+				"src/Bullet.hx"
+			],
+			[
+				"wa",
+				"src/Walker.hx"
+			],
+			[
+				"w",
+				"src/Walker.hx"
+			],
+			[
+				"mains",
+				"src/MainScene.hx"
+			],
+			[
+				"bulle",
+				"src/Bullet.hx"
+			],
+			[
+				"vec",
+				"src/Vector2D.hx"
+			]
 		],
 		"width": 0.0
 	},
@@ -410,12 +815,12 @@
 	},
 	"select_symbol":
 	{
-		"height": 0.0,
+		"height": 392.0,
 		"last_filter": "",
 		"selected_items":
 		[
 		],
-		"width": 0.0
+		"width": 692.0
 	},
 	"selected_group": 0,
 	"settings":
@@ -425,7 +830,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 150.0,
+	"side_bar_width": 174.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

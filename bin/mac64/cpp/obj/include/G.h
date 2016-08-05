@@ -5,7 +5,10 @@
 #include <hxcpp.h>
 #endif
 
+HX_DECLARE_CLASS0(BaseWorld)
 HX_DECLARE_CLASS0(G)
+HX_DECLARE_CLASS2(com,haxepunk,Scene)
+HX_DECLARE_CLASS2(com,haxepunk,Tweener)
 
 
 class HXCPP_CLASS_ATTRIBUTES  G_obj : public hx::Object{
@@ -33,6 +36,13 @@ class HXCPP_CLASS_ATTRIBUTES  G_obj : public hx::Object{
 		static Float timeSpeed;
 		static Float ground;
 		static int lighingMult;
+		static ::BaseWorld world;
+		static bool runAway;
+		static bool stageOver;
+		static int stageNumber;
+		static ::String transitionText;
+		static int killCount;
+		static int shifterCount;
 };
 
 

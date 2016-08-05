@@ -31,6 +31,7 @@ class HXCPP_CLASS_ATTRIBUTES  Layers_obj : public hx::Object{
 		static int back;
 		static int backParalax;
 		static int forwardParalax;
+		static int mainBack;
 		static int main;
 		static int top;
 		static int lightMask;

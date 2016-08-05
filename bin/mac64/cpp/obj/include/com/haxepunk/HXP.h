@@ -267,6 +267,7 @@ class HXCPP_CLASS_ATTRIBUTES  HXP_obj : public hx::Object{
 		static Dynamic consoleEnabled_dyn();
 
 		static Dynamic log;
+		static Dynamic &log_dyn() { return log;}
 		static Dynamic watch;
 		static ::com::haxepunk::tweens::misc::MultiVarTween tween( Dynamic object,Dynamic values,Float duration,Dynamic options);
 		static Dynamic tween_dyn();

@@ -374,6 +374,7 @@ class Walker extends BaseWorldEntity
         }
         
         dead = true;
+        setHitbox(64,20);
         _animatedSprite.play("die");    
     }
 }

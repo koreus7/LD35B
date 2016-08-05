@@ -28,6 +28,8 @@ int Layers_obj::backParalax;
 
 int Layers_obj::forwardParalax;
 
+int Layers_obj::mainBack;
+
 int Layers_obj::main;
 
 int Layers_obj::top;
@@ -49,6 +51,7 @@ static hx::StaticInfo sStaticStorageInfo[] = {
 	{hx::fsInt,(void *) &Layers_obj::back,HX_HCSTRING("back","\x27","\xda","\x10","\x41")},
 	{hx::fsInt,(void *) &Layers_obj::backParalax,HX_HCSTRING("backParalax","\x1c","\x01","\x3f","\x58")},
 	{hx::fsInt,(void *) &Layers_obj::forwardParalax,HX_HCSTRING("forwardParalax","\x3e","\x49","\x06","\xcd")},
+	{hx::fsInt,(void *) &Layers_obj::mainBack,HX_HCSTRING("mainBack","\x00","\x4f","\x93","\x99")},
 	{hx::fsInt,(void *) &Layers_obj::main,HX_HCSTRING("main","\x39","\x38","\x56","\x48")},
 	{hx::fsInt,(void *) &Layers_obj::top,HX_HCSTRING("top","\x95","\x66","\x58","\x00")},
 	{hx::fsInt,(void *) &Layers_obj::lightMask,HX_HCSTRING("lightMask","\xe2","\x20","\x74","\xc1")},
@@ -63,6 +66,7 @@ static void sMarkStatics(HX_MARK_PARAMS) {
 	HX_MARK_MEMBER_NAME(Layers_obj::back,"back");
 	HX_MARK_MEMBER_NAME(Layers_obj::backParalax,"backParalax");
 	HX_MARK_MEMBER_NAME(Layers_obj::forwardParalax,"forwardParalax");
+	HX_MARK_MEMBER_NAME(Layers_obj::mainBack,"mainBack");
 	HX_MARK_MEMBER_NAME(Layers_obj::main,"main");
 	HX_MARK_MEMBER_NAME(Layers_obj::top,"top");
 	HX_MARK_MEMBER_NAME(Layers_obj::lightMask,"lightMask");
@@ -76,6 +80,7 @@ static void sVisitStatics(HX_VISIT_PARAMS) {
 	HX_VISIT_MEMBER_NAME(Layers_obj::back,"back");
 	HX_VISIT_MEMBER_NAME(Layers_obj::backParalax,"backParalax");
 	HX_VISIT_MEMBER_NAME(Layers_obj::forwardParalax,"forwardParalax");
+	HX_VISIT_MEMBER_NAME(Layers_obj::mainBack,"mainBack");
 	HX_VISIT_MEMBER_NAME(Layers_obj::main,"main");
 	HX_VISIT_MEMBER_NAME(Layers_obj::top,"top");
 	HX_VISIT_MEMBER_NAME(Layers_obj::lightMask,"lightMask");
@@ -91,6 +96,7 @@ static ::String sStaticFields[] = {
 	HX_HCSTRING("back","\x27","\xda","\x10","\x41"),
 	HX_HCSTRING("backParalax","\x1c","\x01","\x3f","\x58"),
 	HX_HCSTRING("forwardParalax","\x3e","\x49","\x06","\xcd"),
+	HX_HCSTRING("mainBack","\x00","\x4f","\x93","\x99"),
 	HX_HCSTRING("main","\x39","\x38","\x56","\x48"),
 	HX_HCSTRING("top","\x95","\x66","\x58","\x00"),
 	HX_HCSTRING("lightMask","\xe2","\x20","\x74","\xc1"),
@@ -128,6 +134,7 @@ void Layers_obj::__boot()
 	back= (int)100;
 	backParalax= (int)90;
 	forwardParalax= (int)80;
+	mainBack= (int)75;
 	main= (int)70;
 	top= (int)60;
 	lightMask= (int)50;

@@ -372,6 +372,12 @@
 #ifndef INCLUDED_P5
 #include <P5.h>
 #endif
+#ifndef INCLUDED_MainScene
+#include <MainScene.h>
+#endif
+#ifndef INCLUDED_LightMask
+#include <LightMask.h>
+#endif
 #ifndef INCLUDED_Layers
 #include <Layers.h>
 #endif
@@ -537,6 +543,9 @@
 #ifndef INCLUDED_openfl__legacy_utils_IMemoryRange
 #include <openfl/_legacy/utils/IMemoryRange.h>
 #endif
+#ifndef INCLUDED_openfl__legacy_ui_Mouse
+#include <openfl/_legacy/ui/Mouse.h>
+#endif
 #ifndef INCLUDED_openfl__legacy_text_TextLineMetrics
 #include <openfl/_legacy/text/TextLineMetrics.h>
 #endif
@@ -666,6 +675,15 @@
 #ifndef INCLUDED_com_haxepunk_utils_GestureType
 #include <com/haxepunk/utils/GestureType.h>
 #endif
+#ifndef INCLUDED_com_haxepunk_tweens_motion_QuadMotion
+#include <com/haxepunk/tweens/motion/QuadMotion.h>
+#endif
+#ifndef INCLUDED_com_haxepunk_tweens_motion_Motion
+#include <com/haxepunk/tweens/motion/Motion.h>
+#endif
+#ifndef INCLUDED_com_haxepunk_tweens_misc_VarTween
+#include <com/haxepunk/tweens/misc/VarTween.h>
+#endif
 #ifndef INCLUDED_com_haxepunk_tweens_misc_MultiVarTween
 #include <com/haxepunk/tweens/misc/MultiVarTween.h>
 #endif
@@ -723,9 +741,6 @@
 #ifndef INCLUDED_com_haxepunk_debug_VisibleLabel
 #include <com/haxepunk/debug/VisibleLabel.h>
 #endif
-#ifndef INCLUDED_com_haxepunk_Tween
-#include <com/haxepunk/Tween.h>
-#endif
 #ifndef INCLUDED_com_haxepunk_Screen
 #include <com/haxepunk/Screen.h>
 #endif
@@ -741,11 +756,26 @@
 #ifndef INCLUDED_com_haxepunk__Entity_SolidType_Impl_
 #include <com/haxepunk/_Entity/SolidType_Impl_.h>
 #endif
+#ifndef INCLUDED_Vector2D
+#include <Vector2D.h>
+#endif
 #ifndef INCLUDED_Utils
 #include <Utils.h>
 #endif
+#ifndef INCLUDED_TransitionScene
+#include <TransitionScene.h>
+#endif
 #ifndef INCLUDED_TimerEntity
 #include <TimerEntity.h>
+#endif
+#ifndef INCLUDED_TimeScaleTween
+#include <TimeScaleTween.h>
+#endif
+#ifndef INCLUDED_com_haxepunk_Tween
+#include <com/haxepunk/Tween.h>
+#endif
+#ifndef INCLUDED_TextOverlay
+#include <TextOverlay.h>
 #endif
 #ifndef INCLUDED_StringTools
 #include <StringTools.h>
@@ -762,8 +792,8 @@
 #ifndef INCLUDED_com_haxepunk_Graphic
 #include <com/haxepunk/Graphic.h>
 #endif
-#ifndef INCLUDED_MainScene
-#include <MainScene.h>
+#ifndef INCLUDED_Menu
+#include <Menu.h>
 #endif
 #ifndef INCLUDED__List_ListIterator
 #include <_List/ListIterator.h>
@@ -771,14 +801,14 @@
 #ifndef INCLUDED_List
 #include <List.h>
 #endif
-#ifndef INCLUDED_LightMask
-#include <LightMask.h>
-#endif
 #ifndef INCLUDED_Lamp
 #include <Lamp.h>
 #endif
 #ifndef INCLUDED_Lambda
 #include <Lambda.h>
+#endif
+#ifndef INCLUDED___ASSET__font_zorus_serif_ttf
+#include <__ASSET__font_zorus_serif_ttf.h>
 #endif
 #ifndef INCLUDED_cpp_vm_Deque
 #include <cpp/vm/Deque.h>
@@ -788,6 +818,9 @@
 #endif
 #ifndef INCLUDED_Date
 #include <Date.h>
+#endif
+#ifndef INCLUDED_Bullet
+#include <Bullet.h>
 #endif
 #ifndef INCLUDED_BaseWorldEntity
 #include <BaseWorldEntity.h>
@@ -992,6 +1025,8 @@ hx::RegisterResources( hx::GetResources() );
 ::Xml_obj::__register();
 ::Walker_obj::__register();
 ::P5_obj::__register();
+::MainScene_obj::__register();
+::LightMask_obj::__register();
 ::Layers_obj::__register();
 ::G_obj::__register();
 ::EReg_obj::__register();
@@ -1047,6 +1082,7 @@ hx::RegisterResources( hx::GetResources() );
 ::openfl::_legacy::utils::IDataInput_obj::__register();
 ::openfl::_legacy::utils::IDataOutput_obj::__register();
 ::openfl::_legacy::utils::IMemoryRange_obj::__register();
+::openfl::_legacy::ui::Mouse_obj::__register();
 ::openfl::_legacy::text::TextLineMetrics_obj::__register();
 ::openfl::_legacy::text::TextFormat_obj::__register();
 ::openfl::_legacy::_system::ScreenMode_obj::__register();
@@ -1090,6 +1126,9 @@ hx::RegisterResources( hx::GetResources() );
 ::com::haxepunk::utils::_Input::InputType_Impl__obj::__register();
 ::com::haxepunk::utils::HaxelibInfoBuilder_obj::__register();
 ::com::haxepunk::utils::GestureType_obj::__register();
+::com::haxepunk::tweens::motion::QuadMotion_obj::__register();
+::com::haxepunk::tweens::motion::Motion_obj::__register();
+::com::haxepunk::tweens::misc::VarTween_obj::__register();
 ::com::haxepunk::tweens::misc::MultiVarTween_obj::__register();
 ::com::haxepunk::tweens::misc::Alarm_obj::__register();
 ::com::haxepunk::math::_Vector::Vector_Impl__obj::__register();
@@ -1109,28 +1148,33 @@ hx::RegisterResources( hx::GetResources() );
 ::com::haxepunk::debug::LayerLabel_obj::__register();
 ::com::haxepunk::debug::MaskLabel_obj::__register();
 ::com::haxepunk::debug::VisibleLabel_obj::__register();
-::com::haxepunk::Tween_obj::__register();
 ::com::haxepunk::Screen_obj::__register();
 ::com::haxepunk::_HXP::Position_Impl__obj::__register();
 ::com::haxepunk::_Graphic::ImageType_Impl__obj::__register();
 ::com::haxepunk::_Graphic::TileType_Impl__obj::__register();
 ::com::haxepunk::_Entity::SolidType_Impl__obj::__register();
+::Vector2D_obj::__register();
 ::Utils_obj::__register();
+::TransitionScene_obj::__register();
 ::TimerEntity_obj::__register();
+::TimeScaleTween_obj::__register();
+::com::haxepunk::Tween_obj::__register();
+::TextOverlay_obj::__register();
 ::StringTools_obj::__register();
 ::StringBuf_obj::__register();
 ::Runner_obj::__register();
 ::Paralax_obj::__register();
 ::com::haxepunk::Graphic_obj::__register();
-::MainScene_obj::__register();
+::Menu_obj::__register();
 ::_List::ListIterator_obj::__register();
 ::List_obj::__register();
-::LightMask_obj::__register();
 ::Lamp_obj::__register();
 ::Lambda_obj::__register();
+::__ASSET__font_zorus_serif_ttf_obj::__register();
 ::cpp::vm::Deque_obj::__register();
 ::openfl::_legacy::AssetLibrary_obj::__register();
 ::Date_obj::__register();
+::Bullet_obj::__register();
 ::BaseWorldEntity_obj::__register();
 ::openfl::_legacy::geom::Rectangle_obj::__register();
 ::openfl::_legacy::geom::Matrix_obj::__register();
@@ -1231,6 +1275,8 @@ hx::RegisterResources( hx::GetResources() );
 ::__ASSET__font_04b_03___ttf_png_obj::__boot();
 ::G_obj::__boot();
 ::Layers_obj::__boot();
+::LightMask_obj::__boot();
+::MainScene_obj::__boot();
 ::P5_obj::__boot();
 ::Walker_obj::__boot();
 ::Xml_obj::__boot();

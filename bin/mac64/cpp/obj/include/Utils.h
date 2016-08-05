@@ -6,6 +6,7 @@
 #endif
 
 HX_DECLARE_CLASS0(Utils)
+HX_DECLARE_CLASS2(com,haxepunk,Sfx)
 
 
 class HXCPP_CLASS_ATTRIBUTES  Utils_obj : public hx::Object{
@@ -45,6 +46,30 @@ class HXCPP_CLASS_ATTRIBUTES  Utils_obj : public hx::Object{
 
 		static Float clamp( Float value,Float min,Float max);
 		static Dynamic clamp_dyn();
+
+		static bool onScreen( int x,int y,int width,int height);
+		static Dynamic onScreen_dyn();
+
+		static bool aproxEq( int a,int b,hx::Null< int >  tollerance);
+		static Dynamic aproxEq_dyn();
+
+		static int compareFloat( Float a,Float b);
+		static Dynamic compareFloat_dyn();
+
+		static Float radToDeg( Float angle);
+		static Dynamic radToDeg_dyn();
+
+		static Float degToRad( Float angle);
+		static Dynamic degToRad_dyn();
+
+		static Float linearEase( Float t);
+		static Dynamic linearEase_dyn();
+
+		static ::com::haxepunk::Sfx audex( ::String x);
+		static Dynamic audex_dyn();
+
+		static Float distance( Float x,Float y,Float x1,Float y1);
+		static Dynamic distance_dyn();
 
 };
 

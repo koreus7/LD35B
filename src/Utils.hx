@@ -1,5 +1,7 @@
 package ;
 import com.haxepunk.Sfx;
+import com.haxepunk.HXP;
+
 class Utils
 {
     public static inline function randomRange(lowerBound:Float, upperBound:Float):Float
